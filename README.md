@@ -36,7 +36,7 @@ Contém **duas atividades práticas**:
 
 ---
 
-## 🚀 Atividade 2 — SRIM/TRIM e Simulação de Hadronterapia
+## ✅ Atividade 2 — SRIM/TRIM e Simulação de Hadronterapia
 
 **Objetivo**  
 - Reproduzir um cenário de **irradiação de íons** (He, C, O) em **tecidos equivalentes** e localizar o **pico de Bragg** para um alvo superficial (ex.: tumor a 20 mm).  
