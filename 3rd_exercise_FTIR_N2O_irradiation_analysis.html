@@ -1,6 +1,3 @@
-Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 (Instrumentação Aplicada a Processos Físicos e Biológicos), incluindo todos os itens numerados e os espaços para *prints*, conforme solicitado, em Português (Brasil) e Inglês.
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,53 +5,43 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
     <title>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</title>
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; color: #333; }
-        .header { text-align: center; border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-bottom: 20px; }
-        .activity-section { margin-top: 30px; border: 1px solid #007bff; padding: 15px; border-radius: 5px; background-color: #f0f8ff; }
-        .language-section { margin-top: 40px; border-top: 3px double #007bff; padding-top: 20px; }
-        .print-area { border: 2px dashed #007bff; min-height: 150px; margin: 15px 0; padding: 10px; text-align: center; background-color: #ffffff; }
+        .activity-section { margin-top: 30px; border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+        .language-section { margin-top: 40px; border-top: 2px solid #ccc; padding-top: 20px; }
+        .print-area { border: 2px dashed #007bff; min-height: 150px; margin: 15px 0; padding: 10px; text-align: center; background-color: #f8f9fa; }
         .enunciado { margin-bottom: 10px; padding-left: 20px; text-align: justify; }
         .obs { font-style: italic; font-size: 0.9em; margin-top: 5px; }
-        .math-eq { text-align: center; margin: 10px 0; font-style: normal; }
-        h2 { color: #0056b3; }
-        h3 { color: #218838; }
-        .tools { background-color: #e9ecef; padding: 10px; border-radius: 4px; margin-bottom: 20px; font-size: 0.95em;}
+        .sub-item { padding-left: 40px; }
+        h2 { color: #000; border-bottom: 1px solid #eee; padding-bottom: 5px; }
     </style>
 </head>
 <body>
 
-<header class="header">
-    <h1>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</h1>
-    <hr>
-    <!-- Imagem alinhada ao centro -->
-    <p align="center">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYOnIACPcb9bCeQQ_wbfF9mp5ADlbCIoghtDM6YiLklaBrtEsAxZ-G-y6N3_PNR_tCmw&usqp=CAU"
-           alt="Logo CEFET"
-           width="360">
-    </p>
+<h1>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</h1>
+<hr>
 
-    <p>
-        <strong>Professor:</strong> Jesse Werner Costa<br>
-        <strong>Aluno:</strong> Thalles Cotta Fontainha – <strong>Matrícula PPGIO</strong>: 2410091DIOAMA  
-    </p>
-    <hr>
-</header>
+<!-- Imagem alinhada à esquerda (conforme rascunho original) -->
+<p align="center">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYOnIACPcb9bCeQQ_wbfF9mp5ADlbCIoghtDM6YiLklaBrtEsAxZ-G-y6N3_PNR_tCmw&usqp=CAU"
+       alt="Logo CEFET"
+       width="360">
+</p>
+
+<p>
+    <strong>Professor:</strong> Jesse Werner Costa  <br>
+    <strong>Aluno:</strong> Thalles Cotta Fontainha – <strong>Matrícula PPGIO</strong>: 2410091DIOAMA  
+</p>
+
+<hr>
 
 <div class="activity-section">
     <h2>✅ Atividade 3 - FTIR N₂O Irradiação</h2>
-
-    <div class="tools">
-        <h3>Ferramentas Chave e Parâmetros (Contexto):</h3>
-        <ul>
-            <li>**Softwares de Análise:** O roteiro e o professor requerem o uso do **OMNIC®** (para processamento de espectros), **SRIM/TRIM** (para análise do feixe), **Origin®** (para gráficos) e uma **Planilha Excel** (para cálculo da espessura).</li>
-            <li>**Dados:** A análise é sobre $N_2O$ (óxido nitroso) irradiado com $Xe$ a $90\text{ MeV}$ e depositado a $11\text{ K}$.</li>
-        </ul>
-    </div>
     
     <p>📦 <strong>Materiais Recebidos – 01/10/2025 (via Grupo WhatsApp)</strong></p>
 
+    <!-- INÍCIO DA VERSÃO EM PORTUGUÊS (COPIA FIEL) -->
     <div class="language-section">
-        <h2>🇧🇷 Roteiro para a 2ª Tarefa Prática: Análise por Espectroscopia FTIR</h2>
-        <p class="obs">(Baseado no documento "InstrumProcFisBioRoteiroTarefa2.pdf" para $N_2O$ irradiados com $Xe$ a $90\text{ MeV}$ a $11\text{ K}$)</p>
+        <h2>🇧🇷 ROTEIRO PARA A 2ª TAREFA PRÁTICA: ANÁLISE POR ESPECTROSCOPIA FTIR</h2>
+        <p class="obs">(Análise no programa OMNIC dos dados do $N_2O$ irradiados com $Xe$ a $90\text{ MeV}$)</p>
 
         <h3>1) Utilizando o programa OMNIC:</h3>
         
@@ -77,11 +64,6 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
         <div class="enunciado">
             <strong>1.c)</strong> Escolher os 3 picos contidos no artigo do Fulvio-2009 (Tabela 4). Determinar a área dos mesmos e calcular a densidade de coluna usando o A-value da tabela e a eq. 2.
             <p class="obs">Obs.: A terceira banda de maior intensidade do $N_2O$ (em $589\text{ cm}^{-1}$ $\nu_2$) não foi analisada em Fulvio.</p>
-            <p class="math-eq">
-                \[
-                N = \frac{\ln(10)}{\mathcal{A}} \int A(\tilde\nu)\, d\tilde\nu \quad \text{(Adaptada da eq. 2, onde } \tau(\tilde\nu) = \ln(10)\,A(\tilde\nu))
-                \]
-            </p>
         </div>
         <div class="print-area">
             <strong>Espaço Reservado para Print 3: Análise dos 3 picos e cálculo inicial da densidade de coluna (1.c).</strong>
@@ -89,14 +71,14 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
         </div>
 
         <h3>2) Determinação da espessura do gelo</h3>
+        <p class="obs">Como deste valor determinar a espessura do gelo com o arquivo EXCEL – Ref.:</p>
         
         <div class="enunciado">
             <strong>2.a)</strong> Utilizar para tal determinação a densidade do $N_2O$ a $11\text{k}$ dado no artigo do Fulvio 2009. Fazer este cálculo para as 3 bandas do artigo com o A-value.
-            <p class="obs">Ref.: Arquivo EXCEL – Ref..</p>
         </div>
         
         <div class="enunciado">
-            <strong>2.b)</strong> Como estes valores verificar através do programa SRIM (visto na aula anterior) como o feixe se comporta em unidade de $\mathrm{keV / microns}$.
+            <strong>2.b)</strong> Como estes valores verificar através do programa SRIM (visto na aula anterior) como o feixe se comporta em unidade de $\mathrm{keV/microns}$.
             <p class="obs">Saberemos através destes dados se ocorreu implantação ou não do feixe na amostra.</p>
         </div>
         <div class="print-area">
@@ -107,8 +89,8 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
         <h3>3) Análise de bandas para a amostra não irradiada (bandas Pai) e o correspondente para irradiação nas diversas fluências</h3>
         
         <div class="enunciado">
-            <strong>3.1 -</strong> Identificar através do programa OMINIC os picos do $N_2O$ dados abaixo (amostra não irradiada) e conferir com os que são descritos em Fulvio 2009 - Tabela 3. Quais as substâncias correspondestes? Quais podemos classificar como contaminantes? Obs.: Pesquisar na literatura as bandas que não estão na tabela.
-            <p class="obs">Bandas para os picos em: $\text{589}, \text{1166}, \text{1295}, \text{2239}, \text{2581}, \text{3380}, \text{3706}$</p>
+            <strong>3.1-</strong> Identificar através do programa OMINIC os picos do $N_2O$ dados abaixo (amostra não irradiada) e conferir com os que são descritos em Fulvio 2009 - Tabela 3. Quais as substâncias correspondestes? Quais podemos classificar como contaminantes? Obs.: Pesquisar na literatura as bandas que não estão na tabela.
+            <p class="obs">Bandas para os picos em: $589, 1166, 1295, 2239, 2581, 3380, 3706$</p>
         </div>
         <div class="print-area">
             <strong>Espaço Reservado para Print 5: Identificação de picos no Omnic (Bandas Pai) (3.1).</strong>
@@ -127,11 +109,11 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
             <strong>3.4 -</strong> Fazer os gráficos com estes valores no programa ORIGIN:
         </div>
 
-        <div class="enunciado" style="padding-left: 40px;">
+        <div class="enunciado sub-item">
             <strong>3.3.1 -</strong> Gráfico Área $\text{X}$ fluência
         </div>
 
-        <div class="enunciado" style="padding-left: 40px;">
+        <div class="enunciado sub-item">
             <strong>3.3.2 -</strong> Gráfico Densidade de coluna ($N$) $\text{X}$ fluência
         </div>
         <div class="print-area">
@@ -146,8 +128,8 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
         <h3>4) Análise de bandas Filho para a amostra irradiada com diversos valores de fluência</h3>
         
         <div class="enunciado">
-            <strong>4.1 -</strong> Identificar através do programa OMINIC a evolução das bandas com os picos dados abaixo, desde a amostra não irradiada até a irradiação com o maior valor de fluência. Quais as substâncias correspondestes?
-            <p class="obs">Bandas Filho para os picos em: $\text{781}, \text{1040}, \text{1702}, \text{1718}, \text{2139}$</p>
+            <strong>4.1-</strong> Identificar através do programa OMINIC a evolução das bandas com os picos dados abaixo, desde a amostra não irradiada até a irradiação com o maior valor de fluência. Quais as substâncias correspondestes?
+            <p class="obs">Bandas Filho para os picos em: $781, 1040, 1702, 1718, 2139$</p>
         </div>
         <div class="print-area">
             <strong>Espaço Reservado para Print 7: Evolução dos picos no Omnic (Bandas Filho) (4.1).</strong>
@@ -155,18 +137,18 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
         </div>
 
         <div class="enunciado">
-            <strong>4.2 -</strong> Determinar as áreas das bandas correspondentes a estes picos.
+            <strong>4.2-</strong> Determinar as áreas das bandas correspondentes a estes picos.
         </div>
 
         <div class="enunciado">
             <strong>4.3 -</strong> Fazer os gráficos com estes valores no programa ORIGIN:
         </div>
         
-        <div class="enunciado" style="padding-left: 40px;">
+        <div class="enunciado sub-item">
             <strong>4.3.1 -</strong> Gráfico Área $\text{X}$ fluência
         </div>
 
-        <div class="enunciado" style="padding-left: 40px;">
+        <div class="enunciado sub-item">
             <strong>4.3.2 -</strong> Gráfico Densidade de coluna ($N$) $\text{X}$ fluência
         </div>
         <div class="print-area">
@@ -176,11 +158,12 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
 
         <h3>5) Elaborar e entregar relatório da Tarefa.</h3>
     </div>
+    <!-- FIM DA VERSÃO EM PORTUGUÊS -->
 
-
+    <!-- INÍCIO DA VERSÃO EM INGLÊS (COPIA FIEL) -->
     <div class="language-section">
-        <h2>🇬🇧 Roteiro for the 2nd Practical Task: FTIR Spectroscopy Analysis</h2>
-        <p class="obs">(Based on the document "InstrumProcFisBioRoteiroTarefa2.pdf" for $N_2O$ irradiated with $Xe$ at $90\text{ MeV}$ at $11\text{ K}$)</p>
+        <h2>🇬🇧 ROTEIRO FOR THE 2ND PRACTICAL TASK: FTIR SPECTROSCOPY ANALYSIS</h2>
+        <p class="obs">(OMNIC analysis of $N_2O$ data irradiated with $Xe$ at $90\text{ MeV}$)</p>
 
         <h3>1) Using the OMNIC program:</h3>
         
@@ -203,11 +186,6 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
         <div class="enunciado">
             <strong>1.c)</strong> Choose the 3 peaks contained in the Fulvio-2009 article (Table 4). Determine their area and calculate the column density using the A-value from the table and eq. 2.
             <p class="obs">Note: The third strongest $N_2O$ band (at $589\text{ cm}^{-1}$ $\nu_2$) was not analyzed in Fulvio.</p>
-            <p class="math-eq">
-                \[
-                N = \frac{\ln(10)}{\mathcal{A}} \int A(\tilde\nu)\, d\tilde\nu \quad \text{(Adapted from eq. 2, where } \tau(\tilde\nu) = \ln(10)\,A(\tilde\nu))
-                \]
-            </p>
         </div>
         <div class="print-area">
             <strong>Reserved Space for Print 3: Analysis of the 3 peaks and initial column density calculation (1.c).</strong>
@@ -215,14 +193,14 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
         </div>
 
         <h3>2) Determination of ice thickness</h3>
+        <p class="obs">How to determine the ice thickness from this value using the EXCEL file – Ref.:</p>
         
         <div class="enunciado">
             <strong>2.a)</strong> Use the density of $N_2O$ at $11\text{k}$ given in the Fulvio 2009 article for this determination. Perform this calculation for the 3 bands in the article using the A-value.
-            <p class="obs">Ref.: EXCEL file – Ref..</p>
         </div>
         
         <div class="enunciado">
-            <strong>2.b)</strong> Using these values, verify through the SRIM program (seen in the previous class) how the beam behaves in units of $\mathrm{keV / microns}$.
+            <strong>2.b)</strong> Using these values, verify through the SRIM program (seen in the previous class) how the beam behaves in units of $\mathrm{keV/microns}$.
             <p class="obs">Through this data, we will know whether beam implantation occurred in the sample.</p>
         </div>
         <div class="print-area">
@@ -233,8 +211,8 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
         <h3>3) Analysis of Parent bands for the unirradiated sample and the corresponding irradiation at various fluences</h3>
         
         <div class="enunciado">
-            <strong>3.1 -</strong> Identify through the OMINIC program the $N_2O$ peaks given below (unirradiated sample) and check them against those described in Fulvio 2009 - Table 3. What are the corresponding substances? Which can be classified as contaminants? Note: Search the literature for the bands that are not in the table.
-            <p class="obs">Bands for peaks at: $\text{589}, \text{1166}, \text{1295}, \text{2239}, \text{2581}, \text{3380}, \text{3706}$</p>
+            <strong>3.1-</strong> Identify through the OMINIC program the $N_2O$ peaks given below (unirradiated sample) and check them against those described in Fulvio 2009 - Table 3. What are the corresponding substances? Which can be classified as contaminants? Note: Search the literature for the bands that are not in the table.
+            <p class="obs">Bands for peaks at: $589, 1166, 1295, 2239, 2581, 3380, 3706$</p>
         </div>
         <div class="print-area">
             <strong>Reserved Space for Print 5: Peak identification in Omnic (Parent Bands) (3.1).</strong>
@@ -253,11 +231,11 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
             <strong>3.4 -</strong> Plot the graphs using these values in the ORIGIN program:
         </div>
 
-        <div class="enunciado" style="padding-left: 40px;">
+        <div class="enunciado sub-item">
             <strong>3.3.1 -</strong> Graph Area $\text{X}$ fluence
         </div>
 
-        <div class="enunciado" style="padding-left: 40px;">
+        <div class="enunciado sub-item">
             <strong>3.3.2 -</strong> Graph Column Density ($N$) $\text{X}$ fluence
         </div>
         <div class="print-area">
@@ -272,8 +250,8 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
         <h3>4) Analysis of Daughter bands for the irradiated sample with various fluence values</h3>
         
         <div class="enunciado">
-            <strong>4.1 -</strong> Identify through the OMINIC program the evolution of the bands with the peaks given below, from the unirradiated sample up to the highest fluence value. What are the corresponding substances?
-            <p class="obs">Daughter Bands for peaks at: $\text{781}, \text{1040}, \text{1702}, \text{1718}, \text{2139}$</p>
+            <strong>4.1-</strong> Identify through the OMINIC program the evolution of the bands with the peaks given below, from the unirradiated sample up to the highest fluence value. What are the corresponding substances?
+            <p class="obs">Daughter Bands for peaks at: $781, 1040, 1702, 1718, 2139$</p>
         </div>
         <div class="print-area">
             <strong>Reserved Space for Print 7: Evolution of peaks in Omnic (Daughter Bands) (4.1).</strong>
@@ -281,18 +259,18 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
         </div>
 
         <div class="enunciado">
-            <strong>4.2 -</strong> Determine the areas of the bands corresponding to these peaks.
+            <strong>4.2-</strong> Determine the areas of the bands corresponding to these peaks.
         </div>
 
         <div class="enunciado">
             <strong>4.3 -</strong> Plot the graphs using these values in the ORIGIN program:
         </div>
         
-        <div class="enunciado" style="padding-left: 40px;">
+        <div class="enunciado sub-item">
             <strong>4.3.1 -</strong> Graph Area $\text{X}$ fluence
         </div>
 
-        <div class="enunciado" style="padding-left: 40px;">
+        <div class="enunciado sub-item">
             <strong>4.3.2 -</strong> Graph Column Density ($N$) $\text{X}$ fluence
         </div>
         <div class="print-area">
@@ -302,9 +280,9 @@ Este é o código HTML ajustado para ser uma cópia fiel do roteiro da Tarefa 2 
 
         <h3>5) Elaborate and submit the Task report.</h3>
     </div>
+    <!-- FIM DA VERSÃO EM INGLÊS -->
 
 </div>
 
 </body>
 </html>
-```
