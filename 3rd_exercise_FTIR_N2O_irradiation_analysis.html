@@ -1,86 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</title>
 
   <style>
-    :root {
-      --bg:#ffffff; --fg:#222; --muted:#555; --line:#ddd; --brand:#0ea5e9;
-    }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      color: var(--fg);
-      background: var(--bg);
-    }
+    :root { --bg:#ffffff; --fg:#222; --muted:#555; --line:#ddd; --brand:#0ea5e9; }
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; margin: 20px; color: var(--fg); background: var(--bg); }
     h1, h2, h3 { margin: .6em 0 .4em; }
     hr { border: 0; border-top: 1px solid var(--line); margin: 16px 0; }
-    .atividade-section {
-      margin-top: 30px;
-      border: 1px solid var(--line);
-      padding: 16px;
-      border-radius: 10px;
-      background:#fff;
-    }
-    .enunciado {
-      margin: 10px 0;
-      padding-left: 10px;
-      border-left: 3px solid var(--line);
-    }
-    .print-area {
-      border: 2px dashed #007bff;
-      min-height: 160px;
-      margin: 16px 0;
-      padding: 12px;
-      text-align: center;
-      background-color: #f8f9fa;
-      border-radius: 8px;
-    }
-    .dicas {
-      background-color: #fff3cd;
-      border-left: 6px solid #ffc107;
-      padding: 10px;
-      margin-top: 20px;
-      border-radius: 8px;
-    }
+    .atividade-section { margin-top: 30px; border: 1px solid var(--line); padding: 16px; border-radius: 10px; background:#fff; }
+    .enunciado { margin: 10px 0; padding-left: 10px; border-left: 3px solid var(--line); }
+    .print-area { border: 2px dashed #007bff; min-height: 160px; margin: 16px 0; padding: 12px; text-align: center; background-color: #f8f9fa; border-radius: 8px; }
+    .dicas { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 10px; margin-top: 20px; border-radius: 8px; }
     .muted { color: var(--muted); font-size: .95em; }
-    .eq {
-      background:#f6f8fa;
-      padding:10px 12px;
-      border-radius:8px;
-      border:1px solid #e5e7eb;
-      margin:10px 0;
-      overflow-x:auto;
-    }
-    img.logo {
-      display:block;
-      margin: 0 auto;
-      max-width: 360px;
-      height:auto;
-      border-radius:8px;
-    }
+    .eq { background:#f6f8fa; padding:10px 12px; border-radius:8px; border:1px solid #e5e7eb; margin:10px 0; overflow-x:auto; }
+    img.logo { display:block; margin: 0 auto; max-width: 360px; height:auto; border-radius:8px; }
 
-    /* Botão de tradução */
-    #translate-btn {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      z-index: 9999;
-      background-color: var(--brand);
-      color: white;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    /* Language toggle button */
+    .lang-toggle {
+      position: fixed; top: 14px; right: 14px; z-index: 9999;
+      background: var(--brand); color:#fff; border:none; border-radius:999px;
+      padding: 10px 14px; font-weight:600; cursor:pointer; box-shadow: 0 4px 14px rgba(0,0,0,.12);
     }
-    #google_translate_element { display: none; }
+    .lang-toggle:focus { outline: 2px solid #cceeff; outline-offset: 2px; }
+
+    /* Show/hide language blocks */
+    [data-lang="pt"] #pt { display:block; }
+    [data-lang="pt"] #en { display:none; }
+    [data-lang="en"] #pt { display:none; }
+    [data-lang="en"] #en { display:block; }
   </style>
 
-  <!-- MathJax -->
+  <!-- MathJax configuration (must appear BEFORE the loader) -->
   <script>
     window.MathJax = {
       tex: {
@@ -91,147 +44,276 @@
       options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
     };
   </script>
+  <!-- MathJax loader -->
   <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
-<!-- 🌐 Botão de tradução -->
-<div id="translate-btn">🌐 PT-BR / EN-US</div>
-<div id="google_translate_element"></div>
+<button class="lang-toggle" id="langBtn" aria-label="Alternar idioma">EN-US</button>
 
-<h1>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</h1>
-<hr>
+<!-- ================= PT-BR ================= -->
+<div id="pt">
+  <h1>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</h1>
+  <hr>
 
-<p style="text-align:center">
-  <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYOnIACPcb9bCeQQ_wbfF9mp5ADlbCIoghtDM6YiLklaBrtEsAxZ-G-y6N3_PNR_tCmw&usqp=CAU"
-       alt="Logo CEFET">
-</p>
-
-<p>
-  <strong>Professor:</strong> Jesse Werner Costa<br>
-  <strong>Aluno:</strong> Thalles Cotta Fontainha – <strong>Matrícula PPGIO</strong>: 2410091DIOAMA
-</p>
-
-<hr>
-
-<div class="atividade-section">
-  <h2>✅ Atividade 3 — FTIR N₂O Irradiação</h2>
-
-  <p><strong>Materiais Recebidos – 01/10/2025 (via Grupo WhatsApp)</strong></p>
-
-  <div class="dicas">
-    <h3>Dicas e Contexto</h3>
-    <ul>
-      <li><strong>Softwares:</strong> OMNIC® (FTIR), SRIM/TRIM (alcance e stopping power), Origin® ou Python (gráficos) e planilha (espessura).</li>
-      <li><strong>Amostra:</strong> gelo de N₂O a <strong>11&nbsp;K</strong>, com espectros em diferentes fluências de irradiação.</li>
-      <li><strong>Nomenclatura:</strong> a fluência aparece ao final do nome de cada arquivo espectral.</li>
-      <li><strong>Objetivo:</strong> identificar/quantificar bandas, estimar espessura do filme e avaliar evolução espectral com a fluência.</li>
-    </ul>
-  </div>
-
-  <h3>Conceitos e Equações</h3>
-  <div class="eq">
-    \[
-      T = \frac{I}{I_0}, \qquad
-      A(\tilde\nu) = \log_{10}\left(\frac{1}{T}\right) = \log_{10}\left(\frac{I_0}{I}\right)
-    \]
-  </div>
-
-  <div class="eq">
-    \[
-      N = \frac{1}{\mathcal{A}} \int_{\text{banda}} \tau(\tilde\nu)\, d\tilde\nu,
-      \qquad \tau(\tilde\nu)=\ln\left(\frac{I_0}{I}\right)=\ln(10)\,A(\tilde\nu)
-    \]
-    <p class="muted">\(\mathcal{A}\) é o A-value (cm·molec\(^{-1}\)).</p>
-  </div>
-
-  <div class="eq">
-    \[
-      F = \Phi\, t
-    \]
-    <p class="muted">com \(\Phi\) (projéteis·cm\(^{-2}\)·s\(^{-1}\)) e \(t\) (s).</p>
-  </div>
-</div>
-
-<div class="atividade-section">
-  <h2>Roteiro Prático (OMNIC → Cálculos → Gráficos)</h2>
-
-  <h3>1) Processamento inicial no OMNIC</h3>
-  <div class="enunciado">
-    <strong>1.a)</strong> Abra o espectro não irradiado, selecione uma banda adequada e estime a espessura do filme com base na área integrada e A-value.
-  </div>
-  <div class="print-area"><strong>Print 1</strong><br><em>(Inserir imagem)</em></div>
-
-  <div class="enunciado">
-    <strong>1.b)</strong> Pré-processamento: limite a região útil, remova ruídos e corrija o baseline.
-  </div>
-  <div class="print-area"><strong>Print 2</strong><br><em>(Inserir imagem)</em></div>
-
-  <div class="enunciado">
-    <strong>1.c)</strong> Escolha 3 picos (Fulvio, 2009) e calcule a densidade de coluna:
-    \[
-      N = \frac{\ln(10)}{\mathcal{A}} \int A(\tilde\nu)\, d\tilde\nu
-    \]
-  </div>
-  <div class="print-area"><strong>Print 3</strong><br><em>(Inserir imagem)</em></div>
-
-  <h3>2) Espessura do gelo e SRIM/TRIM</h3>
-  <div class="enunciado">
-    <strong>2.a)</strong> Use densidade do N₂O a 11 K para converter \(N\) em espessura \(x\). Aproximação: \(x \approx N/n\).
-  </div>
-  <div class="enunciado">
-    <strong>2.b)</strong> No SRIM/TRIM, obtenha stopping power (\(\mathrm{keV\,\mu m^{-1}}\)) e alcance. Compare com \(x\) para discutir implantação.
-  </div>
-  <div class="print-area"><strong>Print 4</strong><br><em>(Inserir imagem)</em></div>
-
-  <h3>3) Bandas Pai e Filhas</h3>
-  <div class="enunciado">
-    Identifique picos principais (ex.: 589, 1166, 1295 cm\(^{-1}\)), calcule áreas e acompanhe evolução com fluência.
-  </div>
-  <div class="print-area"><strong>Prints 5-8</strong><br><em>(Inserir imagens e gráficos)</em></div>
-
-  <h3>4) Entrega</h3>
-  <p>
-    Publicar este relatório no GitHub Pages ou anexar versão PDF exportada.  
-    Versão online:
-    <br>
-    <a href="https://thallescotta.github.io/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/3rd_exercise_FTIR_N2O_irradiation_analysis.html" target="_blank">
-      https://thallescotta.github.io/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/3rd_exercise_FTIR_N2O_irradiation_analysis.html
-    </a>
+  <p style="text-align:center">
+    <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYOnIACPcb9bCeQQ_wbfF9mp5ADlbCIoghtDM6YiLklaBrtEsAxZ-G-y6N3_PNR_tCmw&usqp=CAU"
+         alt="Logo CEFET">
   </p>
+
+  <p>
+    <strong>Professor:</strong> Jesse Werner Costa<br>
+    <strong>Aluno:</strong> Thalles Cotta Fontainha – <strong>Matrícula PPGIO</strong>: 2410091DIOAMA
+  </p>
+
+  <hr>
+
+  <div class="atividade-section">
+    <h2>✅ Atividade 3 — FTIR N₂O Irradiação</h2>
+
+    <p><strong>Materiais Recebidos – 01/10/2025 (via Grupo WhatsApp)</strong></p>
+
+    <div class="dicas">
+      <h3>Dicas e Contexto</h3>
+      <ul>
+        <li><strong>Softwares:</strong> OMNIC® (processamento FTIR), SRIM/TRIM (alcance e perda de energia), Origin® ou Python (gráficos) e planilha (cálculo de espessura).</li>
+        <li><strong>Amostra:</strong> gelo de N₂O a <strong>11&nbsp;K</strong>, com espectros obtidos sob diferentes fluências de irradiação.</li>
+        <li><strong>Nomenclatura:</strong> a <em>fluência</em> de cada medida aparece ao final do nome do arquivo espectral.</li>
+        <li><strong>Objetivo:</strong> identificar/quantificar bandas, estimar espessura do filme e avaliar a evolução espectral com a fluência comparando com valores de referência da literatura.</li>
+      </ul>
+    </div>
+
+    <h3>Conceitos e equações</h3>
+    <div class="eq">
+      <p><strong>Transmitância</strong> e <strong>Absorbância</strong> (base 10):</p>
+      <p>\[
+        T = \frac{I}{I_0}, \qquad A(\tilde\nu) = \log_{10}\!\left(\frac{1}{T}\right) = \log_{10}\!\left(\frac{I_0}{I}\right)
+      \]</p>
+    </div>
+    <div class="eq">
+      <p><strong>Densidade de coluna</strong> (via profundidade óptica \(\tau\)):</p>
+      <p>\[
+        N = \frac{1}{\mathcal{A}} \int_{\text{banda}} \tau(\tilde\nu)\, d\tilde\nu,
+        \qquad \tau(\tilde\nu) = \ln\!\left(\frac{I_0}{I}\right) = \ln(10)\,A(\tilde\nu)
+      \]</p>
+      <p class="muted">\(\mathcal{A}\) é o A-value (força de banda integrada, cm&nbsp;molec\(^{-1}\)).</p>
+    </div>
+    <div class="eq">
+      <p><strong>Fluência</strong> e <strong>fluxo</strong>:</p>
+      <p>\[
+        F = \Phi\, t
+      \]
+      com \(\Phi\) (projéteis·cm\(^{-2}\)·s\(^{-1}\)) e \(t\) (s).</p>
+    </div>
+  </div>
+
+  <div class="atividade-section">
+    <h2>Roteiro Prático (OMNIC → Cálculos → Gráficos)</h2>
+
+    <h3>1) Processamento inicial no OMNIC</h3>
+    <div class="enunciado">
+      <strong>1.a)</strong> <u>Espectro não irradiado</u>: abra o espectro de referência, selecione uma banda adequada e estime a espessura do filme a partir da área integrada e do A-value correspondente.
+    </div>
+    <div class="print-area"><strong>Print 1</strong><br><em>(Inserir captura: espectro não irradiado e cálculo de espessura)</em></div>
+
+    <div class="enunciado">
+      <strong>1.b)</strong> <u>Pré-processamento</u>: limite a região útil, remova faixas de ruído e corrija o <em>baseline</em>. Salve o espectro processado.
+    </div>
+    <div class="print-area"><strong>Print 2</strong><br><em>(Inserir captura: baseline corrigido)</em></div>
+
+    <div class="enunciado">
+      <strong>1.c)</strong> <u>Bandas de interesse (Fulvio, 2009)</u>: escolha 3 picos da Tabela&nbsp;4. Integre cada banda e calcule a <strong>densidade de coluna</strong>:
+      \[
+        N = \frac{\ln(10)}{\mathcal{A}} \int A(\tilde\nu)\, d\tilde\nu
+      \]
+      <span class="muted">Obs.: a terceira banda mais intensa do N₂O (589&nbsp;cm\(^{-1}\), modo \(\nu_2\)) não foi analisada em Fulvio (2009).</span>
+    </div>
+    <div class="print-area"><strong>Print 3</strong><br><em>(Inserir captura: integração das 3 bandas)</em></div>
+
+    <h3>2) Espessura do gelo e verificação no SRIM/TRIM</h3>
+    <div class="enunciado">
+      <strong>2.a)</strong> <u>Espessura</u>: usando a densidade do N₂O a 11&nbsp;K (Fulvio, 2009) e os A-values, converta \(N\) em espessura \(x\).
+      Aproximação prática: \(x \approx \dfrac{N}{n}\), sendo \(n\) a densidade numérica (molec·cm\(^{-3}\)).
+    </div>
+    <div class="enunciado">
+      <strong>2.b)</strong> <u>Alcance do feixe</u>: no SRIM/TRIM, obtenha o <em>stopping power</em> (unidades \(\mathrm{keV\,\mu m^{-1}}\)) e o alcance em N₂O. Com base em \(x\), discuta a presença de <strong>implantação</strong>.
+    </div>
+    <div class="print-area"><strong>Print 4</strong><br><em>(Inserir captura: resultados SRIM/TRIM e conclusão)</em></div>
+
+    <h3>3) Bandas “Pai” (não irradiada) e evolução com a fluência</h3>
+    <div class="enunciado">
+      <strong>3.1)</strong> <u>Identificação</u>: no espectro não irradiado, identifique picos em 589, 1166, 1295, 2239, 2581, 3380 e 3706&nbsp;cm\(^{-1}\). Associe espécies (e contaminantes) confrontando com Fulvio (2009), Tabela&nbsp;3, e literatura.
+    </div>
+    <div class="print-area"><strong>Print 5</strong><br><em>(Inserir captura: picos “Pai”)</em></div>
+    <div class="enunciado"><strong>3.2)</strong> Integre as áreas dessas bandas no espectro não irradiado.</div>
+    <div class="enunciado"><strong>3.3)</strong> Repita a integração para todas as fluências e, quando pertinente, estime \(N\).</div>
+    <div class="enunciado">
+      <strong>3.4)</strong> Gere gráficos no Origin/Python:
+      <br>• <em>Área × Fluência</em> &nbsp;&nbsp;• <em>Densidade de Coluna</em> \((N)\) <em>× Fluência</em>.
+    </div>
+    <div class="print-area"><strong>Print 6</strong><br><em>(Inserir gráficos: Área×Fluência e N×Fluência — “Pai”)</em></div>
+    <div class="enunciado"><strong>3.5)</strong> Compare tendências com Fulvio (2009), Fig.&nbsp;4b (saturação, mudanças de perfil, deslocamentos).</div>
+
+    <h3>4) Bandas “Filho” (produtos formados)</h3>
+    <div class="enunciado">
+      <strong>4.1)</strong> <u>Evolução espectral</u>: acompanhe picos em 781, 1040, 1702, 1718 e 2139&nbsp;cm\(^{-1}\) do não irradiado até a maior fluência. Proponha atribuições com base na literatura.
+    </div>
+    <div class="print-area"><strong>Print 7</strong><br><em>(Inserir captura: evolução das bandas “Filho”)</em></div>
+    <div class="enunciado"><strong>4.2)</strong> Integre áreas e (quando aplicável) estime \(N\).</div>
+    <div class="enunciado"><strong>4.3)</strong> Plote <em>Área × Fluência</em> e <em>\(N\) × Fluência</em>; discuta formação, destruição e sputtering.</div>
+    <div class="print-area"><strong>Print 8</strong><br><em>(Inserir gráficos: Área×Fluência e N×Fluência — “Filho”)</em></div>
+
+    <h3>5) Entrega</h3>
+    <p>
+      Publicar este relatório como <strong>página</strong> no GitHub Pages ou anexar PDF exportado desta página.
+      Versão online:
+      <br>
+      <a href="https://thallescotta.github.io/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/3rd_exercise_FTIR_N2O_irradiation_analysis.html" target="_blank" rel="noopener">
+        https://thallescotta.github.io/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/3rd_exercise_FTIR_N2O_irradiation_analysis.html
+      </a>
+    </p>
+  </div>
 </div>
 
-<!-- Google Translate -->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'pt',
-      includedLanguages: 'en,pt',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
+<!-- ================= EN-US ================= -->
+<div id="en">
+  <h1>[IOA6042] Applied Instrumentation for Physical and Biological Processes (2025.2)</h1>
+  <hr>
+
+  <p style="text-align:center">
+    <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYOnIACPcb9bCeQQ_wbfF9mp5ADlbCIoghtDM6YiLklaBrtEsAxZ-G-y6N3_PNR_tCmw&usqp=CAU"
+         alt="CEFET Logo">
+  </p>
+
+  <p>
+    <strong>Professor:</strong> Jesse Werner Costa<br>
+    <strong>Student:</strong> Thalles Cotta Fontainha – <strong>PPGIO ID</strong>: 2410091DIOAMA
+  </p>
+
+  <hr>
+
+  <div class="atividade-section">
+    <h2>✅ Activity 3 — FTIR N₂O Irradiation</h2>
+
+    <p><strong>Materials Received – 01/10/2025 (WhatsApp Group)</strong></p>
+
+    <div class="dicas">
+      <h3>Notes & Context</h3>
+      <ul>
+        <li><strong>Software:</strong> OMNIC® (FTIR processing), SRIM/TRIM (range & stopping), Origin® or Python (plots), and a spreadsheet (thickness).</li>
+        <li><strong>Sample:</strong> N₂O ice at <strong>11&nbsp;K</strong>, spectra for multiple irradiation fluences.</li>
+        <li><strong>Naming:</strong> the <em>fluence</em> appears at the end of each spectral filename.</li>
+        <li><strong>Goal:</strong> identify/quantify bands, estimate film thickness, and evaluate spectral evolution with fluence against literature values.</li>
+      </ul>
+    </div>
+
+    <h3>Key relations</h3>
+    <div class="eq">
+      <p><strong>Transmittance</strong> and <strong>Absorbance</strong> (base 10):</p>
+      <p>\[
+        T = \frac{I}{I_0}, \qquad A(\tilde\nu) = \log_{10}\!\left(\frac{1}{T}\right) = \log_{10}\!\left(\frac{I_0}{I}\right)
+      \]</p>
+    </div>
+    <div class="eq">
+      <p><strong>Column density</strong> from the integrated band area (optical depth \(\tau\)):</p>
+      <p>\[
+        N = \frac{1}{\mathcal{A}} \int_{\text{band}} \tau(\tilde\nu)\, d\tilde\nu,
+        \qquad \tau(\tilde\nu)=\ln\!\left(\frac{I_0}{I}\right)=\ln(10)\,A(\tilde\nu)
+      \]</p>
+      <p class="muted">\(\mathcal{A}\) is the band strength (integrated intensity, cm&nbsp;molecule\(^{-1}\)).</p>
+    </div>
+    <div class="eq">
+      <p><strong>Fluence</strong> and <strong>flux</strong>:</p>
+      <p>\[
+        F = \Phi\, t
+      \]
+      with \(\Phi\) (projectiles·cm\(^{-2}\)·s\(^{-1}\)) and \(t\) (s).</p>
+    </div>
+  </div>
+
+  <div class="atividade-section">
+    <h2>Practical Workflow (OMNIC → Calculations → Plots)</h2>
+
+    <h3>1) Initial OMNIC processing</h3>
+    <div class="enunciado">
+      <strong>1.a)</strong> <u>Unirradiated spectrum</u>: open the reference spectrum, select a suitable band and estimate film thickness from the integrated area and the A-value.
+    </div>
+    <div class="print-area"><strong>Print 1</strong><br><em>(Insert screenshot: unirradiated spectrum & thickness)</em></div>
+
+    <div class="enunciado">
+      <strong>1.b)</strong> <u>Pre-processing</u>: limit the useful region, remove noise windows and correct the baseline. Save the processed spectrum.
+    </div>
+    <div class="print-area"><strong>Print 2</strong><br><em>(Insert screenshot: corrected baseline)</em></div>
+
+    <div class="enunciado">
+      <strong>1.c)</strong> <u>Bands of interest (Fulvio, 2009)</u>: pick 3 peaks from Table&nbsp;4. Integrate each band and compute the <strong>column density</strong>:
+      \[
+        N = \frac{\ln(10)}{\mathcal{A}} \int A(\tilde\nu)\, d\tilde\nu
+      \]
+      <span class="muted">Note: the third strongest N₂O band (589&nbsp;cm\(^{-1}\), \(\nu_2\)) wasn’t analyzed in Fulvio (2009).</span>
+    </div>
+    <div class="print-area"><strong>Print 3</strong><br><em>(Insert screenshot: integration of the 3 bands)</em></div>
+
+    <h3>2) Ice thickness and SRIM/TRIM check</h3>
+    <div class="enunciado">
+      <strong>2.a)</strong> <u>Thickness</u>: using N₂O density at 11&nbsp;K (Fulvio, 2009) and A-values, convert \(N\) to thickness \(x\).
+      Practical estimate: \(x \approx \dfrac{N}{n}\), where \(n\) is the number density (molecule·cm\(^{-3}\)).
+    </div>
+    <div class="enunciado">
+      <strong>2.b)</strong> <u>Beam range</u>: in SRIM/TRIM, obtain the stopping power (\(\mathrm{keV\,\mu m^{-1}}\)) and the range in N₂O. From \(x\), assess implantation.
+    </div>
+    <div class="print-area"><strong>Print 4</strong><br><em>(Insert screenshot: SRIM/TRIM results & conclusion)</em></div>
+
+    <h3>3) “Parent” bands and fluence evolution</h3>
+    <div class="enunciado">
+      <strong>3.1)</strong> <u>Identification</u>: in the unirradiated spectrum, identify peaks at 589, 1166, 1295, 2239, 2581, 3380, 3706&nbsp;cm\(^{-1}\). Assign species (and contaminants) using Fulvio (2009), Table&nbsp;3, plus literature.
+    </div>
+    <div class="print-area"><strong>Print 5</strong><br><em>(Insert screenshot: “Parent” peaks)</em></div>
+    <div class="enunciado"><strong>3.2)</strong> Integrate band areas (unirradiated).</div>
+    <div class="enunciado"><strong>3.3)</strong> Repeat for all fluences and estimate \(N\) when pertinent.</div>
+    <div class="enunciado">
+      <strong>3.4)</strong> Plot (Origin/Python): <em>Area × Fluence</em> and <em>Column Density</em> \((N)\) <em>× Fluence</em>.
+    </div>
+    <div class="print-area"><strong>Print 6</strong><br><em>(Insert plots: Area×Fluence and N×Fluence — “Parent”)</em></div>
+    <div class="enunciado"><strong>3.5)</strong> Compare with Fulvio (2009), Fig.&nbsp;4b (saturation, profile changes, shifts).</div>
+
+    <h3>4) “Daughter” bands (products)</h3>
+    <div class="enunciado">
+      <strong>4.1)</strong> <u>Spectral evolution</u>: track peaks at 781, 1040, 1702, 1718, 2139&nbsp;cm\(^{-1}\) up to the highest fluence. Propose assignments from literature.
+    </div>
+    <div class="print-area"><strong>Print 7</strong><br><em>(Insert screenshot: “Daughter” bands vs fluence)</em></div>
+    <div class="enunciado"><strong>4.2)</strong> Integrate areas and (when applicable) estimate \(N\).</div>
+    <div class="enunciado"><strong>4.3)</strong> Plot <em>Area × Fluence</em> and <em>\(N\) × Fluence</em>; discuss formation/destruction/sputtering.</div>
+    <div class="print-area"><strong>Print 8</strong><br><em>(Insert plots: Area×Fluence and N×Fluence — “Daughter”)</em></div>
+
+    <h3>5) Submission</h3>
+    <p>
+      Publish this report as a <strong>web page</strong> on GitHub Pages or attach a PDF exported from it.
+      Online version:
+      <br>
+      <a href="https://thallescotta.github.io/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/3rd_exercise_FTIR_N2O_irradiation_analysis.html" target="_blank" rel="noopener">
+        https://thallescotta.github.io/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/3rd_exercise_FTIR_N2O_irradiation_analysis.html
+      </a>
+    </p>
+  </div>
+</div>
+
+<script>
+  // Toggle PT-BR <-> EN-US with MathJax re-typeset
+  const root = document.documentElement;
+  const btn  = document.getElementById('langBtn');
+
+  function setLang(lang){
+    root.setAttribute('data-lang', lang);
+    btn.textContent = (lang === 'pt') ? 'EN-US' : 'PT-BR';
+    if (window.MathJax && MathJax.typesetPromise) { MathJax.typesetPromise(); }
   }
-
-  (function() {
-    var gt = document.createElement('script');
-    gt.type = 'text/javascript';
-    gt.async = true;
-    gt.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gt, s);
-  })();
-
-  document.getElementById('translate-btn').addEventListener('click', function() {
-    const select = document.querySelector('select.goog-te-combo');
-    if (select) {
-      if (select.value === 'en') {
-        select.value = 'pt';
-      } else {
-        select.value = 'en';
-      }
-      select.dispatchEvent(new Event('change'));
-    }
+  btn.addEventListener('click', () => {
+    const current = root.getAttribute('data-lang') || 'pt';
+    setLang(current === 'pt' ? 'en' : 'pt');
   });
+  setLang('pt'); // initial
 </script>
 
 </body>
