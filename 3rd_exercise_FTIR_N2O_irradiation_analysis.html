@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        .atividade-section { margin-top: 30px; border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+        .enunciado { margin-bottom: 10px; padding-left: 20px; }
+        .print-area { border: 2px dashed #007bff; min-height: 200px; margin: 20px 0; padding: 10px; text-align: center; background-color: #f8f9fa; }
+        .software-box { border: 1px solid #adb5bd; padding: 10px; margin-top: 10px; background-color: #e9ecef; }
+        .dicas { background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+# [IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)
+---
+
+<!-- Imagem alinhada à esquerda -->
+<p align="center">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYOnIACPcb9bCeQQ_wbfF9mp5ADlbCIoghtDM6YiLklaBrtEsAxZ-G-y6N3_PNR_tCmw&usqp=CAU"
+       alt="Logo CEFET"
+       width="360">   <!-- tamanho da logo -->
+</p>
+
+<p>
+    <strong>Professor:</strong> Jesse Werner Costa  <br>
+    <strong>Aluno:</strong> Thalles Cotta Fontainha – <strong>Matrícula PPGIO</strong>: 2410091DIOAMA  
+</p>
+
+---
+
+<div class="atividade-section">
+    ## ✅ Atividade 3 - FTIR N₂O Irradiação
+
+    📦 <strong>Materiais Recebidos – 01/10/2025 (via Grupo WhatsApp)</strong>
+    
+    <div class="dicas">
+        <h3>Dicas e Contexto da Aula (01/10/2025):</h3>
+        <ul>
+            <li><strong>Softwares:</strong> É necessário utilizar o <strong>Omnic</strong>, <strong>Trm</strong> (ou SRIM), <strong>Origin</strong> (ou outro software de plotagem como Python) e uma <strong>Planilha Excel</strong> para o cálculo da espessura do gelo [1-3, 6].</li>
+            <li><strong>Dados:</strong> O conjunto de dados fornecido refere-se ao $\text{N}_2\text{O}$ irradiado, com temperatura de <strong>11 Kelvin</strong> ($\text{K}$) [8, 9].</li>
+            <li><strong>Fluência:</strong> A fluência está indicada no final do nome de cada arquivo [8, 9].</li>
+            <li><strong>Análise:</strong> A tarefa se concentra na análise dos picos de absorção/transmissão no espectro (que correspondem à impressão digital da substância e seus modos vibracionais) e na comparação com as tabelas de referência fornecidas nos artigos [10-12].</li>
+        </ul>
+    </div>
+</div>
+
+<div class="atividade-section">
+    <h2>Roteiro para a 2ª Tarefa Prática: Análise por Espectroscopia FTIR</h2>
+    
+    <p>
+        <small><em>(Baseado no documento "InstrumProcFisBioRoteiroTarefa2.pdf" para $\text{N}_2\text{O}$ irradiados com $\text{Xe}$ a $90\text{ MeV}$ [27])</em></small>
+    </p>
+
+    <h3>1) Utilizando o programa OMNIC:</h3>
+    <div class="enunciado">
+        <strong>1.a)</strong> Abrir o espectro sem irradiar, para determinar a espessura do filme formado [28].
+    </div>
+    <div class="print-area">
+        <strong>Espaço Reservado para Print 1: Espectro sem irradiar e determinação da espessura.</strong>
+        <p><em>(Inserir imagem aqui)</em></p>
+    </div>
+    <div class="enunciado">
+        <strong>1.b)</strong> Eliminar a faixa de ruídos e corrigir o baseline (deletar o espectro anterior) [28].
+    </div>
+    <div class="print-area">
+        <strong>Espaço Reservado para Print 2: Espectro com baseline corrigido e faixa de ruído eliminada.</strong>
+        <p><em>(Inserir imagem aqui)</em></p>
+    </div>
+    <div class="enunciado">
+        <strong>1.c)</strong> Escolher os 3 picos contidos no artigo do Fulvio-2009 [17] (Tabela 4). Determinar a área dos mesmos e calcular a densidade de coluna usando o A-value da tabela e a eq. 2 [28].
+        <br>
+        <small><em>Obs.: A terceira banda de maior intensidade do $\text{N}_2\text{O}$ (em $589\text{ cm}^{-1}$ $\nu_2$) não foi analisada em Fulvio [17] [28].</em></small>
+    </div>
+    <div class="print-area">
+        <strong>Espaço Reservado para Print 3: Análise dos 3 picos no Omnic e cálculo inicial da densidade de coluna.</strong>
+        <p><em>(Inserir imagem aqui)</em></p>
+    </div>
+
+    <h3>2) Determinação da espessura do gelo</h3>
+    <div class="enunciado">
+        <strong>2.a)</strong> Utilizar para tal determinação a densidade do $\text{N}_2\text{O}$ a $11\text{k}$ dado no artigo do Fulvio $2009$. Fazer este cálculo para as $3$ bandas do artigo com o A-value [29].
+    </div>
+    <div class="enunciado">
+        <strong>2.b)</strong> Como estes valores verificar através do programa $\text{SRIM}$ (visto na aula anterior) como o feixe se comporta em unidade de $\text{keV/microns}$ [29].
+        <br>
+        <small><em>Saberemos através destes dados se ocorreu implantação ou não do feixe na amostra [29].</em></small>
+    </div>
+    <div class="print-area">
+        <strong>Espaço Reservado para Print 4: Resultado da análise SRIM/TRIM.</strong>
+        <p><em>(Inserir imagem aqui)</em></p>
+    </div>
+
+    <h3>3) Análise de bandas para a amostra não irradiada (bandas Pai) e o correspondente para irradiação nas diversas fluências</h3>
+    <div class="enunciado">
+        <strong>3.1)</strong> Identificar através do programa $\text{OMINIC}$ os picos do $\text{N}_2\text{O}$ dados abaixo (amostra não irradiada) e conferir com os que são descritos em Fulvio $2009$ [17] - Tabela 3. Quais as substâncias correspondestes? Quais podemos classificar como contaminantes? $\text{Obs.:}$ Pesquisar na literatura as bandas que não estão na tabela [30].
+        <br>
+        <small>Bandas para os picos em: $589, 1166, 1295, 2239, 2581, 3380, 3706$ [30]</small>
+    </div>
+    <div class="print-area">
+        <strong>Espaço Reservado para Print 5: Identificação de picos no Omnic (Bandas Pai).</strong>
+        <p><em>(Inserir imagem aqui)</em></p>
+    </div>
+    <div class="enunciado">
+        <strong>3.2)</strong> Determinar as áreas das bandas correspondentes a estes picos [30].
+    </div>
+    <div class="enunciado">
+        <strong>3.3)</strong> Determinar as áreas das bandas correspondentes a estes picos para as diversas fluências de irradiação [30].
+    </div>
+    <div class="enunciado">
+        <strong>3.4)</strong> Fazer os gráficos com estes valores no programa $\text{ORIGIN}$ [30]:
+    </div>
+    <div class="enunciado">
+        <strong>3.3.1)</strong> Gráfico Área $\text{X}$ fluência [30]
+    </div>
+    <div class="enunciado">
+        <strong>3.3.2)</strong> Gráfico Densidade de coluna ($\text{N}$) $\text{X}$ fluência [30]
+    </div>
+    <div class="print-area">
+        <strong>Espaço Reservado para Print 6: Gráficos Área X Fluência e Densidade de Coluna X Fluência (Bandas Pai).</strong>
+        <p><em>(Inserir imagens aqui)</em></p>
+    </div>
+    <div class="enunciado">
+        <strong>3.5)</strong> Comparar os resultados obtidos dos gráficos com o trabalho do Fulvio $2009$ [17], Figura $4\text{b}$ do artigo [31].
+    </div>
+
+    <h3>4) Análise de bandas Filho para a amostra irradiada com diversos valores de fluência</h3>
+    <div class="enunciado">
+        <strong>4.1)</strong> Identificar através do programa $\text{OMINIC}$ a evolução das bandas com os picos dados abaixo, desde a amostra não irradiada até a irradiação com o maior valor de fluência. Quais as substâncias correspondestes? [31]
+        <br>
+        <small>Bandas Filho para os picos em: $781, 1040, 1702, 1718, 2139$ [31]</small>
+    </div>
+    <div class="print-area">
+        <strong>Espaço Reservado para Print 7: Evolução dos picos no Omnic (Bandas Filho).</strong>
+        <p><em>(Inserir imagem aqui)</em></p>
+    </div>
+    <div class="enunciado">
+        <strong>4.2)</strong> Determinar as áreas das bandas correspondentes a estes picos [31].
+    </div>
+    <div class="enunciado">
+        <strong>4.3)</strong> Fazer os gráficos com estes valores no programa $\text{ORIGIN}$ [31]:
+    </div>
+    <div class="enunciado">
+        <strong>4.3.1)</strong> Gráfico Área $\text{X}$ fluência [32]
+    </div>
+    <div class="enunciado">
+        <strong>4.3.2)</strong> Gráfico Densidade de coluna ($\text{N}$) $\text{X}$ fluência [32]
+    </div>
+    <div class="print-area">
+        <strong>Espaço Reservado para Print 8: Gráficos Área X Fluência e Densidade de Coluna X Fluência (Bandas Filho).</strong>
+        <p><em>(Inserir imagens aqui)</em></p>
+    </div>
+
+    <h3>5) Elaborar e entregar relatório da Tarefa [32].</h3>
+
+</div>
+
+</body>
+</html>
