@@ -70,7 +70,7 @@
   <hr>
 
   <div class="atividade-section">
-    <h2>✅ Atividade 3 — FTIR N₂O Irradiação</h2>
+    <h2>Atividade 3 — FTIR N₂O Irradiação</h2>
 
     <p><strong>Materiais Recebidos – 01/10/2025 (via Grupo WhatsApp)</strong></p>
 
@@ -189,27 +189,102 @@
 
 
     
+<!-- 1.c) Integração das 3 bandas (Fulvio, 2009) e cálculo de N -->
+<div class="enunciado" style="text-align:justify; margin-top:16px;">
+  <strong>c.</strong> Escolhi <u>três bandas</u> listadas na Tabela&nbsp;4 de <em>Fulvio (2009)</em>, integrei a área de cada uma no OMNIC e calculei a <strong>densidade de coluna</strong> com o A-value e a Eq.&nbsp;2:
+  <code>N = ln(10) × Área / A</code>.
+  <br><span class="muted"><strong>Obs. atendida:</strong> a banda de maior intensidade em <u>589&nbsp;cm⁻¹ (ν₂)</u> <u>não foi utilizada</u>, pois <em>Fulvio (2009)</em> não a analisou. Por isso, usei as três bandas <em>permitidas</em> no artigo.</span>
+</div>
 
+<!-- c1, c2, c3 na ordem pedida -->
+<div class="print-area" style="text-align:center;">
+
+  <strong>c1 — Janela 1310–1280&nbsp;cm⁻¹</strong><br>
+  <img
+    src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/c1.png?raw=1"
+    style="max-width:100%;height:auto;display:block;margin:8px auto;"
+    alt="c1: Peak Resolve na janela 1310–1280 cm⁻1.">
+
+  <strong>c2 — Janela 2600–2565&nbsp;cm⁻¹</strong><br>
+  <img
+    src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/c2.png?raw=1"
+    style="max-width:100%;height:auto;display:block;margin:8px auto;"
+    alt="c2: Peak Resolve na janela 2600–2565 cm⁻1.">
+
+  <strong>c3 — Janela 2300–2170&nbsp;cm⁻¹</strong><br>
+  <img
+    src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/c3.png?raw=1"
+    style="max-width:100%;height:auto;display:block;margin:8px auto;"
+    alt="c3: Peak Resolve na janela 2300–2170 cm⁻1.">
+</div>
+
+<!-- Tabela de áreas e N (c1, c2, c3) -->
+<div class="print-area" style="text-align:center;">
+  <div style="display:inline-block; text-align:left; margin:0 auto;">
+    <table border="1" cellpadding="6" style="border-collapse:collapse; margin:auto;">
+      <thead style="background:#f5f5f5">
+        <tr>
+          <th>Código</th>
+          <th>Janela (cm⁻¹)</th>
+          <th>Área (abs·cm⁻¹)</th>
+          <th>A(Si)<br>(cm·mol⁻¹)</th>
+          <th>A(KBr)<br>(cm·mol⁻¹)</th>
+          <th>N (Si)<br>(mol·cm⁻²)</th>
+          <th>N (KBr)<br>(mol·cm⁻²)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>c1</strong></td>
+          <td>1310–1280</td>
+          <td>5,3828</td>
+          <td>1,22×10⁻¹⁷</td>
+          <td>1,07×10⁻¹⁷</td>
+          <td>≈ 1,02×10¹⁸</td>
+          <td>≈ 1,16×10¹⁸</td>
+        </tr>
+        <tr>
+          <td><strong>c2</strong></td>
+          <td>2600–2565</td>
+          <td>1,011</td>
+          <td>1,63×10⁻¹⁸</td>
+          <td>1,50×10⁻¹⁸</td>
+          <td>≈ 1,43×10¹⁸</td>
+          <td>≈ 1,55×10¹⁸</td>
+        </tr>
+        <tr>
+          <td><strong>c3</strong></td>
+          <td>2300–2170</td>
+          <td>39,3823</td>
+          <td>6,55×10⁻¹⁷</td>
+          <td>5,69×10⁻¹⁷</td>
+          <td>≈ 1,38×10¹⁸</td>
+          <td>≈ 1,59×10¹⁸</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="5" style="text-align:right;">Média (simples):</th>
+          <th>≈ 1,28×10¹⁸</th>
+          <th>≈ 1,43×10¹⁸</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+<p class="muted" style="text-align:justify; max-width:900px; margin:6px auto 0;">
+  Procedimento: com o <em>baseline</em> corrigido, ajustei componentes Voigt em
+  <strong>Analyze → Peak Resolve…</strong> e somei a coluna <strong>Area</strong> de cada janela (c1, c2, c3).
+  A densidade de coluna foi calculada por <code>N = ln(10) × Área / A</code> usando os <em>A-values</em> de
+  <strong>Fulvio (2009)</strong>. <strong>Obs. (cumprida):</strong> a banda de maior intensidade em
+  <u>589&nbsp;cm⁻¹</u> (ν₂) <u>não foi utilizada</u>; as três integrações realizadas foram
+  <strong>c1</strong> (1310–1280&nbsp;cm⁻¹), <strong>c2</strong> (2600–2565&nbsp;cm⁻¹) e
+  <strong>c3</strong> (2300–2170&nbsp;cm⁻¹), conforme Fulvio (2009).
+</p>
 
 
     
-<!-- LETRA B e C permanecem após a A -->
-<div class="enunciado" style="margin-top:14px;">
-  <strong>b.</strong> Eliminar a faixa de ruídos e corrigir o baseline (deletar o espectro anterior).
-</div>
-<div class="print-area">
-  <strong>Print 2</strong><br>
-  <em>(Inserir captura: baseline corrigido)</em>
-</div>
 
-<div class="enunciado">
-  <strong>c.</strong> Escolher os 3 picos contidos no artigo do Fulvio-2009[5] (Tabela 4). Determinar a área dos mesmos e calcular a densidade de coluna usando o A-value da tabela e a eq. 2.
-  <br><span class="muted">Obs.: A terceira banda de maior intensidade do N₂O (em 589 cm<sup>−1</sup>, ν<sub>2</sub>) não foi analisada em Fulvio[5].</span>
-</div>
-<div class="print-area">
-  <strong>Print 3</strong><br>
-  <em>(Inserir captura: integração das 3 bandas)</em>
-</div>
 
 
 
