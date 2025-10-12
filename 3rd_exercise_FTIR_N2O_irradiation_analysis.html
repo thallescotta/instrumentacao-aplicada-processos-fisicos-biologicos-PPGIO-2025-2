@@ -655,91 +655,92 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
 <!-- ===================== RESPOSTA 2.b — Verificação no SRIM/TRIM ===================== -->
 <div style="border:2px dashed #999; background:#fffdf5; padding:12px; border-radius:8px; margin:12px 0;">
 
-  <h4 style="margin:0 0 8px 0;">Resposta 2.b — Stopping power e alcance no SRIM (c1, c2 e c3)</h4>
+  <h4 style="margin:0 0 10px 0;">Resposta 2.b — Stopping power e alcance no SRIM (c1, c2 e c3)</h4>
 
-  <!-- 3 prints lado a lado -->
-  <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:6px 0 10px;">
-    <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/srim-c1-complete.png" target="_blank" rel="noopener">
-      <img src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/srim-c1-complete.png"
-           alt="SRIM — configuração/resultado para c1"
-           style="width:31%; min-width:260px; height:auto; border:1px solid #ddd; padding:2px;">
-    </a>
-    <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/srim-c2-complete.png" target="_blank" rel="noopener">
-      <img src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/srim-c2-complete.png"
-           alt="SRIM — configuração/resultado para c2"
-           style="width:31%; min-width:260px; height:auto; border:1px solid #ddd; padding:2px;">
-    </a>
-    <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/srim-c3-complete.png" target="_blank" rel="noopener">
-      <img src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/srim-c3-complete.png"
-           alt="SRIM — configuração/resultado para c3"
-           style="width:31%; min-width:260px; height:auto; border:1px solid #ddd; padding:2px;">
-    </a>
+  <!-- Variáveis de tamanho para as mini-tabelas -->
+  <div style="--w: 320px; --fs: 0.92rem; --pad: 6px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
+
+    <!-- ====== C1 ====== -->
+    <div style="width:var(--w);">
+      <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/srim-c1-complete.png" target="_blank" rel="noopener">
+        <img
+          src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/srim-c1-complete.png"
+          alt="SRIM — configuração/resultado c1"
+          style="width:100%; height:auto; border:1px solid #ddd; padding:2px; background:#fff;">
+      </a>
+      <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:100%; margin-top:6px;">
+        <thead style="background:#f5f5f5;">
+          <tr><th colspan="2" style="text-align:left; padding:var(--pad);">c1 — Resumo SRIM</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:var(--pad);">Íon / Energia</td><td style="padding:var(--pad);">Xe, 90&nbsp;MeV</td></tr>
+          <tr><td style="padding:var(--pad);">Alvo (ρ)</td><td style="padding:var(--pad);">N–N–O (1,1593 g·cm⁻³)</td></tr>
+          <tr><td style="padding:var(--pad);">Projected Range R<sub>p</sub></td><td style="padding:var(--pad);">1,47&nbsp;µm</td></tr>
+          <tr><td style="padding:var(--pad);">Straggling ΔR<sub>p</sub></td><td style="padding:var(--pad);">0,20&nbsp;µm</td></tr>
+          <tr><td style="padding:var(--pad);">Espessura x</td><td style="padding:var(--pad);">0,909&nbsp;µm</td></tr>
+          <tr><td style="padding:var(--pad); font-weight:600;">Decisão</td>
+              <td style="padding:var(--pad); font-weight:600;">Atravessa (x &lt; R<sub>p</sub>)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ====== C2 ====== -->
+    <div style="width:var(--w);">
+      <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/srim-c2-complete.png" target="_blank" rel="noopener">
+        <img
+          src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/srim-c2-complete.png"
+          alt="SRIM — configuração/resultado c2"
+          style="width:100%; height:auto; border:1px solid #ddd; padding:2px; background:#fff;">
+      </a>
+      <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:100%; margin-top:6px;">
+        <thead style="background:#f5f5f5;">
+          <tr><th colspan="2" style="text-align:left; padding:var(--pad);">c2 — Resumo SRIM</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:var(--pad);">Íon / Energia</td><td style="padding:var(--pad);">Xe, 90&nbsp;MeV</td></tr>
+          <tr><td style="padding:var(--pad);">Alvo (ρ)</td><td style="padding:var(--pad);">N–N–O (1,1593 g·cm⁻³)</td></tr>
+          <tr><td style="padding:var(--pad);">Projected Range R<sub>p</sub></td><td style="padding:var(--pad);">1,47&nbsp;µm</td></tr>
+          <tr><td style="padding:var(--pad);">Straggling ΔR<sub>p</sub></td><td style="padding:var(--pad);">0,20&nbsp;µm</td></tr>
+          <tr><td style="padding:var(--pad);">Espessura x</td><td style="padding:var(--pad);">3,461&nbsp;µm</td></tr>
+          <tr><td style="padding:var(--pad); font-weight:600;">Decisão</td>
+              <td style="padding:var(--pad); font-weight:600;">Implantação (x &gt; R<sub>p</sub> + ΔR<sub>p</sub>)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ====== C3 ====== -->
+    <div style="width:var(--w);">
+      <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/srim-c3-complete.png" target="_blank" rel="noopener">
+        <img
+          src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/srim-c3-complete.png"
+          alt="SRIM — configuração/resultado c3"
+          style="width:100%; height:auto; border:1px solid #ddd; padding:2px; background:#fff;">
+      </a>
+      <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:100%; margin-top:6px;">
+        <thead style="background:#f5f5f5;">
+          <tr><th colspan="2" style="text-align:left; padding:var(--pad);">c3 — Resumo SRIM</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:var(--pad);">Íon / Energia</td><td style="padding:var(--pad);">Xe, 90&nbsp;MeV</td></tr>
+          <tr><td style="padding:var(--pad);">Alvo (ρ)</td><td style="padding:var(--pad);">N–N–O (1,1593 g·cm⁻³)</td></tr>
+          <tr><td style="padding:var(--pad);">Projected Range R<sub>p</sub></td><td style="padding:var(--pad);">1,47&nbsp;µm</td></tr>
+          <tr><td style="padding:var(--pad);">Straggling ΔR<sub>p</sub></td><td style="padding:var(--pad);">0,20&nbsp;µm</td></tr>
+          <tr><td style="padding:var(--pad);">Espessura x</td><td style="padding:var(--pad);">0,178&nbsp;µm</td></tr>
+          <tr><td style="padding:var(--pad); font-weight:600;">Decisão</td>
+              <td style="padding:var(--pad); font-weight:600;">Atravessa (x &lt; R<sub>p</sub>)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 
-  <!-- Passos curtos e diretos -->
-  <ol style="margin:0 0 10px 18px; padding:0; line-height:1.55; text-align:justify;">
-    <li><strong>TRIM (Setup):</strong> <em>Ion Data</em> = <strong>Xe</strong>, <em>Energy</em> = <strong>90&nbsp;MeV</strong>; <em>Target Layers</em> = “N₂O (11 K)”.</li>
-    <li><strong>Alvo:</strong> em <em>Input Elements to Layer</em> adicionei <strong>N</strong>, <strong>N</strong> e <strong>O</strong> (≈33,33% cada) e defini <em>Density</em> = <strong>1,1593 g·cm⁻³</strong>.</li>
-    <li><strong>Espessura do filme (Width):</strong> usei os <em>x</em> obtidos em 2.a:
-      <span style="font-family:ui-monospace,Menlo,Consolas,monospace;">c3 = 0,178 µm (1780 Å), c1 = 0,909 µm (9090 Å), c2 = 3,461 µm (34610 Å)</span>.
-    </li>
-    <li><strong>Ion Stopping &amp; Range Tables:</strong> para o alvo N–N–O (ρ=1,1593), li no log de <strong>90&nbsp;keV H</strong>:
-      <span style="font-family:ui-monospace,Menlo,Consolas,monospace;">Projected Range R<sub>p</sub> ≈ 1,47 µm; Longitudinal Straggling ≈ 0,195 µm</span>.
-    </li>
-    <li><strong>Critério:</strong> comparei cada espessura com <strong>R<sub>p</sub> ± ΔR<sub>p</sub></strong> para concluir implantação/atravessamento.</li>
-  </ol>
-
-  <!-- Tabela-resumo (decisão para c1, c2, c3) -->
-  <div style="font-size:0.95rem; margin-top:6px;">
-    <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:880px; margin:auto;">
-      <thead style="background:#f5f5f5;">
-        <tr>
-          <th style="text-align:left;">Caso</th>
-          <th style="text-align:right;">x (µm)</th>
-          <th style="text-align:right;">R<sub>p</sub> ± ΔR<sub>p</sub> (µm) &nbsp;<small>(90&nbsp;keV H)</small></th>
-          <th style="text-align:left;">Decisão</th>
-          <th style="text-align:left;">Como preenchi / O que li no log</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>c3</strong></td>
-          <td style="text-align:right;">0,178</td>
-          <td style="text-align:right;">1,47 ± 0,20</td>
-          <td style="text-align:left;">Atravessa (sem implantação)</td>
-          <td style="text-align:left;">
-            Width = 1780 Å; em “Ion Stopping and Range Tables” li <em>Projected Range</em> ≈ 1,47 µm e <em>Longitudinal Straggling</em> ≈ 0,195 µm (linha 90 keV).
-          </td>
-        </tr>
-        <tr>
-          <td><strong>c1</strong></td>
-          <td style="text-align:right;">0,909</td>
-          <td style="text-align:right;">1,47 ± 0,20</td>
-          <td style="text-align:left;">Atravessa (sem implantação)</td>
-          <td style="text-align:left;">
-            Width = 9090 Å; mesmo alvo/densidade. Comparado a 1,47±0,20 µm do log → filme ainda <em>mais fino</em> que o alcance.
-          </td>
-        </tr>
-        <tr>
-          <td><strong>c2</strong></td>
-          <td style="text-align:right;">3,461</td>
-          <td style="text-align:right;">1,47 ± 0,20</td>
-          <td style="text-align:left;">Implantação clara (filme &gt; alcance)</td>
-          <td style="text-align:left;">
-            Width = 34610 Å; o alcance 1,47 µm do log fica <em>bem menor</em> que a espessura → os íons param dentro da amostra.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Nota de replicação -->
-  <p class="muted" style="text-align:justify; margin-top:8px;">
-    Para alternar entre <strong>c1</strong>, <strong>c2</strong> e <strong>c3</strong>, mantive todas as configurações e apenas troquei o campo <em>Width</em> na camada “N₂O (11 K)”. Os três prints acima
-    (<em>srim-c1</em>, <em>srim-c2</em>, <em>srim-c3</em>) mostram as telas preenchidas e os trechos do log onde aparecem <em>Projected Range</em> e <em>Straggling</em>.
+  <!-- Regra usada (curto) -->
+  <p class="muted" style="margin-top:10px; text-align:justify;">
+    Regra de decisão: <em>atravessa</em> se <strong>x &lt; R<sub>p</sub> − ΔR<sub>p</sub></strong>; <em>implantação parcial</em> se
+    <strong>R<sub>p</sub> − ΔR<sub>p</sub> ≤ x ≤ R<sub>p</sub> + ΔR<sub>p</sub></strong>; <em>implanta</em> se
+    <strong>x &gt; R<sub>p</sub> + ΔR<sub>p</sub></strong>. Valores de <strong>R<sub>p</sub></strong> e <strong>ΔR<sub>p</sub></strong> foram lidos no log do SRIM para o alvo N–N–O (ρ=1,1593 g·cm⁻³), linha de 90&nbsp;keV.
   </p>
 </div>
-
 
     
 
