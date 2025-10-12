@@ -655,13 +655,35 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
 <!-- ===================== RESPOSTA 2.b — Verificação no SRIM/TRIM (C1) ===================== -->
 <div style="border:2px dashed #999; background:#fffdf5; padding:12px; border-radius:8px; margin:12px 0;">
 
-  <h4 style="margin:0 0 8px 0;">Resposta 2.b — Stopping power e alcance no SRIM (janela <em>c1</em>)</h4>
+  <h4 style="margin:0 0 8px 0;">Resposta 2.b — Stopping power e alcance no SRIM (metodologia para c1, c2 e c3)</h4>
 
-  <p style="margin:4px 0 10px; text-align:justify;">
-    Eu verifiquei no SRIM/TRIM se o alcance projetado do feixe ultrapassou a espessura do filme obtida em <strong>2.a</strong> para a banda
-    <strong>c1</strong> (janela 1310–1280&nbsp;cm<sup>−1</sup>). Para ilustrar, utilizei a execução mostrada no print abaixo, em que
-    li os valores diretamente da tabela <em>Ion Stopping &amp; Range Tables</em>.
-  </p>
+  <!-- bloco de método explícito: como calculei no SRIM para cada banda -->
+  <div style="background:#fffff2; border:1px solid #e6df9f; padding:10px; border-radius:6px; margin-bottom:10px; text-align:justify; line-height:1.55;">
+    <strong>Como verifiquei cada banda (c1, c2, c3) no SRIM:</strong>
+    <ol style="margin:6px 0 0 18px; padding:0;">
+      <li><em>Filme fixo</em>: defini o alvo como N<sub>2</sub>O sólido (11&nbsp;K) com densidade <code>ρ = 1,1593 g·cm⁻³</code> (N, N, O; 33,33% atômico cada N e O 33,33% conforme log).</li>
+      <li><em>Feixe fixo</em>: usei o mesmo íon/energia do experimento na janela <em>Ion Stopping &amp; Range Tables</em> (no seu print: <strong>H</strong> e li a linha de <strong>90&nbsp;keV</strong> como referência).</li>
+      <li><em>Leitura no SRIM</em>: para essa energia, li <strong>R<sub>p</sub></strong> (Projected Range, em µm) e o estraggle <strong>ΔR<sub>p</sub></strong>. Para o <em>stopping power</em> eletrônico em <strong>keV/µm</strong>, converti o valor da tabela usando o fator mostrado no rodapé:
+        <div style="font-family:ui-monospace, Menlo, Consolas, monospace; background:#fafafa; border:1px dashed #ddd; padding:6px; margin:6px 0;">
+          S<sub>e</sub>(keV/µm) = S<sub>e</sub>(tabela) × 1,1593×10² &nbsp;&nbsp;<!-- fator da linha “Multiply Stopping by … keV/ micron” -->
+        </div>
+      </li>
+      <li><em>Comparação com a espessura de 2.a</em>: para cada banda usei a espessura obtida anteriormente e comparei com o alcance do SRIM:
+        <div style="font-family:ui-monospace, Menlo, Consolas, monospace; background:#fafafa; border:1px dashed #ddd; padding:6px; margin:6px 0;">
+          c1: x = 0,909 µm &nbsp;|&nbsp; c2: x = 3,461 µm &nbsp;|&nbsp; c3: x = 0,178 µm
+        </div>
+        Critério:
+        <ul style="margin:4px 0 0 18px;">
+          <li><em>Atravessa</em> (sem implantação): se <strong>R<sub>p</sub> − ΔR<sub>p</sub> &gt; x</strong>.</li>
+          <li><em>Implantação parcial</em>: se <strong>R<sub>p</sub> − ΔR<sub>p</sub> ≤ x ≤ R<sub>p</sub> + ΔR<sub>p</sub></strong>.</li>
+          <li><em>Implanta</em> (para completamente no filme): se <strong>R<sub>p</sub> + ΔR<sub>p</sub> &lt; x</strong>.</li>
+        </ul>
+      </li>
+      <li><em>Imagem do relatório</em>: gerei a tela do TRIM (alvo N<sub>2</sub>O) e a janela <em>Ion Stopping &amp; Range Tables</em> com a tabela de alcance para anexar como evidência.</li>
+    </ol>
+  </div>
+
+  <h4 style="margin:6px 0 8px;">Aplicação — caso <em>c1</em> (1310–1280&nbsp;cm⁻¹)</h4>
 
   <!-- print pronto do SRIM para c1 -->
   <div class="print-area" style="text-align:center; margin-top:6px;">
@@ -673,19 +695,19 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
     >
   </div>
 
-  <!-- Passos que eu executei (TRIM e SR Tables) -->
+  <!-- Passos executados (TRIM e SR Tables) -->
   <details style="margin-top:8px;">
-    <summary style="cursor:pointer;"><strong>Como configurei o TRIM e o &ldquo;Ion Stopping &amp; Range Tables&rdquo; (passo a passo)</strong></summary>
+    <summary style="cursor:pointer;"><strong>Como configurei as telas (TRIM e Ion Stopping &amp; Range Tables)</strong></summary>
     <ol style="margin:8px 0 0 18px; padding:0; line-height:1.55; text-align:justify;">
-      <li><strong>Alvo (N₂O sólido, 11&nbsp;K):</strong> em <em>Target</em> adicionei <span style="white-space:nowrap;">N (Z=7)</span> duas vezes (stoich=2) e <span style="white-space:nowrap;">O (Z=8)</span> uma vez (stoich=1) ou usei <em>Compound Dictionary → Nitrous Oxide</em>. Defini <strong>Density = 1,1593 g/cm³</strong> (11&nbsp;K).</li>
-      <li><strong>Íon e varredura de energia (SR Tables):</strong> abri <em>Ion Stopping &amp; Range Tables</em> e selecionei <strong>Hydrogen (H)</strong> para gerar a tabela entre 10&nbsp;keV e 10&nbsp;MeV (como no print fornecido). Em <em>Stopping Power Units</em> mantive as unidades padrão e usei o fator da tabela para ler em <strong>keV/µm</strong> quando necessário.</li>
-      <li><strong>Leitura da linha de interesse:</strong> para comparar com a espessura de <em>c1</em>, li a linha <strong>90&nbsp;keV</strong> da tabela (ver área inferior do print), que reportou o <em>Projected Range</em> e os estraggles.</li>
+      <li><strong>Target (N₂O 11&nbsp;K):</strong> adicionei N, N e O (stoich 1:1:1 na lista, que o programa normaliza) e defini <em>Density</em> = <strong>1,1593 g/cm³</strong>.</li>
+      <li><strong>Ion Table:</strong> selecionei <strong>Hydrogen (H)</strong> e li a <strong>linha de 90&nbsp;keV</strong> (como no seu log). Em <em>Stopping Power Units</em> mantive a unidade padrão e converti para keV/µm com o fator do rodapé.</li>
+      <li><strong>Espessura comparada:</strong> usei <code>x<sub>c1</sub> = 0,909 µm</code> (obtida em 2.a) para decidir implantação.</li>
     </ol>
   </details>
 
   <!-- Resultados lidos do seu log (linha de 90 keV) -->
   <div style="text-align:justify; margin-top:10px;">
-    <strong>Resultados lidos (tabela do SRIM — linha de 90&nbsp;keV):</strong>
+    <strong>Resultados lidos (tabela do SRIM — 90&nbsp;keV):</strong>
     <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:880px; margin:6px 0;">
       <thead style="background:#f5f5f5;">
         <tr>
@@ -697,8 +719,8 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
       <tbody>
         <tr>
           <td>Stopping power eletrônico S<sub>e</sub> (keV/µm)</td>
-          <td style="text-align:right;">&approx; 6,66×10<sup>−1</sup> &times; 1,1593×10<sup>2</sup> &rarr; <strong>&approx; 77</strong></td>
-          <td>Conversão da unidade listada para keV/µm (rodapé da tabela do SRIM).</td>
+          <td style="text-align:right;">&approx; 0,6659 × 1,1593×10² → <strong>&approx; 77</strong></td>
+          <td>Conversão pela linha “Multiply Stopping by … keV/micron”.</td>
         </tr>
         <tr>
           <td>Alcance projetado R<sub>p</sub> (µm)</td>
@@ -708,7 +730,7 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
         <tr>
           <td>Estraggle longitudinal ΔR<sub>p</sub> (µm)</td>
           <td style="text-align:right;"><strong>0,151</strong></td>
-          <td>“Longitudinal Straggling = 1507&nbsp;Å = 0,1507&nbsp;µm”.</td>
+          <td>“Longitudinal Straggling = 1507 Å”.</td>
         </tr>
       </tbody>
     </table>
@@ -716,19 +738,18 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
 
   <!-- Comparação com a espessura da banda c1 e conclusão -->
   <div style="margin-top:10px; line-height:1.6; text-align:justify;">
-    <strong>Comparação com a espessura de c1 (obtida em 2.a)</strong><br>
-    Espessura do filme (c1): <code>x<sub>c1</sub> = 0,909&nbsp;µm</code><br>
-    Alcance efetivo mínimo: <code>R<sub>p</sub> − ΔR<sub>p</sub> = 1,47 − 0,151 = 1,319&nbsp;µm</code>
-    <div style="border-left:3px solid #4a7; padding-left:10px; margin-top:6px;">
-      Como <strong>1,319&nbsp;µm &gt; 0,909&nbsp;µm</strong>, o feixe ultrapassou a espessura do filme no caso <em>c1</em>.  
-      <strong>Conclusão:</strong> para <em>c1</em>, não houve implantação; os íons atravessaram o gelo (regime de <em>through-range</em>).
+    <strong>Comparação com a espessura de c1 (2.a):</strong>
+    <div style="font-family:ui-monospace, Menlo, Consolas, monospace; background:#fafafa; border:1px dashed #ddd; padding:8px; margin-top:6px;">
+      x<sub>c1</sub> = 0,909 µm &nbsp;&nbsp;|&nbsp;&nbsp; R<sub>p</sub> ± ΔR<sub>p</sub> = 1,47 ± 0,151 µm → (1,319 – 1,621) µm
     </div>
+    Como <strong>1,319 µm &gt; 0,909 µm</strong>, o alcance mínimo já excede a espessura do filme.
+    <strong>Conclusão:</strong> no caso <em>c1</em> o feixe atravessou o gelo (sem implantação).
   </div>
 
-  <!-- Observação sobre repetição para c2 e c3 -->
+  <!-- Observação para c2 e c3 -->
   <p class="muted" style="margin-top:10px; text-align:justify;">
-    Eu repetirei o mesmo procedimento para <strong>c2</strong> e <strong>c3</strong> (lendo as linhas de energia correspondentes e comparando
-    com <code>x<sub>c2</sub> = 3,461&nbsp;µm</code> e <code>x<sub>c3</sub> = 0,178&nbsp;µm</code>) para fechar a análise de implantação nas três janelas.
+    Para <strong>c2</strong> e <strong>c3</strong> o procedimento é idêntico: manter o mesmo feixe/energia no SRIM, ler <em>R<sub>p</sub></em> e <em>ΔR<sub>p</sub></em> na tabela e comparar
+    com <code>x<sub>c2</sub> = 3,461 µm</code> e <code>x<sub>c3</sub> = 0,178 µm</code>. Se desejar, rode o TRIM com a <em>Layer Width</em> igual a cada <em>x</em> apenas para gerar a imagem do alvo com a espessura da amostra.
   </p>
 </div>
 
