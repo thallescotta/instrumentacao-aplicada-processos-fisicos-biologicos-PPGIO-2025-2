@@ -112,48 +112,46 @@
     <h2>Roteiro Prático (OMNIC → Cálculos → Gráficos)</h2>
 
 
+
+
 <!-- 1.a) Espectro não irradiado — abertura, ajuste e espessura -->
 <div class="enunciado">
   <strong>a.</strong> Abrir o espectro sem irradiar, para determinar a espessura do filme formado.
 </div>
 
-<!-- GIFs: abertura/preparo e ajuste da banda -->
-<div class="print-area">
-  <strong>GIFs 1 e 2 — Abertura e preparo (letra a)</strong><br>
+<!-- GIFs 1 e 2 -->
+<div class="print-area" style="text-align:center;">
+  <strong>GIFs 1 e 2 - Abertura e preparo (letra a)</strong><br>
   <img
     src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/Anima%C3%A7%C3%A3o-a1.gif"
-    style="max-width:100%;height:auto"
+    style="max-width:100%;height:auto;display:block;margin:8px auto;"
     alt="Abri o espectro pré-irradiação e preparei a área de trabalho (Display Limits, Smooth, Baseline)."
     title="Abri o espectro pré-irradiação e preparei a área de trabalho: limitei a janela espectral, suavizei levemente e corrigi o baseline."
   >
   <img
     src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/Anima%C3%A7%C3%A3o-a2.gif"
-    style="max-width:100%;height:auto;margin-top:8px"
-    alt="Enquadrei 2300–2170 cm⁻¹ e ajustei a banda 2239 cm⁻¹ com Peak Resolve (Baseline Linear)."
-    title="Enquadrei 2300–2170 cm⁻¹ e ajustei a banda ν₃ (~2239 cm⁻¹) via Analyze → Peak Resolve (Baseline Linear), gerando o Composite Result."
+    style="max-width:100%;height:auto;display:block;margin:8px auto;"
+    alt="Enquadrei 2300–2170 cm⁻1 e ajustei a banda 2239 cm⁻1 com Peak Resolve (Baseline Linear)."
+    title="Enquadrei 2300–2170 cm⁻1 e ajustei a banda ν₃ (~2239 cm⁻1) via Peak Resolve (Baseline Linear), gerando o Composite Result."
   >
 </div>
 
-<!-- Imagem do Result / seleção da banda -->
-<div class="print-area" style="margin-top:10px">
+<!-- Imagem do Result -->
+<div class="print-area" style="text-align:center;">
   <strong>Print 1.1 — Seleção da banda no Result</strong><br>
   <img
     src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/a3.png"
-    style="max-width:100%;height:auto"
-    alt="Na janela Result selecionei 2300–2170 cm⁻¹ (banda ν₃)."
-    title="Na janela Result selecionei 2300–2170 cm⁻¹. Para evitar superestimativa por baseline, conferi a área somando os componentes em Peaks…"
+    style="max-width:100%;height:auto;display:block;margin:8px auto;"
+    alt="Na janela Result selecionei 2300–2170 cm⁻1 (banda ν₃)."
+    title="Na janela Result selecionei 2300–2170 cm⁻1. Para evitar superestimativa por baseline, confirmei a área somando os componentes em Peaks…"
   >
-  <p class="muted" style="margin:6px 0 0">
-    Observação — Para garantir a área da banda sem contribuição de baseline, somei as áreas dos componentes Voigt na tabela
-    <em>Peaks…</em> (abaixo), em vez de usar diretamente o “Total Region” do traço <em>Result</em>.
-  </p>
 </div>
 
-<!-- Tabela de picos (Peaks…) usada para a soma da área -->
-<div class="print-area" style="margin-top:10px">
+<!-- Tabela centralizada -->
+<div class="print-area" style="text-align:center;">
   <strong>Tabela 1 — Componentes Voigt (2300–2170 cm⁻¹)</strong>
-  <div style="overflow-x:auto">
-    <table border="1" cellpadding="6" style="border-collapse:collapse;min-width:620px">
+  <div style="display:inline-block; text-align:left; margin:8px auto;">
+    <table border="1" cellpadding="6" style="border-collapse:collapse; margin:auto;">
       <thead style="background:#f5f5f5">
         <tr>
           <th>Peak #</th><th>Peak Type</th><th>Center X (cm⁻¹)</th>
@@ -183,22 +181,27 @@
     </table>
   </div>
   <p class="muted" style="margin-top:6px">
-    A soma das áreas dos componentes dentro da faixa 2300–2170 cm⁻¹ forneceu a área integrada da banda ν₃:
+    Eu somei as áreas dos componentes na faixa 2300–2170 cm⁻¹ e obtive a área integrada da banda ν₃:
     <strong>A = 39,3823&nbsp;absorbance·cm⁻¹</strong>.
   </p>
 </div>
 
 <!-- Cálculo da espessura -->
-<div class="calc" style="margin-top:8px">
+<div class="calc" style="text-align:center; margin-top:8px;">
   <strong>Resultado da espessura (letra a)</strong><br>
-  Eu converti a área integrada em espessura usando o fator F′ da banda 2239&nbsp;cm⁻¹ (<em>d</em> em nm):
-  <ul style="margin:6px 0">
-    <li><em>KBr</em>: <code>d = 25,51 × A</code> → <code>d = 25,51 × 39,3823 ≈ 1.004,64 nm</code> (≈ <strong>1,00&nbsp;µm</strong>)</li>
-    <li><em>Si</em>:  <code>d = 22,17 × A</code> → <code>d = 22,17 × 39,3823 ≈ &nbsp;873,11 nm</code> (≈ <strong>0,87&nbsp;µm</strong>)</li>
-  </ul>
-  <span class="muted">Nota — Reportei ambos os valores; o que vale é o do substrato utilizado na amostra. Os fatores F′ já consideram a integração em absorbância (base-10).</span>
+  <div style="display:inline-block; text-align:left; margin-top:6px;">
+    KBr: <code>d = 25,51 × A</code> &rarr; <code>d = 25,51 × 39,3823 ≈ 1.004,64 nm</code> (≈ <strong>1,00&nbsp;µm</strong>)<br>
+    Si:&nbsp;&nbsp; <code>d = 22,17 × A</code> &rarr; <code>d = 22,17 × 39,3823 ≈&nbsp;&nbsp;873,11 nm</code> (≈ <strong>0,87&nbsp;µm</strong>)
+  </div>
+  <p class="muted" style="margin-top:6px; max-width:820px; margin-left:auto; margin-right:auto;">
+    <strong>Observação.</strong> <em>KBr</em> (brometo de potássio) e <em>Si</em> (silício) são os substratos do filme no experimento de FTIR;
+    o fator F′ (nm por unidade de área) depende do substrato e já considera que a integração foi feita em absorbância (base-10).
+    No Excel, eu colei a tabela <em>Peaks…</em> e usei <code>SOMASES/SUMIFS</code> para somar apenas as áreas cujos <em>Center X</em> ficaram entre
+    2170 e 2300&nbsp;cm⁻¹, garantindo a área da banda sem contribuição do baseline.
+  </p>
 </div>
 
+    
 
 
 
