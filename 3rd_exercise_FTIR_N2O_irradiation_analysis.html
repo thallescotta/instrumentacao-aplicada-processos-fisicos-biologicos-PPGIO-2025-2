@@ -469,34 +469,43 @@
 <!-- ===================== RESPOSTA 2.a — Cálculo de espessura (com pontilhado) ===================== -->
 <div style="border:2px dashed #999; background:#fffdf5; padding:12px; border-radius:8px; margin:10px 0;">
 
-  <h4 style="margin:0 0 8px 0;">Resposta 2.a — Espessura do gelo a partir das três bandas</h4>
+  <h4 style="margin:0 0 8px 0;">Resposta 2.a — Espessura do gelo a partir das três bandas (11&nbsp;K, 0.5&nbsp;mbar)</h4>
+
+  <!-- Ilustrações c1, c2, c3 -->
+  <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:6px 0 10px;">
+    <img src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/3.c.1.png"
+         alt="c1 (ν1) — 1310–1280 cm-1" style="width:30%; min-width:220px; height:auto; border:1px solid #ddd; padding:2px;">
+    <img src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/3.c.2.png"
+         alt="c2 (2ν1) — 2600–2565 cm-1" style="width:30%; min-width:220px; height:auto; border:1px solid #ddd; padding:2px;">
+    <img src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/3.c.3.png"
+         alt="c3 (ν3) — 2245–2228 cm-1" style="width:30%; min-width:220px; height:auto; border:1px solid #ddd; padding:2px;">
+  </div>
 
   <!-- Passo-a-passo (no passado) -->
-  <ol style="margin:0 0 10px 18px; padding:0; line-height:1.5;">
+  <ol style="margin:0 0 10px 18px; padding:0; line-height:1.55;">
     <li>Eu integrei as áreas das três bandas no OMNIC (c1, c2, c3) após <em>Smooth</em> e <em>Automatic Baseline Correct</em>.</li>
     <li>Para cada banda, eu calculei a densidade de coluna <strong>N</strong> com a Eq.&nbsp;2:
       <div style="margin:6px 0 0 0;">
-        <code>N = \ln(10) \times \dfrac{\text{Área integrada}}{A\text{-value}}</code>
-        <span style="opacity:.85;">(Área em absorbance·cm<sup>−1</sup>; A-value em cm·molec<sup>−1</sup>)</span>
+        <code>N = ln(10) × (Área integrada) / (A-value)</code>
+        <span style="opacity:.85;">&nbsp;[Área em absorbance·cm<sup>−1</sup>; A-value em cm·molec<sup>−1</sup>]</span>
       </div>
     </li>
-    <li>Com a densidade do N<sub>2</sub>O a <strong>11&nbsp;K</strong> (Fulvio, 2009) eu obtive a densidade numérica
-      <strong>n</strong> do sólido:
+    <li>Com a densidade do N<sub>2</sub>O a <strong>11&nbsp;K</strong> (Fulvio, 2009) eu obtive a densidade numérica <strong>n</strong> do sólido:
       <div style="margin:6px 0 0 0;">
-        <code>n = \dfrac{\rho(11\,\text{K}) \times N_A}{M}</code>
-        <span style="opacity:.85;">(ρ em g·cm<sup>−3</sup>, M = 44&nbsp;g·mol<sup>−1</sup>, N<sub>A</sub> = 6,022×10<sup>23</sup> mol<sup>−1</sup>)</span>
+        <code>n = ρ(11 K) × N<sub>A</sub> / M</code>
+        <span style="opacity:.85;">&nbsp;[ρ em g·cm<sup>−3</sup>; M = 44 g·mol<sup>−1</sup>; N<sub>A</sub> = 6,022×10<sup>23</sup> mol<sup>−1</sup>]</span>
       </div>
     </li>
     <li>Por fim, eu converti <strong>N</strong> em espessura <strong>x</strong>:
       <div style="margin:6px 0 0 0;">
-        <code>x\,(cm) = \dfrac{N}{n}</code> &nbsp;→&nbsp; <code>x\,(nm) = \dfrac{N}{n}\times 10^{7}</code>
+        <code>x (cm) = N / n</code> &nbsp;→&nbsp; <code>x (nm) = (N / n) × 10<sup>7</sup></code>
       </div>
     </li>
   </ol>
 
-  <!-- Tabela compacta dos resultados (preencher com seus valores de área/A) -->
-  <div style="font-size:0.95rem; margin-top:8px;">
-    <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:860px; margin:auto;">
+  <!-- Tabela com as áreas já somadas (a partir dos seus "PEAKS RESOLVED") -->
+  <div style="font-size:0.95rem; margin-top:10px;">
+    <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:950px; margin:auto;">
       <thead style="background:#f5f5f5;">
         <tr>
           <th style="text-align:left;">Banda</th>
@@ -509,25 +518,25 @@
       </thead>
       <tbody>
         <tr>
-          <td><strong>c1</strong> (ν₁)</td>
+          <td><strong>c1</strong> (ν1)</td>
           <td>1310–1280</td>
-          <td style="text-align:right;">&nbsp;<!-- preencha --></td>
+          <td style="text-align:right;"><strong>6,7660</strong></td>
           <td style="text-align:right;">(Tabela 4 — Fulvio 2009)</td>
           <td style="text-align:right;">&nbsp;</td>
           <td style="text-align:right;">&nbsp;</td>
         </tr>
         <tr>
-          <td><strong>c2</strong> (2ν₁)</td>
+          <td><strong>c2</strong> (2ν1)</td>
           <td>2600–2565</td>
-          <td style="text-align:right;">&nbsp;</td>
+          <td style="text-align:right;"><strong>3,6102</strong></td>
           <td style="text-align:right;">(Tabela 4 — Fulvio 2009)</td>
           <td style="text-align:right;">&nbsp;</td>
           <td style="text-align:right;">&nbsp;</td>
         </tr>
         <tr>
-          <td><strong>c3</strong> (ν₃)</td>
+          <td><strong>c3</strong> (ν3)</td>
           <td>2245–2228</td>
-          <td style="text-align:right;">&nbsp;</td>
+          <td style="text-align:right;"><strong>7,0326</strong></td>
           <td style="text-align:right;">(Tabela 4 — Fulvio 2009)</td>
           <td style="text-align:right;">&nbsp;</td>
           <td style="text-align:right;">&nbsp;</td>
@@ -542,19 +551,34 @@
     </table>
   </div>
 
+  <!-- Detalhe: picos e áreas que geraram as somas (opcional, recolhível) -->
+  <details style="margin-top:10px;">
+    <summary style="cursor:pointer;">Ver como somei as áreas (c1, c2, c3)</summary>
+    <div style="font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.92rem; white-space:pre-wrap; background:#fafafa; border:1px solid #eee; padding:8px; margin-top:6px;">
+<strong>c1 (1310–1280 cm⁻¹)</strong>
+Áreas: 3,6083 + 3,1577 = <strong>6,7660</strong>
+
+<strong>c2 (2600–2565 cm⁻¹)</strong>
+Áreas: 1,2592 + 0,5320 + 0,4016 + 0,2555 + 0,8399 + 0,2401 + 0,0813 + 0,0006 = <strong>3,6102</strong>
+
+<strong>c3 (2245–2228 cm⁻¹)</strong>
+Áreas: 0,0012 + 7,0314 = <strong>7,0326</strong>
+    </div>
+  </details>
+
   <!-- Observações curtas -->
   <ul style="margin:10px 0 0 18px; padding:0; line-height:1.5; font-size:0.95rem;">
     <li>As <em>A-values</em> devem ser copiadas da <strong>Tabela 4</strong> (Fulvio, 2009) para cada banda.</li>
-    <li>Usei a <strong>ρ(11&nbsp;K)</strong> do N<sub>2</sub>O reportada por Fulvio (2009) ao calcular <em>n</em>.</li>
-    <li>Manteve-se o mesmo procedimento de integração do item 1 (Peak Resolve → <em>Statistics…</em> → <em>Clipboard</em>).</li>
+    <li>Use a <strong>ρ(11&nbsp;K)</strong> do N<sub>2</sub>O reportada por Fulvio (2009) ao calcular <em>n</em>.</li>
+    <li>Procedimento de integração: Peak Resolve → <em>Find Peaks</em> → <em>Fit Peaks</em> → <em>Statistics…</em> → <em>Clipboard</em>.</li>
   </ul>
 
-  <!-- Lembrete de origem dos números -->
   <div class="muted" style="margin-top:10px; font-size:0.9rem;">
     <strong>Fontes dos parâmetros:</strong> áreas integradas (OMNIC); A-values e ρ(11&nbsp;K) (Fulvio, 2009);
-    M = 44&nbsp;g·mol<sup>−1</sup>; N<sub>A</sub> = 6,022×10<sup>23</sup> mol<sup>−1</sup>.
+    M = 44 g·mol<sup>−1</sup>; N<sub>A</sub> = 6,022×10<sup>23</sup> mol<sup>−1</sup>.
   </div>
 </div>
+
 
 
 <div class="enunciado" style="text-align:justify;">
