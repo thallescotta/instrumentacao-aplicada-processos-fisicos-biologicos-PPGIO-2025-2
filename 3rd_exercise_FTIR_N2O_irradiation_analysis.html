@@ -461,9 +461,101 @@
 
 </div>
   
+<!-- ============== ENUNCIADO 2.a (mantido exatamente) ============== -->
 <div class="enunciado" style="text-align:justify;">
   <strong>2.a)</strong> Utilizar para tal determinação a densidade do N2O a 11k dado no artigo do Fulvio 2009. Fazer este cálculo para as 3 bandas do artigo com o A-value.
 </div>
+
+<!-- ===================== RESPOSTA 2.a — Cálculo de espessura (com pontilhado) ===================== -->
+<div style="border:2px dashed #999; background:#fffdf5; padding:12px; border-radius:8px; margin:10px 0;">
+
+  <h4 style="margin:0 0 8px 0;">Resposta 2.a — Espessura do gelo a partir das três bandas</h4>
+
+  <!-- Passo-a-passo (no passado) -->
+  <ol style="margin:0 0 10px 18px; padding:0; line-height:1.5;">
+    <li>Eu integrei as áreas das três bandas no OMNIC (c1, c2, c3) após <em>Smooth</em> e <em>Automatic Baseline Correct</em>.</li>
+    <li>Para cada banda, eu calculei a densidade de coluna <strong>N</strong> com a Eq.&nbsp;2:
+      <div style="margin:6px 0 0 0;">
+        <code>N = \ln(10) \times \dfrac{\text{Área integrada}}{A\text{-value}}</code>
+        <span style="opacity:.85;">(Área em absorbance·cm<sup>−1</sup>; A-value em cm·molec<sup>−1</sup>)</span>
+      </div>
+    </li>
+    <li>Com a densidade do N<sub>2</sub>O a <strong>11&nbsp;K</strong> (Fulvio, 2009) eu obtive a densidade numérica
+      <strong>n</strong> do sólido:
+      <div style="margin:6px 0 0 0;">
+        <code>n = \dfrac{\rho(11\,\text{K}) \times N_A}{M}</code>
+        <span style="opacity:.85;">(ρ em g·cm<sup>−3</sup>, M = 44&nbsp;g·mol<sup>−1</sup>, N<sub>A</sub> = 6,022×10<sup>23</sup> mol<sup>−1</sup>)</span>
+      </div>
+    </li>
+    <li>Por fim, eu converti <strong>N</strong> em espessura <strong>x</strong>:
+      <div style="margin:6px 0 0 0;">
+        <code>x\,(cm) = \dfrac{N}{n}</code> &nbsp;→&nbsp; <code>x\,(nm) = \dfrac{N}{n}\times 10^{7}</code>
+      </div>
+    </li>
+  </ol>
+
+  <!-- Tabela compacta dos resultados (preencher com seus valores de área/A) -->
+  <div style="font-size:0.95rem; margin-top:8px;">
+    <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:860px; margin:auto;">
+      <thead style="background:#f5f5f5;">
+        <tr>
+          <th style="text-align:left;">Banda</th>
+          <th style="text-align:left;">Janela (cm⁻¹)</th>
+          <th style="text-align:right;">Área integrada<br>(abs·cm⁻¹)</th>
+          <th style="text-align:right;">A-value<br>(cm·molec⁻¹)</th>
+          <th style="text-align:right;">N = ln(10)·Área/A<br>(molec·cm⁻²)</th>
+          <th style="text-align:right;">x = N/n<br>(nm)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>c1</strong> (ν₁)</td>
+          <td>1310–1280</td>
+          <td style="text-align:right;">&nbsp;<!-- preencha --></td>
+          <td style="text-align:right;">(Tabela 4 — Fulvio 2009)</td>
+          <td style="text-align:right;">&nbsp;</td>
+          <td style="text-align:right;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td><strong>c2</strong> (2ν₁)</td>
+          <td>2600–2565</td>
+          <td style="text-align:right;">&nbsp;</td>
+          <td style="text-align:right;">(Tabela 4 — Fulvio 2009)</td>
+          <td style="text-align:right;">&nbsp;</td>
+          <td style="text-align:right;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td><strong>c3</strong> (ν₃)</td>
+          <td>2245–2228</td>
+          <td style="text-align:right;">&nbsp;</td>
+          <td style="text-align:right;">(Tabela 4 — Fulvio 2009)</td>
+          <td style="text-align:right;">&nbsp;</td>
+          <td style="text-align:right;">&nbsp;</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="5" style="text-align:right;">Média/intervalo de x (nm):</th>
+          <th style="text-align:right;">&nbsp;</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- Observações curtas -->
+  <ul style="margin:10px 0 0 18px; padding:0; line-height:1.5; font-size:0.95rem;">
+    <li>As <em>A-values</em> devem ser copiadas da <strong>Tabela 4</strong> (Fulvio, 2009) para cada banda.</li>
+    <li>Usei a <strong>ρ(11&nbsp;K)</strong> do N<sub>2</sub>O reportada por Fulvio (2009) ao calcular <em>n</em>.</li>
+    <li>Manteve-se o mesmo procedimento de integração do item 1 (Peak Resolve → <em>Statistics…</em> → <em>Clipboard</em>).</li>
+  </ul>
+
+  <!-- Lembrete de origem dos números -->
+  <div class="muted" style="margin-top:10px; font-size:0.9rem;">
+    <strong>Fontes dos parâmetros:</strong> áreas integradas (OMNIC); A-values e ρ(11&nbsp;K) (Fulvio, 2009);
+    M = 44&nbsp;g·mol<sup>−1</sup>; N<sub>A</sub> = 6,022×10<sup>23</sup> mol<sup>−1</sup>.
+  </div>
+</div>
+
 
 <div class="enunciado" style="text-align:justify;">
   <strong>2.b)</strong> Como estes valores verificar através do programa SRIM (visto na aula anterior) como o feixe se comporta em unidade de keV/microns.
