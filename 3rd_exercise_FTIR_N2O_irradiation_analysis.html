@@ -562,6 +562,61 @@
     </div>
   </details>
 
+
+<!-- Como cheguei aos valores em vermelho (A-values, N e x) -->
+<details style="margin-top:10px;">
+  <summary style="cursor:pointer;">Ver como obtive os <span style="color:#c00;font-weight:700;">valores em vermelho</span> (A-values, N e x)</summary>
+
+  <div style="background:#fafafa;border:1px solid #eee;padding:10px;line-height:1.6;font-size:0.95rem;">
+    <ol style="margin:0 0 8px 18px;">
+      <li>
+        <strong>A-values (cm·molec⁻¹)</strong>:
+        <ul style="margin:4px 0 8px 18px;">
+          <li><strong>ν₁ (c1)</strong>: <span style="color:#c00;font-weight:700;">1,07×10⁻¹⁷</span></li>
+          <li><strong>2ν₁ (c2)</strong>: <span style="color:#c00;font-weight:700;">1,50×10⁻¹⁸</span></li>
+          <li><strong>ν₃ (c3)</strong>: <span style="color:#c00;font-weight:700;">5,69×10⁻¹⁷</span></li>
+        </ul>
+        Esses valores vieram de compilações de <em>band strengths</em> que citam Fulvio (2009).
+      </li>
+
+      <li>
+        <strong>Densidade numérica do N₂O a 11 K</strong>:
+        <div style="font-family:ui-monospace, Menlo, Consolas, monospace;">
+          ρ = 1,17 g·cm⁻³;&nbsp; M = 44 g·mol⁻¹;&nbsp; N<sub>A</sub> = 6,022×10²³ mol⁻¹<br>
+          n = ρ·N<sub>A</sub>/M ≈ 1,17/44 × 6,022×10²³ ≈ <span style="color:#c00;font-weight:700;">1,60×10²² molec·cm⁻³</span>
+        </div>
+      </li>
+
+      <li>
+        <strong>Coluna N e espessura x por banda</strong> (Eq. 2: N = ln(10)·Área/A; &nbsp;x = N/n; &nbsp;1 cm = 10⁷ nm):
+        <div style="font-family:ui-monospace, Menlo, Consolas, monospace;white-space:pre-wrap;background:#fff;border:1px dashed #ddd;padding:8px;margin-top:6px;">
+<strong>c1 (ν₁)</strong>
+Área = 6,7660 abs·cm⁻¹;  A = 1,07×10⁻¹⁷
+N = 2,302585×6,7660 / 1,07×10⁻¹⁷  ≈ <span style="color:#c00;font-weight:700;">1,46×10¹⁸</span> molec·cm⁻²
+x = N/n = 1,46×10¹⁸ / 1,60×10²² = 9,09×10⁻⁵ cm = <span style="color:#c00;font-weight:700;">909 nm</span>
+
+<strong>c2 (2ν₁)</strong>
+Área = 3,6102 abs·cm⁻¹;  A = 1,50×10⁻¹⁸
+N = 2,302585×3,6102 / 1,50×10⁻¹⁸  ≈ <span style="color:#c00;font-weight:700;">5,53×10¹⁸</span> molec·cm⁻²
+x = N/n = 5,53×10¹⁸ / 1,60×10²² = 3,46×10⁻⁴ cm = <span style="color:#c00;font-weight:700;">3 461 nm</span>
+
+<strong>c3 (ν₃)</strong>
+Área = 7,0326 abs·cm⁻¹;  A = 5,69×10⁻¹⁷
+N = 2,302585×7,0326 / 5,69×10⁻¹⁷ ≈ <span style="color:#c00;font-weight:700;">2,85×10¹⁷</span> molec·cm⁻²
+x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:#c00;font-weight:700;">178 nm</span>
+        </div>
+      </li>
+    </ol>
+
+    <div style="font-size:0.9rem;opacity:.9;margin-top:6px;">
+      <strong>Observação.</strong> c2 (2ν₁) foi incluída usando um A-value de referência de literatura recente; se você optar por manter
+      apenas as bandas ν₁ e ν₃ (mais consolidadas), reporte também o intervalo/média com essas duas.
+    </div>
+  </div>
+</details>
+
+
+
   <!-- Notas e referências -->
   <ul style="margin:10px 0 0 18px; padding:0; line-height:1.5; font-size:0.95rem;">
     <li><em>A-values</em> usados: ν₁ = 1,07×10<sup>−17</sup>; 2ν₁ = 1,50×10<sup>−18</sup>; ν₃ = 5,69×10<sup>−17</sup> cm·molec<sup>−1</sup> (compilações recentes que citam Fulvio, 2009).</li>
