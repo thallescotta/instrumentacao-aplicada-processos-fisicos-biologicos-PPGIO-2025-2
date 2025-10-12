@@ -640,11 +640,11 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
 
 
 
+<!-- ============== ENUNCIADO 2.b (mantido exatamente) ============== -->
 <div class="enunciado" style="text-align:justify;">
   <strong>2.b)</strong> Como estes valores verificar através do programa SRIM (visto na aula anterior) como o feixe se comporta em unidade de keV/microns.
   <br>Saberemos através destes dados se ocorreu implantação ou não do feixe na amostra.
-  <br>
-  <br>
+  <br><br>
   <img
     src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/2-enun.png"
     alt="Enunciado 2 — referência SRIM/TRIM"
@@ -652,13 +652,84 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
   >
 </div>
 
+<!-- ===================== RESPOSTA 2.b — Verificação no SRIM/TRIM ===================== -->
+<div style="border:2px dashed #999; background:#fffdf5; padding:12px; border-radius:8px; margin:12px 0;">
 
+  <h4 style="margin:0 0 8px 0;">Resposta 2.b — Stopping power e alcance no SRIM</h4>
 
-<!-- Espaço para o print do SRIM/TRIM (como pede o enunciado) -->
-<div style="text-align:justify; margin-top:8px;">
-  <strong>Print 4</strong><br>
-  <em>(Inserir captura: resultados SRIM/TRIM e conclusão)</em>
+  <p style="margin:4px 0 10px; text-align:justify;">
+    Eu utilizei as espessuras estimadas na etapa 2.a (pelas bandas <em>c1</em>, <em>c2</em> e <em>c3</em>) como espessura do filme de N₂O no SRIM e verifiquei se o
+    alcance projetado do feixe foi maior ou menor que essas espessuras. Assim, concluí se houve implantação (íons pararam no filme) ou atravessamento.
+  </p>
+
+  <ol style="margin:0 0 10px 18px; padding:0; line-height:1.55;">
+    <li><strong>Eu defini o íon do feixe:</strong> em <em>Ion</em> selecionei <strong>Xe</strong> e inseri a energia do experimento (ex.: <strong>90&nbsp;MeV</strong>).</li>
+    <li><strong>Eu montei o alvo (Target):</strong> adicionei <strong>N</strong> (stoich=2) e <strong>O</strong> (stoich=1) via <em>Add Element</em>, defini o composto <em>N₂O</em> e
+        informei a <em>Density</em> do N₂O sólido a ~11&nbsp;K (ex.: <strong>1,17 g/cm³</strong>).</li>
+    <li><strong>Eu ajustei as unidades:</strong> em <em>Stopping Power Units</em> selecionei <strong>keV / (µm)</strong>.</li>
+    <li><strong>Eu inseri a espessura do filme:</strong> rodei o cálculo para cada valor obtido em 2.a:
+      <div style="font-family:ui-monospace, Menlo, Consolas, monospace; background:#fafafa; border:1px solid #eee; padding:6px; margin-top:6px;">
+        x<sub>c1</sub> = 0,909 µm &nbsp;•&nbsp; x<sub>c2</sub> = 3,461 µm &nbsp;•&nbsp; x<sub>c3</sub> = 0,178 µm
+      </div>
+      <small style="opacity:.85;">(Opcional: use também a média/intervalo de espessura como valor “representativo”.)</small>
+    </li>
+    <li><strong>Eu calculei a tabela:</strong> cliquei <em>Calculate Table</em> e anotei o <em>stopping power</em>, o <strong>alcance projetado</strong> R<sub>p</sub> e o <strong>estraggle</strong> ΔR<sub>p</sub>.</li>
+  </ol>
+
+  <!-- Tabela para você colar os números do SRIM -->
+  <div style="text-align:justify; margin-top:8px;">
+    <strong>Resultados SRIM (valores que eu coletei)</strong>
+    <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:880px; margin:6px 0;">
+      <thead style="background:#f5f5f5;">
+        <tr>
+          <th style="text-align:left;">Parâmetro</th>
+          <th style="text-align:right;">Valor</th>
+          <th style="text-align:left;">Comentário</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Stopping power eletrônico S<sub>e</sub> (keV/µm)</td>
+          <td style="text-align:right;"><em><!-- cole do SRIM --></em></td>
+          <td>Perda de energia por unidade de espessura no N₂O.</td>
+        </tr>
+        <tr>
+          <td>Alcance projetado R<sub>p</sub> (µm)</td>
+          <td style="text-align:right;"><em><!-- cole do SRIM --></em></td>
+          <td>Profundidade média onde os íons pararam.</td>
+        </tr>
+        <tr>
+          <td>Estraggle ΔR<sub>p</sub> (µm)</td>
+          <td style="text-align:right;"><em><!-- cole do SRIM --></em></td>
+          <td>Largura da distribuição de alcances.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Como decidir implantação -->
+  <div style="margin-top:10px; line-height:1.55; text-align:justify;">
+    <strong>Decisão (critérios que eu apliquei)</strong>
+    <ul style="margin:6px 0 0 18px;">
+      <li><em>Sem implantação</em> (atravessou): se <strong>R<sub>p</sub> − ΔR<sub>p</sub> &gt; x</strong>.</li>
+      <li><em>Implantação parcial</em>: se <strong>R<sub>p</sub> − ΔR<sub>p</sub> ≤ x ≤ R<sub>p</sub> + ΔR<sub>p</sub></strong>.</li>
+      <li><em>Implantação clara</em> (parou dentro): se <strong>R<sub>p</sub> + ΔR<sub>p</sub> &lt; x</strong>.</li>
+    </ul>
+    <div style="font-family:ui-monospace, Menlo, Consolas, monospace; background:#fafafa; border:1px dashed #ddd; padding:8px; margin-top:6px;">
+      Para cada espessura que obtive em 2.a:<br>
+      • x = 0,178 µm (c3) → comparar com R<sub>p</sub> ± ΔR<sub>p</sub>.<br>
+      • x = 0,909 µm (c1) → comparar com R<sub>p</sub> ± ΔR<sub>p</sub>.<br>
+      • x = 3,461 µm (c2) → comparar com R<sub>p</sub> ± ΔR<sub>p</sub>.
+    </div>
+  </div>
+
+  <!-- Espaço para o print do SRIM/TRIM -->
+  <div class="print-area" style="text-align:center; margin-top:12px;">
+    <strong>Print 4 — SRIM configurado</strong><br>
+    <em>(Inserir captura: Ion=Xe (90 MeV), Target=N₂O com densidade, tabela de S<sub>e</sub>, R<sub>p</sub>, ΔR<sub>p</sub> e sua conclusão de implantação)</em>
+  </div>
 </div>
+
     
 
 <!-- ===================== SEÇÃO 3 (texto original, apenas formatado/justificado) ===================== -->
