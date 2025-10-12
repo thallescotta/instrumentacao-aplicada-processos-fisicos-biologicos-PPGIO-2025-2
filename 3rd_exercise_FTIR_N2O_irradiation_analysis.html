@@ -1179,8 +1179,69 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
   <br>3.4.1 - Gráfico Área X  fluência
   <br>3.4.2 - Gráfico Densidade de coluna (N)  X fluência
 </div>
-<div class="print-area" style="text-align:justify;"><strong>Print 6</strong><br><em>(Inserir gráficos: Área×Fluência e N×Fluência — “Pai”)</em></div>
 
+<!-- Print 6 — gráficos 3.4.1 e 3.4.2 -->
+<div class="print-area" style="text-align:center;">
+  <strong>Print 6</strong><br>
+  <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:8px;">
+
+    <!-- (A) Área × Fluência -->
+    <div style="flex:1 1 420px; max-width:820px;">
+      <div style="font-weight:600; margin-bottom:6px; text-align:left;">3.4.1 — Área integrada × Fluência (sete picos “Pai”)</div>
+      <!-- Se já tiver a imagem, troque o src abaixo pelo caminho correto -->
+      <img
+        src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/area_x_fluencia.png"
+        alt="Área × Fluência (7 picos)"
+        style="width:100%; height:auto; border:1px solid #ddd; padding:2px; background:#fff;"
+        onerror="this.outerHTML='<em>(Inserir figura: Área×Fluência, 7 picos)</em>';">
+    </div>
+
+    <!-- (B) N × Fluência -->
+    <div style="flex:1 1 420px; max-width:820px;">
+      <div style="font-weight:600; margin-bottom:6px; text-align:left;">3.4.2 — Densidade de coluna (N) × Fluência</div>
+      <img
+        src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/densidadexfluencia.png"
+        alt="Densidade de coluna N × Fluência"
+        style="width:100%; height:auto; border:1px solid #ddd; padding:2px; background:#fff;">
+    </div>
+
+  </div>
+</div>
+
+<!-- Explicação detalhada dos gráficos 3.4.1 e 3.4.2 -->
+<div class="muted" style="text-align:justify; font-size:0.95rem; margin-top:8px;">
+  <strong>Como montei os gráficos:</strong><br>
+  <u>Fonte dos dados de área</u>: para cada fluência, usei as integrações do item 3.3 (arquivos OMNIC) e somei a coluna <em>Area</em> de todos os componentes dentro de cada janela de pico
+  (589: 580–592; 1166: 1155–1178; 1295: 1280–1305; 2239: 2224–2243; 2581: 2565–2600; 3380: 3376–3382; 3706: 3706,5–3704,5).
+  A tabela “Peak List” de cada janela foi obtida via <em>Analyze → Peak Resolve… → Statistics → Clipboard</em>.
+  <br><br>
+
+  <strong>3.4.1 — Área × Fluência (sete picos):</strong><br>
+  • Para cada pico “Pai” (589, 1166, 1295, 2239, 2581, 3380, 3706&nbsp;cm⁻¹), plotei a <em>área integrada</em> (abs·cm⁻¹) em função da fluência (ions·cm⁻²) lida do nome do arquivo.<br>
+  • Isso mostra diretamente como a intensidade integrada de cada banda evolui com a irradiação (formação/consumo/saturação e possíveis mudanças de perfil).<br><br>
+
+  <strong>3.4.2 — N × Fluência (três bandas com A-value):</strong><br>
+  • A densidade de coluna foi calculada pela equação:
+  <code>N = ln(10) × (Área integrada) / A</code>, com <em>A-value</em> em cm·molec⁻¹.<br>
+  • Para garantir consistência com a literatura (Fulvio, 2009), calculei <em>N</em> apenas para as bandas do N₂O com <em>A-values</em> consolidados no relatório:
+    <u>1295</u> (ν₁), <u>2239</u> (ν₃) e <u>2581</u> (2ν₁).<br>
+  • As bandas em <u>3380</u> e <u>3706</u> cm⁻¹ (H₂O, contaminante) e <u>589</u> cm⁻¹ (ν₂ do N₂O, fora da Tabela 3 de Fulvio) não entraram no gráfico de <em>N</em> por falta de A-values adotados neste trabalho.
+  <br><br>
+
+  <strong>Notas de procedimento (OMNIC → planilha/Origin/Python):</strong><br>
+  1) No OMNIC, para cada fluência: <em>Display Limits</em> na janela do pico → <em>Smooth</em> leve → <em>Automatic Baseline Correct</em> → <em>Analyze → Peak Resolve</em> (fit Voigt) → <em>Statistics → Clipboard</em> (guardar a coluna <em>Area</em>).<br>
+  2) Em planilha (ou script), somei as áreas por pico e organizei uma tabela “Fluência × Área”.<br>
+  3) Para as três bandas com A-value, calculei <em>N</em> (molec·cm⁻²) via <code>N = ln(10)·Área/A</code> e montei “Fluência × N”.<br>
+  4) Plotei “Área × Fluência” (7 picos) e “N × Fluência” (3 bandas) — neste relatório, a figura “N × Fluência” está em:
+  <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/densidadexfluencia.png" target="_blank" rel="noopener">densidadexfluencia.png</a>.
+  <br><br>
+
+  <em>Observações rápidas:</em> (i) áreas em <em>absorbance·cm⁻¹</em>, após correção de <em>baseline</em>; (ii) a conversão para <em>N</em> é direta e <u>não</u> depende do substrato; (iii) para comparar com Fulvio (2009, Fig.&nbsp;4b), discuta tendências (saturação/decrescimento), eventuais deslocamentos de centro e mudanças de largura/assimetria ao longo da fluência.
+</div>
+
+
+
+    
 <div class="enunciado" style="text-align:justify;">
   3.5 - Comparar os resultados obtidos dos gráficos com o trabalho do Fulvio 2009[5], Figura 4b do artigo.
 </div>
