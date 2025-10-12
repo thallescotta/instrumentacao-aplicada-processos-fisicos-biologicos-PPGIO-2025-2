@@ -678,8 +678,8 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
           <tr><td style="padding:var(--pad);">Projected Range R<sub>p</sub></td><td style="padding:var(--pad);">1,47&nbsp;µm</td></tr>
           <tr><td style="padding:var(--pad);">Straggling ΔR<sub>p</sub></td><td style="padding:var(--pad);">0,20&nbsp;µm</td></tr>
           <tr><td style="padding:var(--pad);">Espessura x</td><td style="padding:var(--pad);">0,909&nbsp;µm</td></tr>
-          <tr><td style="padding:var(--pad); font-weight:600;">Decisão</td>
-              <td style="padding:var(--pad); font-weight:600;">Atravessa (x &lt; R<sub>p</sub>)</td></tr>
+          <tr><td style="padding:var(--pad); font-weight:600;">Conclusão</td>
+              <td style="padding:var(--pad); font-weight:600;">Atravessou o filme</td></tr>
         </tbody>
       </table>
     </div>
@@ -702,8 +702,8 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
           <tr><td style="padding:var(--pad);">Projected Range R<sub>p</sub></td><td style="padding:var(--pad);">1,47&nbsp;µm</td></tr>
           <tr><td style="padding:var(--pad);">Straggling ΔR<sub>p</sub></td><td style="padding:var(--pad);">0,20&nbsp;µm</td></tr>
           <tr><td style="padding:var(--pad);">Espessura x</td><td style="padding:var(--pad);">3,461&nbsp;µm</td></tr>
-          <tr><td style="padding:var(--pad); font-weight:600;">Decisão</td>
-              <td style="padding:var(--pad); font-weight:600;">Implantação (x &gt; R<sub>p</sub> + ΔR<sub>p</sub>)</td></tr>
+          <tr><td style="padding:var(--pad); font-weight:600;">Conclusão</td>
+              <td style="padding:var(--pad); font-weight:600;">Implantou no filme</td></tr>
         </tbody>
       </table>
     </div>
@@ -726,21 +726,26 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
           <tr><td style="padding:var(--pad);">Projected Range R<sub>p</sub></td><td style="padding:var(--pad);">1,47&nbsp;µm</td></tr>
           <tr><td style="padding:var(--pad);">Straggling ΔR<sub>p</sub></td><td style="padding:var(--pad);">0,20&nbsp;µm</td></tr>
           <tr><td style="padding:var(--pad);">Espessura x</td><td style="padding:var(--pad);">0,178&nbsp;µm</td></tr>
-          <tr><td style="padding:var(--pad); font-weight:600;">Decisão</td>
-              <td style="padding:var(--pad); font-weight:600;">Atravessa (x &lt; R<sub>p</sub>)</td></tr>
+          <tr><td style="padding:var(--pad); font-weight:600;">Conclusão</td>
+              <td style="padding:var(--pad); font-weight:600;">Atravessou o filme</td></tr>
         </tbody>
       </table>
     </div>
 
   </div>
 
-  <!-- Regra usada (curto) -->
+  <!-- Relato (curto) do que foi feito no SRIM -->
   <p class="muted" style="margin-top:10px; text-align:justify;">
-    Regra de decisão: <em>atravessa</em> se <strong>x &lt; R<sub>p</sub> − ΔR<sub>p</sub></strong>; <em>implantação parcial</em> se
-    <strong>R<sub>p</sub> − ΔR<sub>p</sub> ≤ x ≤ R<sub>p</sub> + ΔR<sub>p</sub></strong>; <em>implanta</em> se
-    <strong>x &gt; R<sub>p</sub> + ΔR<sub>p</sub></strong>. Valores de <strong>R<sub>p</sub></strong> e <strong>ΔR<sub>p</sub></strong> foram lidos no log do SRIM para o alvo N–N–O (ρ=1,1593 g·cm⁻³), linha de 90&nbsp;keV.
+    <strong>Relato:</strong> No TRIM, selecionei <em>Ion</em>=Xe (90&nbsp;MeV) e montei o alvo como N–N–O (estequiometria 1:1:1), com
+    densidade 1,1593&nbsp;g·cm<sup>−3</sup>. Para cada caso, defini a espessura do filme de N₂O igual ao valor obtido em 2.a
+    (<em>x</em><sub>c1</sub>=0,909&nbsp;µm; <em>x</em><sub>c2</sub>=3,461&nbsp;µm; <em>x</em><sub>c3</sub>=0,178&nbsp;µm) e
+    gerei a tabela no <em>Ion Stopping &amp; Range Tables</em>, de onde li o <em>Projected Range</em> (R<sub>p</sub>) e o
+    <em>Straggling</em> (ΔR<sub>p</sub>). Comparei R<sub>p</sub> com a espessura <em>x</em> e registrei no quadro acima se o feixe
+    implantou ou atravessou. Os três prints linkados mostram a configuração e o log usado em cada caso.
   </p>
+
 </div>
+
 
     
 
