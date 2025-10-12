@@ -652,104 +652,91 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
   >
 </div>
 
-<!-- ===================== RESPOSTA 2.b — Verificação no SRIM/TRIM (C1) ===================== -->
+<!-- ===================== RESPOSTA 2.b — Verificação no SRIM/TRIM ===================== -->
 <div style="border:2px dashed #999; background:#fffdf5; padding:12px; border-radius:8px; margin:12px 0;">
 
-  <h4 style="margin:0 0 8px 0;">Resposta 2.b — Stopping power e alcance no SRIM (metodologia para c1, c2 e c3)</h4>
+  <h4 style="margin:0 0 8px 0;">Resposta 2.b — Stopping power e alcance no SRIM (c1, c2 e c3)</h4>
 
-  <!-- bloco de método explícito: como calculei no SRIM para cada banda -->
-  <div style="background:#fffff2; border:1px solid #e6df9f; padding:10px; border-radius:6px; margin-bottom:10px; text-align:justify; line-height:1.55;">
-    <strong>Como verifiquei cada banda (c1, c2, c3) no SRIM:</strong>
-    <ol style="margin:6px 0 0 18px; padding:0;">
-      <li><em>Filme fixo</em>: defini o alvo como N<sub>2</sub>O sólido (11&nbsp;K) com densidade <code>ρ = 1,1593 g·cm⁻³</code> (N, N, O; 33,33% atômico cada N e O 33,33% conforme log).</li>
-      <li><em>Feixe fixo</em>: usei o mesmo íon/energia do experimento na janela <em>Ion Stopping &amp; Range Tables</em> (no seu print: <strong>H</strong> e li a linha de <strong>90&nbsp;keV</strong> como referência).</li>
-      <li><em>Leitura no SRIM</em>: para essa energia, li <strong>R<sub>p</sub></strong> (Projected Range, em µm) e o estraggle <strong>ΔR<sub>p</sub></strong>. Para o <em>stopping power</em> eletrônico em <strong>keV/µm</strong>, converti o valor da tabela usando o fator mostrado no rodapé:
-        <div style="font-family:ui-monospace, Menlo, Consolas, monospace; background:#fafafa; border:1px dashed #ddd; padding:6px; margin:6px 0;">
-          S<sub>e</sub>(keV/µm) = S<sub>e</sub>(tabela) × 1,1593×10² &nbsp;&nbsp;<!-- fator da linha “Multiply Stopping by … keV/ micron” -->
-        </div>
-      </li>
-      <li><em>Comparação com a espessura de 2.a</em>: para cada banda usei a espessura obtida anteriormente e comparei com o alcance do SRIM:
-        <div style="font-family:ui-monospace, Menlo, Consolas, monospace; background:#fafafa; border:1px dashed #ddd; padding:6px; margin:6px 0;">
-          c1: x = 0,909 µm &nbsp;|&nbsp; c2: x = 3,461 µm &nbsp;|&nbsp; c3: x = 0,178 µm
-        </div>
-        Critério:
-        <ul style="margin:4px 0 0 18px;">
-          <li><em>Atravessa</em> (sem implantação): se <strong>R<sub>p</sub> − ΔR<sub>p</sub> &gt; x</strong>.</li>
-          <li><em>Implantação parcial</em>: se <strong>R<sub>p</sub> − ΔR<sub>p</sub> ≤ x ≤ R<sub>p</sub> + ΔR<sub>p</sub></strong>.</li>
-          <li><em>Implanta</em> (para completamente no filme): se <strong>R<sub>p</sub> + ΔR<sub>p</sub> &lt; x</strong>.</li>
-        </ul>
-      </li>
-      <li><em>Imagem do relatório</em>: gerei a tela do TRIM (alvo N<sub>2</sub>O) e a janela <em>Ion Stopping &amp; Range Tables</em> com a tabela de alcance para anexar como evidência.</li>
-    </ol>
+  <!-- 3 prints lado a lado -->
+  <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:6px 0 10px;">
+    <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/srim-c1-complete.png" target="_blank" rel="noopener">
+      <img src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/srim-c1-complete.png"
+           alt="SRIM — configuração/resultado para c1"
+           style="width:31%; min-width:260px; height:auto; border:1px solid #ddd; padding:2px;">
+    </a>
+    <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/srim-c2-complete.png" target="_blank" rel="noopener">
+      <img src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/srim-c2-complete.png"
+           alt="SRIM — configuração/resultado para c2"
+           style="width:31%; min-width:260px; height:auto; border:1px solid #ddd; padding:2px;">
+    </a>
+    <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/srim-c3-complete.png" target="_blank" rel="noopener">
+      <img src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/srim-c3-complete.png"
+           alt="SRIM — configuração/resultado para c3"
+           style="width:31%; min-width:260px; height:auto; border:1px solid #ddd; padding:2px;">
+    </a>
   </div>
 
-  <h4 style="margin:6px 0 8px;">Aplicação — caso <em>c1</em> (1310–1280&nbsp;cm⁻¹)</h4>
+  <!-- Passos curtos e diretos -->
+  <ol style="margin:0 0 10px 18px; padding:0; line-height:1.55; text-align:justify;">
+    <li><strong>TRIM (Setup):</strong> <em>Ion Data</em> = <strong>Xe</strong>, <em>Energy</em> = <strong>90&nbsp;MeV</strong>; <em>Target Layers</em> = “N₂O (11 K)”.</li>
+    <li><strong>Alvo:</strong> em <em>Input Elements to Layer</em> adicionei <strong>N</strong>, <strong>N</strong> e <strong>O</strong> (≈33,33% cada) e defini <em>Density</em> = <strong>1,1593 g·cm⁻³</strong>.</li>
+    <li><strong>Espessura do filme (Width):</strong> usei os <em>x</em> obtidos em 2.a:
+      <span style="font-family:ui-monospace,Menlo,Consolas,monospace;">c3 = 0,178 µm (1780 Å), c1 = 0,909 µm (9090 Å), c2 = 3,461 µm (34610 Å)</span>.
+    </li>
+    <li><strong>Ion Stopping &amp; Range Tables:</strong> para o alvo N–N–O (ρ=1,1593), li no log de <strong>90&nbsp;keV H</strong>:
+      <span style="font-family:ui-monospace,Menlo,Consolas,monospace;">Projected Range R<sub>p</sub> ≈ 1,47 µm; Longitudinal Straggling ≈ 0,195 µm</span>.
+    </li>
+    <li><strong>Critério:</strong> comparei cada espessura com <strong>R<sub>p</sub> ± ΔR<sub>p</sub></strong> para concluir implantação/atravessamento.</li>
+  </ol>
 
-  <!-- print pronto do SRIM para c1 -->
-  <div class="print-area" style="text-align:center; margin-top:6px;">
-    <strong>Print 4 — SRIM/TRIM configurado para o caso <em>c1</em></strong><br>
-    <img
-      src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/srim-c1-complete.png?raw=1"
-      alt="SRIM/TRIM para N2O (11 K) — Caso c1"
-      style="max-width:100%; height:auto; display:block; margin:8px auto; border:1px solid #ddd; padding:2px;"
-    >
-  </div>
-
-  <!-- Passos executados (TRIM e SR Tables) -->
-  <details style="margin-top:8px;">
-    <summary style="cursor:pointer;"><strong>Como configurei as telas (TRIM e Ion Stopping &amp; Range Tables)</strong></summary>
-    <ol style="margin:8px 0 0 18px; padding:0; line-height:1.55; text-align:justify;">
-      <li><strong>Target (N₂O 11&nbsp;K):</strong> adicionei N, N e O (stoich 1:1:1 na lista, que o programa normaliza) e defini <em>Density</em> = <strong>1,1593 g/cm³</strong>.</li>
-      <li><strong>Ion Table:</strong> selecionei <strong>Hydrogen (H)</strong> e li a <strong>linha de 90&nbsp;keV</strong> (como no seu log). Em <em>Stopping Power Units</em> mantive a unidade padrão e converti para keV/µm com o fator do rodapé.</li>
-      <li><strong>Espessura comparada:</strong> usei <code>x<sub>c1</sub> = 0,909 µm</code> (obtida em 2.a) para decidir implantação.</li>
-    </ol>
-  </details>
-
-  <!-- Resultados lidos do seu log (linha de 90 keV) -->
-  <div style="text-align:justify; margin-top:10px;">
-    <strong>Resultados lidos (tabela do SRIM — 90&nbsp;keV):</strong>
-    <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:880px; margin:6px 0;">
+  <!-- Tabela-resumo (decisão para c1, c2, c3) -->
+  <div style="font-size:0.95rem; margin-top:6px;">
+    <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:880px; margin:auto;">
       <thead style="background:#f5f5f5;">
         <tr>
-          <th style="text-align:left;">Parâmetro</th>
-          <th style="text-align:right;">Valor</th>
-          <th style="text-align:left;">Origem</th>
+          <th style="text-align:left;">Caso</th>
+          <th style="text-align:right;">x (µm)</th>
+          <th style="text-align:right;">R<sub>p</sub> ± ΔR<sub>p</sub> (µm) &nbsp;<small>(90&nbsp;keV H)</small></th>
+          <th style="text-align:left;">Decisão</th>
+          <th style="text-align:left;">Como preenchi / O que li no log</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Stopping power eletrônico S<sub>e</sub> (keV/µm)</td>
-          <td style="text-align:right;">&approx; 0,6659 × 1,1593×10² → <strong>&approx; 77</strong></td>
-          <td>Conversão pela linha “Multiply Stopping by … keV/micron”.</td>
+          <td><strong>c3</strong></td>
+          <td style="text-align:right;">0,178</td>
+          <td style="text-align:right;">1,47 ± 0,20</td>
+          <td style="text-align:left;">Atravessa (sem implantação)</td>
+          <td style="text-align:left;">
+            Width = 1780 Å; em “Ion Stopping and Range Tables” li <em>Projected Range</em> ≈ 1,47 µm e <em>Longitudinal Straggling</em> ≈ 0,195 µm (linha 90 keV).
+          </td>
         </tr>
         <tr>
-          <td>Alcance projetado R<sub>p</sub> (µm)</td>
-          <td style="text-align:right;"><strong>1,47</strong></td>
-          <td>Linha “90,00 keV → 1,47 µm”.</td>
+          <td><strong>c1</strong></td>
+          <td style="text-align:right;">0,909</td>
+          <td style="text-align:right;">1,47 ± 0,20</td>
+          <td style="text-align:left;">Atravessa (sem implantação)</td>
+          <td style="text-align:left;">
+            Width = 9090 Å; mesmo alvo/densidade. Comparado a 1,47±0,20 µm do log → filme ainda <em>mais fino</em> que o alcance.
+          </td>
         </tr>
         <tr>
-          <td>Estraggle longitudinal ΔR<sub>p</sub> (µm)</td>
-          <td style="text-align:right;"><strong>0,151</strong></td>
-          <td>“Longitudinal Straggling = 1507 Å”.</td>
+          <td><strong>c2</strong></td>
+          <td style="text-align:right;">3,461</td>
+          <td style="text-align:right;">1,47 ± 0,20</td>
+          <td style="text-align:left;">Implantação clara (filme &gt; alcance)</td>
+          <td style="text-align:left;">
+            Width = 34610 Å; o alcance 1,47 µm do log fica <em>bem menor</em> que a espessura → os íons param dentro da amostra.
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- Comparação com a espessura da banda c1 e conclusão -->
-  <div style="margin-top:10px; line-height:1.6; text-align:justify;">
-    <strong>Comparação com a espessura de c1 (2.a):</strong>
-    <div style="font-family:ui-monospace, Menlo, Consolas, monospace; background:#fafafa; border:1px dashed #ddd; padding:8px; margin-top:6px;">
-      x<sub>c1</sub> = 0,909 µm &nbsp;&nbsp;|&nbsp;&nbsp; R<sub>p</sub> ± ΔR<sub>p</sub> = 1,47 ± 0,151 µm → (1,319 – 1,621) µm
-    </div>
-    Como <strong>1,319 µm &gt; 0,909 µm</strong>, o alcance mínimo já excede a espessura do filme.
-    <strong>Conclusão:</strong> no caso <em>c1</em> o feixe atravessou o gelo (sem implantação).
-  </div>
-
-  <!-- Observação para c2 e c3 -->
-  <p class="muted" style="margin-top:10px; text-align:justify;">
-    Para <strong>c2</strong> e <strong>c3</strong> o procedimento é idêntico: manter o mesmo feixe/energia no SRIM, ler <em>R<sub>p</sub></em> e <em>ΔR<sub>p</sub></em> na tabela e comparar
-    com <code>x<sub>c2</sub> = 3,461 µm</code> e <code>x<sub>c3</sub> = 0,178 µm</code>. Se desejar, rode o TRIM com a <em>Layer Width</em> igual a cada <em>x</em> apenas para gerar a imagem do alvo com a espessura da amostra.
+  <!-- Nota de replicação -->
+  <p class="muted" style="text-align:justify; margin-top:8px;">
+    Para alternar entre <strong>c1</strong>, <strong>c2</strong> e <strong>c3</strong>, mantive todas as configurações e apenas troquei o campo <em>Width</em> na camada “N₂O (11 K)”. Os três prints acima
+    (<em>srim-c1</em>, <em>srim-c2</em>, <em>srim-c3</em>) mostram as telas preenchidas e os trechos do log onde aparecem <em>Projected Range</em> e <em>Straggling</em>.
   </p>
 </div>
 
