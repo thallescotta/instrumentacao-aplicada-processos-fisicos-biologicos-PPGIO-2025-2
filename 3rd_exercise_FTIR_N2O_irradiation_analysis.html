@@ -472,7 +472,7 @@
 
   <h4 style="margin:0 0 8px 0;">Resposta 2.a — Espessura do gelo a partir das três bandas (11&nbsp;K, 0.5&nbsp;mbar)</h4>
 
-  <!-- Ilustrações c1, c2, c3 -->
+  <!-- Ilustrações c1, c2, c3 (já fornecidas por você) -->
   <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:6px 0 10px;">
     <img src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/3.c.1.png"
          alt="c1 (ν1) — 1310–1280 cm-1" style="width:30%; min-width:220px; height:auto; border:1px solid #ddd; padding:2px;">
@@ -485,26 +485,21 @@
   <!-- Passo-a-passo (no passado) -->
   <ol style="margin:0 0 10px 18px; padding:0; line-height:1.55;">
     <li>Eu integrei as áreas das três bandas no OMNIC (c1, c2, c3) após <em>Smooth</em> e <em>Automatic Baseline Correct</em>.</li>
-    <li>Para cada banda, eu calculei a densidade de coluna <strong>N</strong> com a Eq.&nbsp;2:
+    <li>Para cada banda, calculei a densidade de coluna <strong>N</strong> com a Eq.&nbsp;2:
       <div style="margin:6px 0 0 0;">
         <code>N = ln(10) × (Área integrada) / (A-value)</code>
         <span style="opacity:.85;">&nbsp;[Área em absorbance·cm<sup>−1</sup>; A-value em cm·molec<sup>−1</sup>]</span>
       </div>
     </li>
-    <li>Com a densidade do N<sub>2</sub>O a <strong>11&nbsp;K</strong> (Fulvio, 2009) eu obtive a densidade numérica <strong>n</strong> do sólido:
-      <div style="margin:6px 0 0 0;">
-        <code>n = ρ(11 K) × N<sub>A</sub> / M</code>
-        <span style="opacity:.85;">&nbsp;[ρ em g·cm<sup>−3</sup>; M = 44 g·mol<sup>−1</sup>; N<sub>A</sub> = 6,022×10<sup>23</sup> mol<sup>−1</sup>]</span>
-      </div>
-    </li>
-    <li>Por fim, eu converti <strong>N</strong> em espessura <strong>x</strong>:
+    <li>Usando ρ(11&nbsp;K) do N<sub>2</sub>O e \(M=44\ \mathrm{g\,mol^{-1}}\), obtive <code>n = ρ × N<sub>A</sub> / M</code>.</li>
+    <li>Por fim, converti <strong>N</strong> em espessura <strong>x</strong>:
       <div style="margin:6px 0 0 0;">
         <code>x (cm) = N / n</code> &nbsp;→&nbsp; <code>x (nm) = (N / n) × 10<sup>7</sup></code>
       </div>
     </li>
   </ol>
 
-  <!-- Tabela com as áreas (OK) e campos pendentes dos A-values (em vermelho) -->
+  <!-- Tabela com áreas + A-values + N + x -->
   <div style="font-size:0.95rem; margin-top:10px;">
     <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:950px; margin:auto;">
       <thead style="background:#f5f5f5;">
@@ -522,56 +517,66 @@
           <td><strong>c1</strong> (ν1)</td>
           <td>1310–1280</td>
           <td style="text-align:right;"><strong>6,7660</strong></td>
-          <td style="text-align:right; color:#c00;"><strong><!-- Cole aqui --> A<sub>c1</sub></strong></td>
-          <td style="text-align:right; color:#c00;"><strong>ln(10)·6,7660 / A<sub>c1</sub></strong></td>
-          <td style="text-align:right; color:#c00;"><strong>(ln(10)·6,7660 / A<sub>c1</sub>) / n × 10<sup>7</sup></strong></td>
+          <td style="text-align:right;">1,07×10<sup>−17</sup></td>
+          <td style="text-align:right;">1,46×10<sup>18</sup></td>
+          <td style="text-align:right;">9,09×10<sup>2</sup></td>
         </tr>
         <tr>
           <td><strong>c2</strong> (2ν1)</td>
           <td>2600–2565</td>
           <td style="text-align:right;"><strong>3,6102</strong></td>
-          <td style="text-align:right; color:#c00;"><strong><!-- Cole aqui --> A<sub>c2</sub></strong></td>
-          <td style="text-align:right; color:#c00;"><strong>ln(10)·3,6102 / A<sub>c2</sub></strong></td>
-          <td style="text-align:right; color:#c00;"><strong>(ln(10)·3,6102 / A<sub>c2</sub>) / n × 10<sup>7</sup></strong></td>
+          <td style="text-align:right; color:#c00;"><strong>não fornecido em Fulvio&nbsp;(2009)</strong></td>
+          <td style="text-align:right; color:#c00;"><strong>—</strong></td>
+          <td style="text-align:right; color:#c00;"><strong>—</strong></td>
         </tr>
         <tr>
           <td><strong>c3</strong> (ν3)</td>
           <td>2245–2228</td>
           <td style="text-align:right;"><strong>7,0326</strong></td>
-          <td style="text-align:right; color:#c00;"><strong><!-- Cole aqui --> A<sub>c3</sub></strong></td>
-          <td style="text-align:right; color:#c00;"><strong>ln(10)·7,0326 / A<sub>c3</sub></strong></td>
-          <td style="text-align:right; color:#c00;"><strong>(ln(10)·7,0326 / A<sub>c3</sub>) / n × 10<sup>7</sup></strong></td>
+          <td style="text-align:right;">5,69×10<sup>−17</sup></td>
+          <td style="text-align:right;">2,85×10<sup>17</sup></td>
+          <td style="text-align:right;">1,78×10<sup>2</sup></td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <th colspan="5" style="text-align:right;">Média/intervalo de x (nm):</th>
-          <th style="text-align:right; color:#c00;"><strong><!-- calcule após preencher x(c1..c3) --></strong></th>
+          <th colspan="5" style="text-align:right;">Média/intervalo de x (nm) <span style="font-weight:400;">(usando c1 e c3)</span>:</th>
+          <th style="text-align:right;">(178&nbsp;–&nbsp;909)</th>
         </tr>
       </tfoot>
     </table>
   </div>
 
-  <!-- Como obter n com a densidade de 11 K -->
-  <div class="muted" style="margin-top:10px; font-size:0.95rem;">
-    <strong>Como obter <em>n</em>:</strong> copie do artigo a densidade do N<sub>2</sub>O a 11&nbsp;K, ρ(11&nbsp;K), e use
-    <code>n = ρ(11 K) × N<sub>A</sub> / M</code> (com M = 44 g·mol<sup>−1</sup>).
-    Depois substitua <code>n</code> nas expressões em vermelho para obter <code>x</code> (nm).
-  </div>
+  <!-- Detalhe: como as áreas foram somadas -->
+  <details style="margin-top:10px;">
+    <summary style="cursor:pointer;">Ver como somei as áreas (c1, c2, c3)</summary>
+    <div style="font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.92rem; white-space:pre-wrap; background:#fafafa; border:1px solid #eee; padding:8px; margin-top:6px;">
+<strong>c1 (1310–1280 cm⁻¹)</strong>
+Áreas: 3,6083 + 3,1577 = <strong>6,7660</strong>
 
-  <!-- Observações e referências -->
+<strong>c2 (2600–2565 cm⁻¹)</strong>
+Áreas: 1,2592 + 0,5320 + 0,4016 + 0,2555 + 0,8399 + 0,2401 + 0,0813 + 0,0006 = <strong>3,6102</strong>
+
+<strong>c3 (2245–2228 cm⁻¹)</strong>
+Áreas: 0,0012 + 7,0314 = <strong>7,0326</strong>
+    </div>
+  </details>
+
+  <!-- Notas e referências -->
   <ul style="margin:10px 0 0 18px; padding:0; line-height:1.5; font-size:0.95rem;">
-    <li>Os <em>A-values</em> (cm·molec⁻¹) das três bandas devem ser **copiados da Tabela 4 de Fulvio (2009)**.</li>
-    <li>As áreas integradas vieram do OMNIC (Peak Resolve → <em>Statistics…</em> → <em>Clipboard</em>), conforme c1/c2/c3.</li>
-    <li>Após preencher A<sub>c1</sub>, A<sub>c2</sub>, A<sub>c3</sub> e ρ(11&nbsp;K), calcule N e x linha a linha e, por fim, a média de x.</li>
+    <li><em>A-values</em>: ν₁ = 1,07×10<sup>−17</sup> (Fulvio 2009, citado em MNRAS 2017); ν₃ ≈ 5,69×10<sup>−17</sup> (tabela com bandas de referência que usa Fulvio como fonte). 2ν₁ não informado em Fulvio&nbsp;(2009).</li>
+    <li>Densidade do N₂O sólido a ~11–16 K: ρ ≈ 1,17 g cm<sup>−3</sup> (atribuída a Fulvio 2009).</li>
+    <li>Procedimento no OMNIC: Peak Resolve → <em>Find Peaks</em> → <em>Fit Peaks</em> → <em>Statistics…</em> → <em>Clipboard</em>.</li>
   </ul>
 
-  <!-- Referência ABNT (exemplo genérico; ajuste ao seu artigo exato) -->
-  <div style="margin-top:10px; font-size:0.9rem;">
-    <strong>Referência (ABNT):</strong><br>
-    FULVIO, D.; <em>et al.</em> Infrared spectroscopy of solid N<sub>2</sub>O at cryogenic temperatures: band strengths and density. <strong>Journal/Revista</strong>, v.&nbsp;xx, n.&nbsp;xx, p.&nbsp;xx–xx, 2009.
+  <div class="muted" style="margin-top:10px; font-size:0.9rem;">
+    <strong>Referências (ABNT, resumo):</strong><br>
+    FULVIO, D. <em>et al.</em> Novel measurements of refractive index, density and mid-infrared integrated band strengths for solid O₂, N₂O and NO₂:N₂O₄ mixtures. <strong>Spectrochimica Acta Part A</strong>, v. 72, p. 1007–1013, 2009. :contentReference[oaicite:4]{index=4}<br>
+    LAONNITIS, P. <em>et al.</em> Formation of nitrogen- and oxygen-bearing molecules from radiolysis of nitrous oxide ices… <strong>MNRAS</strong>, v. 465, p. 3281–3296, 2017 — usa \(A_{\nu_1}\) de Fulvio e ρ≈1,17 g cm⁻³. :contentReference[oaicite:5]{index=5}<br>
+    BORDALO, V. <em>et al.</em> Radiolysis of N₂O:CO₂ ice by heavy ions… <strong>MNRAS</strong>, v. 478, p. 4939–4959, 2018 — tabela com \(A_{\nu_3}\)≈5,69×10⁻¹⁷ cm molec⁻¹ (citando Fulvio). :contentReference[oaicite:6]{index=6}
   </div>
 </div>
+
 
 
 
