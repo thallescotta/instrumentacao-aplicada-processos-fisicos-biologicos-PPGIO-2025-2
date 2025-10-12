@@ -1074,6 +1074,90 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
   3.3 - Determinar as áreas das bandas correspondentes a estes picos para as diversas fluências de irradiação.
 </div>
 
+
+<!-- ===================== RESPOSTA 3.3 — Áreas por fluência (parcial) ===================== -->
+<div style="border:2px dashed #999; background:#fffdf5; padding:12px; border-radius:8px; margin:12px 0;">
+
+  <h4 style="margin:0 0 10px 0;">Resposta 3.3 — Áreas integradas dos picos “Pai” nas diversas fluências (parcial)</h4>
+
+  <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:980px; margin:auto; font-size:0.95rem; background:#fff;">
+    <thead style="background:#f5f5f5;">
+      <tr>
+        <th style="text-align:left;">Pico (cm⁻¹)</th>
+        <th style="text-align:left;">Janela</th>
+        <th style="text-align:left;">Atribuição</th>
+        <th style="text-align:left;">Fluência</th>
+        <th style="text-align:right;">Área integrada<br>(abs·cm⁻¹)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>589</strong></td>
+        <td>580–592</td>
+        <td>ν₂ (flexão, N₂O)</td>
+        <td>2,5×10¹⁰</td>
+        <td style="text-align:right;"><strong>4,0302</strong></td>
+      </tr>
+      <tr>
+        <td><strong>1166</strong></td>
+        <td>1155–1178</td>
+        <td>2ν₂ (N₂O)</td>
+        <td>1×10¹²</td>
+        <td style="text-align:right;"><strong>1,9330</strong></td>
+      </tr>
+      <tr>
+        <td><strong>1295</strong></td>
+        <td>1280–1305</td>
+        <td>ν₁ (N–N, N₂O)</td>
+        <td>1×10¹²</td>
+        <td style="text-align:right;"><strong>2,9196</strong></td>
+      </tr>
+      <tr>
+        <td><strong>2239</strong></td>
+        <td>2224–2243</td>
+        <td>ν₃ (anti-sim., N₂O)</td>
+        <td>1×10¹²</td>
+        <td style="text-align:right;"><strong>265,6121</strong></td>
+      </tr>
+      <tr>
+        <td><strong>2581</strong></td>
+        <td>2565–2600</td>
+        <td>2ν₁ / ν₁+ν₂ (N₂O)</td>
+        <td>1×10¹²</td>
+        <td style="text-align:right;"><strong>1,2931</strong></td>
+      </tr>
+      <tr>
+        <td><strong>3380</strong></td>
+        <td>3376–3382</td>
+        <td>O–H (H₂O, contaminante)</td>
+        <td>1×10¹²</td>
+        <td style="text-align:right;"><strong>0,0624</strong></td>
+      </tr>
+      <tr>
+        <td><strong>3706</strong></td>
+        <td>3706,5–3704,5</td>
+        <td>O–H “dangling” (H₂O, superfície)</td>
+        <td>2,5×10¹⁰</td>
+        <td style="text-align:right;"><strong>0,0092</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Nota de método -->
+  <div class="muted" style="margin:10px 0 0; text-align:justify;">
+    <strong>Como calculei cada área integrada para 3.3:</strong><br>
+    (i) Em <em>Analyze → Peak Resolve…</em>, defini a <u>mesma janela</u> do item 3.1 para cada pico (ex.: 2224–2243 cm⁻¹ para 2239 cm⁻¹), <em>Baseline</em>=Linear e ajuste Voigt. <br>
+    (ii) Cliquei <em>Find Peaks</em> → <em>Fit Peaks</em> e em <em>Statistics… → Clipboard</em> exportei a lista de picos. <br>
+    (iii) Somei a coluna <strong>Area</strong> de <u>todos</u> os componentes dentro da janela; o resultado (em <em>absorbance·cm⁻¹</em>) é a área integrada da banda para aquela <strong>fluência</strong> (valores acima). <br>
+    (iv) Repetir o mesmo procedimento para as demais fluências (os arquivos .SPA com 5e9, 1e10, 5e10, 8e11, 1e12 etc.), preenchendo a tabela para cada pico.
+  </div>
+</div>
+
+
+
+
+  
+
 <div class="enunciado" style="text-align:justify;">
   3.4 - Fazer os gráficos com estes valores no programa ORIGIN:
   <br>3.4.1 - Gráfico Área X  fluência
