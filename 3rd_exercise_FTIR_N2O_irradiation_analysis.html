@@ -791,7 +791,129 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
 </div>
 <div class="print-area" style="text-align:justify;"><strong>Print 5</strong><br><em>(Inserir captura: picos “Pai”)</em></div>
 
-<div class="enunciado" style="text-align:justify;">
+
+
+<!-- ===================== RESPOSTA 3.1 — Identificação dos picos, atribuições e contaminantes ===================== -->
+<div style="border:2px dashed #999; background:#fffdf5; padding:12px; border-radius:8px; margin:12px 0;">
+
+  <h4 style="margin:0 0 10px 0;">Resposta 3.1 — Identificação no OMNIC + atribuições e contaminantes</h4>
+
+  <!-- Como foi feita a leitura/atribuição -->
+  <div style="background:#fffffb; border:1px solid #e9e2c7; padding:10px; margin:0 0 12px 0; line-height:1.55; text-align:justify;">
+    <strong>Procedimento no OMNIC (amostra não irradiada):</strong><br>
+    • Isolar cada janela espectral, aplicar baseline linear (ou spline curto apenas se houver curvatura evidente) e usar <em>Peak Resolve</em> para bandas mais estreitas.<br>
+    • Ler o máximo (cm⁻¹) e conferir com Fulvio 2009 (Tabela 3).<br>
+    • Atribuições adotadas: 589 (ν₂), 1166 (2ν₂), 1295 (ν₁), 2239 (ν₃) do N₂O; 2581 (2ν₁ ou ν₁+ν₂, fraca) do N₂O; 3380 e 3706 cm⁻¹ como O–H (H₂O) — <u>contaminantes</u>.
+  </div>
+
+  <!-- Cards responsivos (PDFs 100% da largura do cartão) -->
+  <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center;">
+
+    <!-- 589 cm⁻1 -->
+    <div style="flex:1 1 360px; max-width:560px; border:1px solid #ddd; border-radius:8px; overflow:hidden;">
+      <div style="padding:12px;">
+        <h5 style="margin:0 0 6px;">589 cm⁻¹ — ν₂ (flexão, N₂O)</h5>
+        <p style="margin:0; font-size:14px;">Janela 580–592; FWHH≈1.0; marcar “589 cm⁻¹ (ν₂)”.</p>
+      </div>
+      <iframe
+        src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/3_589cm.pdf#view=FitH"
+        style="width:100%; height:420px; border:0;"
+        title="3_589cm.pdf"></iframe>
+    </div>
+
+    <!-- 1166 cm⁻1 -->
+    <div style="flex:1 1 360px; max-width:560px; border:1px solid #ddd; border-radius:8px; overflow:hidden;">
+      <div style="padding:12px;">
+        <h5 style="margin:0 0 6px;">1166 cm⁻¹ — 2ν₂ (N₂O)</h5>
+        <p style="margin:0; font-size:14px;">Janela 1155–1178; FWHH≈1.0–1.3; “1166 cm⁻¹ (comb.)”.</p>
+      </div>
+      <iframe
+        src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/3_1166cm.pdf#view=FitH"
+        style="width:100%; height:420px; border:0;"
+        title="3_1166cm.pdf"></iframe>
+    </div>
+
+    <!-- 1295 cm⁻1 -->
+    <div style="flex:1 1 360px; max-width:560px; border:1px solid #ddd; border-radius:8px; overflow:hidden;">
+      <div style="padding:12px;">
+        <h5 style="margin:0 0 6px;">1295 cm⁻¹ — ν₁ (estiramento N–N, N₂O)</h5>
+        <p style="margin:0; font-size:14px;">Janela 1280–1305; FWHH≈1.0; “1295 cm⁻¹ (ν₁)”.</p>
+      </div>
+      <iframe
+        src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/3_1295cm.pdf#view=FitH"
+        style="width:100%; height:420px; border:0;"
+        title="3_1295cm.pdf"></iframe>
+    </div>
+
+    <!-- 2239 cm⁻1 -->
+    <div style="flex:1 1 360px; max-width:560px; border:1px solid #ddd; border-radius:8px; overflow:hidden;">
+      <div style="padding:12px;">
+        <h5 style="margin:0 0 6px;">2239 cm⁻¹ — ν₃ (anti-simétrico, N₂O)</h5>
+        <p style="margin:0; font-size:14px;">Janela 2224–2243; FWHH≈1.0–1.4; “2239 cm⁻¹ (ν₃)”.</p>
+      </div>
+      <iframe
+        src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/3_2239cm.pdf#view=FitH"
+        style="width:100%; height:420px; border:0;"
+        title="3_2239cm.pdf"></iframe>
+    </div>
+
+    <!-- 2581 cm⁻1 -->
+    <div style="flex:1 1 360px; max-width:560px; border:1px solid #ddd; border-radius:8px; overflow:hidden;">
+      <div style="padding:12px;">
+        <h5 style="margin:0 0 6px;">2581 cm⁻¹ — 2ν₁ / ν₁+ν₂ (N₂O, fraca)</h5>
+        <p style="margin:0; font-size:14px;">Janela 2565–2600; FWHH≈1.0–1.4; Sensitivity: Medium/High.</p>
+      </div>
+      <iframe
+        src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/3_2581cm.pdf#view=FitH"
+        style="width:100%; height:420px; border:0;"
+        title="3_2581cm.pdf"></iframe>
+    </div>
+
+    <!-- 3380 cm⁻1 -->
+    <div style="flex:1 1 360px; max-width:560px; border:1px solid #ddd; border-radius:8px; overflow:hidden;">
+      <div style="padding:12px;">
+        <h5 style="margin:0 0 6px;">3380 cm⁻¹ — O–H (H₂O amorfa) — contaminante</h5>
+        <p style="margin:0; font-size:14px;">Janela 3376–3382; sem Peak Resolve; baseline linear + área direta.</p>
+      </div>
+      <iframe
+        src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/3_3380cm.pdf#view=FitH"
+        style="width:100%; height:420px; border:0;"
+        title="3_3380cm.pdf"></iframe>
+    </div>
+
+    <!-- 3706 cm⁻1 -->
+    <div style="flex:1 1 360px; max-width:560px; border:1px solid #ddd; border-radius:8px; overflow:hidden;">
+      <div style="padding:12px;">
+        <h5 style="margin:0 0 6px;">3706 cm⁻¹ — O–H “dangling bond” (H₂O) — contaminante</h5>
+        <p style="margin:0; font-size:14px;">Janela 3706.5–3704.5; FWHH≈0.8–1.2; marcador de superfície.</p>
+      </div>
+      <iframe
+        src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/3_3706cm.pdf#view=FitH"
+        style="width:100%; height:420px; border:0;"
+        title="3_3706cm.pdf"></iframe>
+    </div>
+
+  </div>
+
+  <!-- Notas curtas de conferência -->
+  <p class="muted" style="margin-top:10px; text-align:justify; font-size:0.95rem;">
+    <strong>Conferência com Fulvio 2009 (Tabela 3):</strong> 589 (ν₂), 1166 (2ν₂), 1295 (ν₁) e 2239 cm⁻¹ (ν₃) são bandas do N₂O. 2581 cm⁻¹ é overtone/combinação fraca do N₂O. As bandas 3380/3706 cm⁻¹ são de H₂O (contaminação), devendo ser citadas como “fora da Tabela 3 do N₂O”.
+  </p>
+
+</div>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="enunciado" style="text-align:justify;">
   3.2 - Determinar as áreas das bandas correspondentes a estes picos.
 </div>
 
