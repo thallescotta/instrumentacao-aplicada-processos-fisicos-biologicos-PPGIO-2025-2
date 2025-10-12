@@ -112,80 +112,91 @@
     <h2>Roteiro Prático (OMNIC → Cálculos → Gráficos)</h2>
 
 
-
+<!-- 1.a) Espectro não irradiado — abertura, ajuste e espessura -->
 <div class="enunciado">
   <strong>a.</strong> Abrir o espectro sem irradiar, para determinar a espessura do filme formado.
 </div>
 
-<!-- GIFs (abertura/preparo + ajuste da banda) -->
+<!-- GIFs: abertura/preparo e ajuste da banda -->
 <div class="print-area">
   <strong>GIFs 1 e 2 — Abertura e preparo (letra a)</strong><br>
   <img
     src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/Anima%C3%A7%C3%A3o-a1.gif"
     style="max-width:100%;height:auto"
-    alt="Abertura do espectro pré-irradiação e preparo (Display Limits, Smooth, Baseline)"
-    title="Abri o espectro pré-irradiação e preparei a área de trabalho (Display Limits, Smooth, Automatic Baseline Correct)."
+    alt="Abri o espectro pré-irradiação e preparei a área de trabalho (Display Limits, Smooth, Baseline)."
+    title="Abri o espectro pré-irradiação e preparei a área de trabalho: limitei a janela espectral, suavizei levemente e corrigi o baseline."
   >
   <img
     src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/Anima%C3%A7%C3%A3o-a2.gif"
     style="max-width:100%;height:auto;margin-top:8px"
-    alt="Ajuste da banda 2239 cm⁻1 no Peak Resolve"
-    title="Enquadrei 2300–2170 cm⁻1 e ajustei a banda 2239 cm⁻1 com Peak Resolve (Baseline Linear), gerando o Composite Result."
+    alt="Enquadrei 2300–2170 cm⁻¹ e ajustei a banda 2239 cm⁻¹ com Peak Resolve (Baseline Linear)."
+    title="Enquadrei 2300–2170 cm⁻¹ e ajustei a banda ν₃ (~2239 cm⁻¹) via Analyze → Peak Resolve (Baseline Linear), gerando o Composite Result."
   >
 </div>
 
-<!-- Imagens finais + explicação curta -->
+<!-- Imagem do Result / seleção da banda -->
 <div class="print-area" style="margin-top:10px">
   <strong>Print 1.1 — Seleção da banda no Result</strong><br>
   <img
     src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/a3.png"
     style="max-width:100%;height:auto"
-    alt="Result: seleção 2300–2170 cm⁻1; rodapé mostra Total Region"
-    title="Na janela Result eu selecionei 2300–2170 cm⁻1; o rodapé exibiu a área integrada como Total Region."
+    alt="Na janela Result selecionei 2300–2170 cm⁻¹ (banda ν₃)."
+    title="Na janela Result selecionei 2300–2170 cm⁻¹. Para evitar superestimativa por baseline, conferi a área somando os componentes em Peaks…"
   >
-  <p style="margin-top:6px">
-    <em>Área integrada (exemplo):</em> <code>Total Region = 110,418 absorbance·cm⁻1</code>.
+  <p class="muted" style="margin:6px 0 0">
+    Observação — Para garantir a área da banda sem contribuição de baseline, somei as áreas dos componentes Voigt na tabela
+    <em>Peaks…</em> (abaixo), em vez de usar diretamente o “Total Region” do traço <em>Result</em>.
   </p>
 </div>
 
-<div class="print-area" style="margin-top:8px">
-  <strong>Print 1.2 — Checagem no Excel</strong><br>
-  <img
-    src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/a4.png"
-    style="max-width:100%;height:auto"
-    alt="Excel: soma das áreas dos componentes na faixa 2300–2170 cm⁻1"
-    title="Exporte a tabela Peaks… e some as áreas dos componentes com SUMIFS na faixa 2300–2170 cm⁻1."
-  >
-  <details style="margin-top:6px">
-    <summary><strong>Como fiz no Excel (passo a passo)</strong></summary>
-    <ol style="margin-top:6px">
-      <li>No Peak Resolve cliquei <strong>Peaks…</strong> &rarr; <em>Clipboard</em> e colei a tabela no Excel.</li>
-      <li>Confirmei que as colunas ficaram assim: <em>Center X</em> (posição do pico) e <em>Area</em> (área do componente).</li>
-      <li>Na célula <code>J2</code> somei as áreas dentro da faixa 2300–2170 cm⁻1:<br>
-        <small>Excel PT-BR:</small> <code>=SOMASES(G:G;C:C;">="&amp;2170;C:C;"<="&amp;2300)</code><br>
-        <small>Excel EN-US:</small> <code>=SUMIFS(G:G,C:C,">="&amp;2170,C:C,"<="&amp;2300)</code><br>
-        (Aqui <code>C</code>=Center&nbsp;X e <code>G</code>=Area. Ajuste as letras se suas colunas forem outras.)
-      </li>
-      <li>O valor de <code>J2</code> bateu com o <em>Total Region</em> do OMNIC (ex.: <code>110,418</code>).</li>
-    </ol>
-  </details>
+<!-- Tabela de picos (Peaks…) usada para a soma da área -->
+<div class="print-area" style="margin-top:10px">
+  <strong>Tabela 1 — Componentes Voigt (2300–2170 cm⁻¹)</strong>
+  <div style="overflow-x:auto">
+    <table border="1" cellpadding="6" style="border-collapse:collapse;min-width:620px">
+      <thead style="background:#f5f5f5">
+        <tr>
+          <th>Peak #</th><th>Peak Type</th><th>Center X (cm⁻¹)</th>
+          <th>Height</th><th>FWHH</th><th>Other</th><th>Area (abs·cm⁻¹)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Voigt</td><td>2195,787</td><td>0,0168</td><td>1,927</td><td>1,862</td><td>0,0704</td></tr>
+        <tr><td>2</td><td>Voigt</td><td>2221,353</td><td>0,2884</td><td>5,843</td><td>1,351</td><td>2,1995</td></tr>
+        <tr><td>3</td><td>Voigt</td><td>2229,370</td><td>0,4306</td><td>6,809</td><td>4,630</td><td>5,3378</td></tr>
+        <tr><td>4</td><td>Voigt</td><td>2236,222</td><td>0,2732</td><td>3,727</td><td>5,156</td><td>2,7757</td></tr>
+        <tr><td>5</td><td>Voigt</td><td>2236,932</td><td>0,9735</td><td>3,019</td><td>3,469</td><td>7,1014</td></tr>
+        <tr><td>6</td><td>Voigt</td><td>2240,265</td><td>0,8159</td><td>2,584</td><td>2,331</td><td>4,4256</td></tr>
+        <tr><td>7</td><td>Voigt</td><td>2242,610</td><td>0,6735</td><td>2,102</td><td>2,219</td><td>3,2506</td></tr>
+        <tr><td>8</td><td>Voigt</td><td>2244,562</td><td>0,5625</td><td>1,975</td><td>2,242</td><td>2,6656</td></tr>
+        <tr><td>9</td><td>Voigt</td><td>2246,553</td><td>0,4941</td><td>2,161</td><td>2,428</td><td>2,5454</td></tr>
+        <tr><td>10</td><td>Voigt</td><td>2248,774</td><td>0,3398</td><td>2,593</td><td>2,789</td><td>2,0455</td></tr>
+        <tr><td>11</td><td>Voigt</td><td>2251,866</td><td>0,5384</td><td>4,223</td><td>5,462</td><td>5,9241</td></tr>
+        <tr><td>12</td><td>Voigt</td><td>2256,490</td><td>0,1542</td><td>2,629</td><td>3,320</td><td>1,0407</td></tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="6" style="text-align:right">Área total (soma):</th>
+          <th><strong>39,3823</strong></th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <p class="muted" style="margin-top:6px">
+    A soma das áreas dos componentes dentro da faixa 2300–2170 cm⁻¹ forneceu a área integrada da banda ν₃:
+    <strong>A = 39,3823&nbsp;absorbance·cm⁻¹</strong>.
+  </p>
 </div>
 
-<!-- Cálculo da espessura (texto enxuto, em passado) -->
+<!-- Cálculo da espessura -->
 <div class="calc" style="margin-top:8px">
-  <strong>Resultado da espessura</strong><br>
-  Eu converti a área integrada da banda ν<sub>3</sub> (2239&nbsp;cm⁻1) em espessura usando o fator F′:
+  <strong>Resultado da espessura (letra a)</strong><br>
+  Eu converti a área integrada em espessura usando o fator F′ da banda 2239&nbsp;cm⁻¹ (<em>d</em> em nm):
   <ul style="margin:6px 0">
-    <li><em>KBr</em>: <code>F′ = 25,51 nm/(absorbance·cm⁻1)</code></li>
-    <li><em>Si</em>:  <code>F′ = 22,17 nm/(absorbance·cm⁻1)</code></li>
+    <li><em>KBr</em>: <code>d = 25,51 × A</code> → <code>d = 25,51 × 39,3823 ≈ 1.004,64 nm</code> (≈ <strong>1,00&nbsp;µm</strong>)</li>
+    <li><em>Si</em>:  <code>d = 22,17 × A</code> → <code>d = 22,17 × 39,3823 ≈ &nbsp;873,11 nm</code> (≈ <strong>0,87&nbsp;µm</strong>)</li>
   </ul>
-  Fórmula aplicada: <code>d (nm) = F′ × Área</code>.<br>
-  <em>Exemplo com a área acima:</em>
-  <div style="margin-top:4px">
-    KBr &rarr; <code>d = 25,51 × 110,418 ≈ 2.816,76 nm (≈ 2,82 μm)</code><br>
-    Si&nbsp;&nbsp;&nbsp;&nbsp;&rarr; <code>d = 22,17 × 110,418 ≈ 2.447,97 nm (≈ 2,45 μm)</code>
-  </div>
-  <span class="muted" style="display:block;margin-top:4px">No relatório, substituí o valor de área pelo medido na minha seleção; os fatores F′ já consideram a integração em absorbância (base-10).</span>
+  <span class="muted">Nota — Reportei ambos os valores; o que vale é o do substrato utilizado na amostra. Os fatores F′ já consideram a integração em absorbância (base-10).</span>
 </div>
 
 
