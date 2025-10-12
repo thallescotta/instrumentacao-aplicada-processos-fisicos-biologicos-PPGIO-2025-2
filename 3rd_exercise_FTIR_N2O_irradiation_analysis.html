@@ -111,37 +111,72 @@
   <div class="atividade-section">
     <h2>Roteiro Prático (OMNIC → Cálculos → Gráficos)</h2>
 
+
 <h3>ROTEIRO</h3>
 <p>Análise no programa OMNIC dos dados do N2O irradiados com Xe a 90 MeV.</p>
 
 <h3>1) Utilizando o programa OMNIC</h3>
 
+<!-- LETRA A: toda a sequência em passado -->
 <div class="enunciado">
   <strong>a.</strong> Abrir o espectro sem irradiar, para determinar a espessura do filme formado.
 </div>
 
 <div class="print-area">
-  <strong>Print 1</strong><br>
-  <!-- GIF 1 — letra a -->
+  <strong>Print 1 — Letra a (abertura e preparo)</strong><br>
   <img
     src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/Anima%C3%A7%C3%A3o-a1.gif"
     style="max-width:100%; height:auto;"
-    title="(Letra a) Reabri a sessão no OMNIC e preparei a área de trabalho para o espectro pré-irradiação (Display Limits, Smooth e Automatic Baseline)."
-    alt="(Letra a) Abertura do espectro pré-irradiação e preparo."
+    title="Eu abri o espectro pré-irradiação no OMNIC (File → Open) e preparei a área de trabalho: limitei a visualização (Display Limits), apliquei uma suavização leve (Smooth) e corrigi o baseline (Automatic Baseline Correct)."
+    alt="Abertura do espectro pré-irradiação e preparo: Display Limits, Smooth e Baseline."
   >
-  <!-- GIF 2 — letra a -->
   <img
     src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/Anima%C3%A7%C3%A3o-a2.gif"
     style="max-width:100%; height:auto; margin-top:8px;"
-    title="(Letra a) Enquadrei a região 2300–2170 cm⁻¹ e modelei a banda 2239 cm⁻¹ no Peak Resolve (baseline linear; Composite Result)."
-    alt="(Letra a) Enquadramento 2300–2170 cm⁻¹ e ajuste da banda 2239 cm⁻¹ no Peak Resolve."
+    title="Eu enquadrei a região 2300–2170 cm⁻¹ e ajustei a banda 2239 cm⁻¹ com Analyze → Peak Resolve (Baseline Linear), gerando o Composite Result."
+    alt="Enquadramento 2300–2170 cm⁻¹ e ajuste da banda 2239 cm⁻¹ no Peak Resolve."
   >
-  <div class="caption muted" style="margin-top:6px;">
-    Ambos os GIFs correspondem à letra a: abertura/preparo do espectro não irradiado e ajuste/integração da banda 2239&nbsp;cm⁻¹ para estimar a espessura.
-  </div>
 </div>
 
-<div class="enunciado">
+<!-- As duas imagens finais da letra a -->
+<div class="print-area" style="margin-top:10px;">
+  <strong>Print 1.1 — Letra a (Composite/seleção da banda)</strong><br>
+  <img
+    src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/a3.png"
+    style="max-width:100%; height:auto;"
+    title="Na janela Result (Composite result spectrum), eu selecionei a faixa 2300–2170 cm⁻¹. O rodapé indicou a área integrada como 'Total Region'."
+    alt="Result: seleção 2300–2170 cm⁻¹ com indicação de Total Region."
+  >
+</div>
+
+<div class="print-area" style="margin-top:8px;">
+  <strong>Print 1.2 — Letra a (checagem no Excel)</strong><br>
+  <img
+    src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/a4.png"
+    style="max-width:100%; height:auto;"
+    title="Eu exportei a tabela Peaks… para o Excel (Clipboard), somei as áreas dos componentes dentro de 2300–2170 cm⁻¹ (SUMIFS) e confirmei o valor total."
+    alt="Excel: soma das áreas dos componentes na faixa 2300–2170 cm⁻¹ (SUMIFS)."
+  >
+</div>
+
+<!-- Resultados e cálculo DENTRO da letra a, em passado -->
+<div class="caption" style="margin-top:8px;">
+  <strong>Resultados e cálculo (letra a)</strong><br>
+  Eu integrei a banda ν₃ (~2239 cm⁻¹) na faixa <code>2300–2170 cm⁻¹</code> e obtive a área integrada no OMNIC (rodapé “Total Region”). Em seguida, eu reproduzi o valor no Excel somando as áreas dos componentes (Peaks…) com
+  <code>SUMIFS(Area; CenterX; "&gt;=2170"; CenterX; "&lt;=2300")</code>. <br><br>
+
+  <em>Exemplo ilustrativo (substituir pelo valor medido):</em><br>
+  — Área integrada (OMNIC/Excel): <code>A = 110,418&nbsp;absorbance·cm⁻¹</code>.<br>
+  — Eu converti a área em espessura usando o fator da banda 2239 cm⁻¹: <code>d (nm) = F′ × A</code>, onde<br>
+  &nbsp;&nbsp;KBr: <code>F′ = 25,51</code> &nbsp;&nbsp;|&nbsp;&nbsp; Si: <code>F′ = 22,17</code>.<br>
+  — Cálculo (exemplo):<br>
+  &nbsp;&nbsp;KBr → <code>d = 25,51 × 110,418 ≈ 2816,76 nm (≈ 2,82 μm)</code><br>
+  &nbsp;&nbsp;Si  → <code>d = 22,17 × 110,418 ≈ 2447,97 nm (≈ 2,45 μm)</code><br>
+  Observação: eu substituí o valor da área pelo medido na minha seleção; os fatores F′ já consideram a integração em absorbância (base-10).
+</div>
+
+<!-- LETRA B e C permanecem após a A -->
+<div class="enunciado" style="margin-top:14px;">
   <strong>b.</strong> Eliminar a faixa de ruídos e corrigir o baseline (deletar o espectro anterior).
 </div>
 <div class="print-area">
@@ -157,42 +192,6 @@
   <strong>Print 3</strong><br>
   <em>(Inserir captura: integração das 3 bandas)</em>
 </div>
-
-<!-- BLOCO FINAL: imagens 3 e 4 + cálculo com Excel -->
-<div class="print-area" style="margin-top:14px;">
-  <strong>Print 4 — Resultados e cálculo</strong><br>
-
-  <!-- Imagem 3: janela Result/Composite (área integrada na barra inferior) -->
-  <img
-    src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/a3.png"
-    style="max-width:100%; height:auto;"
-    title="Janela Result (Composite result spectrum). Seleção 2300–2170 cm⁻¹ com indicador de área no rodapé: Total Region = 110,418 (absorbance·cm⁻¹)."
-    alt="Result: seleção 2300–2170 cm⁻¹ e Total Region = 110,418."
-  >
-
-  <!-- Imagem 4: planilha Excel com soma/checagem da área -->
-  <img
-    src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/a4.png"
-    style="max-width:100%; height:auto; margin-top:8px;"
-    title="Planilha Excel: soma das áreas dos componentes (Peaks… → Clipboard) dentro de 2300–2170 cm⁻¹, checando o valor Total Region."
-    alt="Excel: soma das áreas dos componentes na faixa 2300–2170 cm⁻¹."
-  >
-
-  <div class="caption" style="margin-top:8px;">
-    <strong>Como a espessura foi calculada (letra a)</strong><br>
-    1) No OMNIC (janela <em>Result</em>), selecionei a faixa <code>2300–2170 cm⁻¹</code> e li a área integrada no rodapé:
-    <code>Total Region = <span id="area2239">110,418</span> absorbance·cm⁻¹</code>.<br>
-    2) Reproduzi/validei a área no Excel somando as colunas <em>Area</em> dos componentes (tabela <em>Peaks…</em>) com a fórmula
-    <code>SUMIFS(Area; CenterX; "&gt;=2170"; CenterX; "&lt;=2300")</code>.<br>
-    3) Converto a área em espessura: <code>d (nm) = F′ × Área</code>, com os fatores para a banda 2239 cm⁻¹:<br>
-    &nbsp;&nbsp;• KBr: <code>F′ = 25,51 nm/(absorbance·cm⁻¹)</code> &nbsp;&nbsp;• Si: <code>F′ = 22,17 nm/(absorbance·cm⁻¹)</code>.<br>
-    <em>Exemplo numérico (usando a área acima):</em><br>
-    &nbsp;&nbsp;• KBr → <code>d = 25,51 × 110,418 ≈ 2816,76 nm (≈ 2,82 μm)</code><br>
-    &nbsp;&nbsp;• Si  → <code>d = 22,17 × 110,418 ≈ 2447,97 nm (≈ 2,45 μm)</code><br>
-    <span class="muted">Observação: substitua o valor de área pelo medido no seu arquivo; os fatores F′ já incorporam a conversão em absorbância (base-10).</span>
-  </div>
-</div>
-
 
 
 
