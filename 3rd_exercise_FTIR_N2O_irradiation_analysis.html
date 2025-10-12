@@ -111,25 +111,36 @@
   <div class="atividade-section">
     <h2>Roteiro Prático (OMNIC → Cálculos → Gráficos)</h2>
 
-    <h3>1) Processamento inicial no OMNIC</h3>
-    <div class="enunciado">
-      <strong>1.a)</strong> <u>Espectro não irradiado</u>: abra o espectro de referência, selecione uma banda adequada e estime a espessura do filme a partir da área integrada e do A-value correspondente.
-    </div>
-    <div class="print-area"><strong>Print 1</strong><br><em>(Inserir captura: espectro não irradiado e cálculo de espessura)</em></div>
+<h3>ROTEIRO</h3>
+<p>Análise no programa OMNIC dos dados do N2O irradiados com Xe a 90 MeV.</p>
 
-    <div class="enunciado">
-      <strong>1.b)</strong> <u>Pré-processamento</u>: limite a região útil, remova faixas de ruído e corrija o <em>baseline</em>. Salve o espectro processado.
-    </div>
-    <div class="print-area"><strong>Print 2</strong><br><em>(Inserir captura: baseline corrigido)</em></div>
+<h3>1) Utilizando o programa OMNIC</h3>
 
-    <div class="enunciado">
-      <strong>1.c)</strong> <u>Bandas de interesse (Fulvio, 2009)</u>: escolha 3 picos da Tabela&nbsp;4. Integre cada banda e calcule a <strong>densidade de coluna</strong>:
-      \[
-        N = \frac{\ln(10)}{\mathcal{A}} \int A(\tilde\nu)\, d\tilde\nu
-      \]
-      <span class="muted">Obs.: a terceira banda mais intensa do N₂O (589&nbsp;cm\(^{-1}\), modo \(\nu_2\)) não foi analisada em Fulvio (2009).</span>
-    </div>
-    <div class="print-area"><strong>Print 3</strong><br><em>(Inserir captura: integração das 3 bandas)</em></div>
+<div class="enunciado">
+  <strong>a.</strong> Abrir o espectro sem irradiar, para determinar a espessura do filme formado.
+</div>
+<div class="print-area">
+  <strong>Print 1</strong><br>
+  <img src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/Anima%C3%A7%C3%A3o-a1.gif" alt="Espectro não irradiado — seleção de banda e preparo para espessura" style="max-width:100%; height:auto;">
+</div>
+
+<div class="enunciado">
+  <strong>b.</strong> Eliminar a faixa de ruídos e corrigir o baseline (deletar o espectro anterior).
+</div>
+<div class="print-area">
+  <strong>Print 2</strong><br>
+  <img src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/raw/main/gif/Anima%C3%A7%C3%A3o-a2.gif" alt="Pré-processamento — limitar região útil e corrigir baseline" style="max-width:100%; height:auto;">
+</div>
+
+<div class="enunciado">
+  <strong>c.</strong> Escolher os 3 picos contidos no artigo do Fulvio-2009[5] (Tabela 4). Determinar a área dos mesmos e calcular a densidade de coluna usando o A-value da tabela e a eq. 2.
+  <br><span class="muted">Obs.: A terceira banda de maior intensidade do N₂O (em 589 cm<sup>−1</sup> ν<sub>2</sub>) não foi analisada em Fulvio[5].</span>
+</div>
+<div class="print-area">
+  <strong>Print 3</strong><br>
+  <em>(Inserir captura: integração das 3 bandas e cálculo da densidade de coluna)</em>
+</div>
+
 
     <h3>2) Espessura do gelo e verificação no SRIM/TRIM</h3>
     <div class="enunciado">
