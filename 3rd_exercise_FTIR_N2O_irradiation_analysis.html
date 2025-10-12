@@ -305,12 +305,141 @@
 </p>
 
 
+<!-- ===================== SEÇÃO 2  ===================== -->
+<h3 style="text-align:justify;">2) Determinação da espessura do gelo</h3>
+
+<p style="text-align:justify; margin:0;">
+  Como deste valor determinar a espessura do gelo com o arquivo EXCEL – Ref.[7]:
+</p>
+
+<!-- [Local adequado] – micro-tabelas pequenas da planilha (Ref.[7]) -->
+<div class="print-area" style="text-align:justify; margin-top:8px;">
+  <div style="font-weight:600;">Dados da planilha (Ref.[7])</div>
+  <div style="
+      display:flex; flex-wrap:wrap; gap:10px; 
+      align-items:flex-start; margin-top:6px;
+      --fs: 0.82rem; --pad:4px; --w: 330px;">
     
-<!-- ===================== SEÇÃO 2 (JUSTIFICADA) ===================== -->
-<h3 style="text-align:justify;">2) Espessura do gelo e verificação no SRIM/TRIM</h3>
+    <!-- Dose -->
+    <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:var(--w);">
+      <thead style="background:#f5f5f5;"><tr><th colspan="2" style="text-align:left; padding:var(--pad);">Dose</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:var(--pad);">Se (keV/mm)</td><td style="padding:var(--pad);">4,0</td></tr>
+        <tr><td style="padding:var(--pad);">ρ (g/cm³)</td><td style="padding:var(--pad);">0,500</td></tr>
+        <tr><td style="padding:var(--pad);">M (g/mol)</td><td style="padding:var(--pad);">16,042</td></tr>
+        <tr><td style="padding:var(--pad);">F (ion/cm²)</td><td style="padding:var(--pad);">1,40E+16</td></tr>
+        <tr><td style="padding:var(--pad);">dose (eV/molec)</td><td style="padding:var(--pad);">29,84</td></tr>
+        <tr><td style="padding:var(--pad);">dose (MGy)</td><td style="padding:var(--pad);">179,43</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Thickness of the sample (ℓ) -->
+    <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:var(--w);">
+      <thead style="background:#f5f5f5;"><tr><th colspan="2" style="text-align:left; padding:var(--pad);">Thickness of the sample (ℓ)</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:var(--pad);">N (molec/cm²)</td><td style="padding:var(--pad);">1,48E+18</td></tr>
+        <tr><td style="padding:var(--pad);">M (g/mol)</td><td style="padding:var(--pad);">44,000</td></tr>
+        <tr><td style="padding:var(--pad);">ρ (g/cm³)</td><td style="padding:var(--pad);">0,870</td></tr>
+        <tr><td style="padding:var(--pad);">ℓ (µm)</td><td style="padding:var(--pad);">1,24</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Absorbance / A-value -->
+    <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:var(--w);">
+      <thead style="background:#f5f5f5;"><tr><th colspan="2" style="text-align:left; padding:var(--pad);">Absorbance → N</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:var(--pad);">Absorbance</td><td style="padding:var(--pad);">20,664</td></tr>
+        <tr><td style="padding:var(--pad);">A-value (cm/molec)</td><td style="padding:var(--pad);">2,80E−17</td></tr>
+        <tr><td style="padding:var(--pad);">N (molec/cm²)</td><td style="padding:var(--pad);">1,70E+18</td></tr>
+        <tr><td style="padding:var(--pad);">M (g/mol)</td><td style="padding:var(--pad);">18,015</td></tr>
+        <tr><td style="padding:var(--pad);">ρ (g/cm³)</td><td style="padding:var(--pad);">0,800</td></tr>
+        <tr><td style="padding:var(--pad);">ℓ (µm)</td><td style="padding:var(--pad);">0,635</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Wavenumber / wavelength -->
+    <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:var(--w);">
+      <thead style="background:#f5f5f5;"><tr><th colspan="2" style="text-align:left; padding:var(--pad);">Wavenumber / wavelength converter</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:var(--pad);">Wavenumber (cm⁻¹)</td><td style="padding:var(--pad);">4527</td></tr>
+        <tr><td style="padding:var(--pad);">Wavelength (µm)</td><td style="padding:var(--pad);">2,21</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Initial Cross Section / G converter -->
+    <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:var(--w);">
+      <thead style="background:#f5f5f5;"><tr><th colspan="2" style="text-align:left; padding:var(--pad);">Initial Cross Section / G converter</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:var(--pad);">Se (keV/µm)</td><td style="padding:var(--pad);">4908,0</td></tr>
+        <tr><td style="padding:var(--pad);">ρ (g/cm³)</td><td style="padding:var(--pad);">0,800</td></tr>
+        <tr><td style="padding:var(--pad);">M (g/mol)</td><td style="padding:var(--pad);">17,031</td></tr>
+        <tr><td style="padding:var(--pad);">σ (cm²)</td><td style="padding:var(--pad);">6,44E−14</td></tr>
+        <tr><td style="padding:var(--pad);">G (molec/100 eV)</td><td style="padding:var(--pad);">3,71</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Thickness from interference fringes -->
+    <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:var(--w);">
+      <thead style="background:#f5f5f5;"><tr><th colspan="2" style="text-align:left; padding:var(--pad);">Thickness from interference fringes (baseline)</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:var(--pad);">ν₁ − ν₂ (cm⁻¹)</td><td style="padding:var(--pad);">19,000</td></tr>
+        <tr><td style="padding:var(--pad);">n</td><td style="padding:var(--pad);">1,200</td></tr>
+        <tr><td style="padding:var(--pad);">ℓ (µm)</td><td style="padding:var(--pad);">219,30</td></tr>
+      </tbody>
+    </table>
+
+    <!-- density converter -->
+    <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:var(--w);">
+      <thead style="background:#f5f5f5;"><tr><th colspan="2" style="text-align:left; padding:var(--pad);">density converter</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:var(--pad);">ρ (g/cm³)</td><td style="padding:var(--pad);">0,800</td></tr>
+        <tr><td style="padding:var(--pad);">M (g/mol)</td><td style="padding:var(--pad);">17,031</td></tr>
+        <tr><td style="padding:var(--pad);">ρ (molec/µm³)</td><td style="padding:var(--pad);">2,83E+10</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Rate of Adsorption -->
+    <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:var(--w);">
+      <thead style="background:#f5f5f5;"><tr><th colspan="2" style="text-align:left; padding:var(--pad);">Rate of Adsorption</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:var(--pad);">sticking probability</td><td style="padding:var(--pad);">1,0</td></tr>
+        <tr><td style="padding:var(--pad);">pressure (mbar)</td><td style="padding:var(--pad);">1,00E−06</td></tr>
+        <tr><td style="padding:var(--pad);">molecule mass (kg)</td><td style="padding:var(--pad);">2,99E−26</td></tr>
+        <tr><td style="padding:var(--pad);">Temperature (K)</td><td style="padding:var(--pad);">300</td></tr>
+        <tr><td style="padding:var(--pad);">R (molec/cm²/s)</td><td style="padding:var(--pad);">3,58E+14</td></tr>
+        <tr><td style="padding:var(--pad);">Time (s)</td><td style="padding:var(--pad);">10</td></tr>
+        <tr><td style="padding:var(--pad);">Tot. Ads. (molec/cm²)</td><td style="padding:var(--pad);">3,58E+15</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Beam Current / Flux converter -->
+    <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:var(--w);">
+      <thead style="background:#f5f5f5;"><tr><th colspan="2" style="text-align:left; padding:var(--pad);">Beam Current / Flux converter</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:var(--pad);">Beam Current (nA/cm²)</td><td style="padding:var(--pad);">30,0</td></tr>
+        <tr><td style="padding:var(--pad);">Charge state</td><td style="padding:var(--pad);">18</td></tr>
+        <tr><td style="padding:var(--pad);">Flux (ion/cm²/s)</td><td style="padding:var(--pad);">1,04E+10</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Molar Masses -->
+    <table border="1" cellpadding="0" style="border-collapse:collapse; font-size:var(--fs); width:calc(var(--w) * 0.7);">
+      <thead style="background:#f5f5f5;"><tr><th colspan="2" style="text-align:left; padding:var(--pad);">Molar Masses</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:var(--pad);">CH₄</td><td style="padding:var(--pad);">16,042</td></tr>
+        <tr><td style="padding:var(--pad);">NH₃</td><td style="padding:var(--pad);">17,031</td></tr>
+        <tr><td style="padding:var(--pad);">H₂O</td><td style="padding:var(--pad);">18,015</td></tr>
+        <tr><td style="padding:var(--pad);">CO</td><td style="padding:var(--pad);">28,010</td></tr>
+        <tr><td style="padding:var(--pad);">CH₃OH</td><td style="padding:var(--pad);">32,040</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+<!-- fim das micro-tabelas -->
 
 <div class="enunciado" style="text-align:justify;">
-  <strong>2.a)</strong> <u>Espessura</u>: usando a densidade do N₂O a 11&nbsp;K (Fulvio, 2009) e os A-values, converta \(N\) em espessura \(x\).
+  <strong>2.a)</strong> Utilizar para tal determinação a densidade do N2O a 11k dado no artigo do Fulvio 2009. Fazer este cálculo para as 3 bandas do artigo com o A-value.
   Aproximação prática: \(x \approx \dfrac{N}{n}\), sendo \(n\) a densidade numérica (molec·cm\(^{-3}\)).
 </div>
 
@@ -318,72 +447,13 @@
   <strong>2.b)</strong> <u>Alcance do feixe</u>: no SRIM/TRIM, obtenha o <em>stopping power</em> (unidades \(\mathrm{keV\,\mu m^{-1}}\)) e o alcance em N₂O. Com base em \(x\), discuta a presença de <strong>implantação</strong>.
 </div>
 
-<!-- Local adequado: inserção dos dados da planilha Ref.[7] (em tamanho pequeno) -->
-<div class="print-area" style="text-align:justify; margin-top:8px;">
-  <strong>Dados da planilha (Ref.[7])</strong>
-  <div style="font-size:0.9rem; opacity:0.95; margin-top:6px;">
-    <div><em>Arquivo:</em> <code>Ices calculations dose v1 Bordalo.pdf</code> &nbsp;|&nbsp; <em>Aba:</em> <code>Pasta1</code></div>
-    <div style="margin-top:6px;">
-      <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:900px;">
-        <thead style="background:#f5f5f5;">
-          <tr>
-            <th colspan="4" style="text-align:left;">Parâmetros principais (conforme planilha)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>N (molec/cm²)</strong></td>
-            <td>1,48×10<sup>18</sup></td>
-            <td><strong>Se (keV/mm)</strong></td>
-            <td>4,0</td>
-          </tr>
-          <tr>
-            <td><strong>ρ (g/cm³)</strong></td>
-            <td>0,500</td>
-            <td><strong>M (g/mol)</strong></td>
-            <td>44,000</td>
-          </tr>
-          <tr>
-            <td><strong>F (ion/cm²)</strong></td>
-            <td>1,4×10<sup>16</sup></td>
-            <td><strong>ℓ (mm)</strong></td>
-            <td>1,24</td>
-          </tr>
-          <tr>
-            <td><strong>Dose (eV/molec)</strong></td>
-            <td>29,84</td>
-            <td><strong>Dose (MGy)</strong></td>
-            <td>179,43</td>
-          </tr>
-          <tr>
-            <td><strong>Absorbance</strong></td>
-            <td>20,664</td>
-            <td><strong>A-value (cm/molec)</strong></td>
-            <td>2,80×10<sup>−17</sup></td>
-          </tr>
-          <tr>
-            <td><strong>Wavenumber (cm⁻¹)</strong></td>
-            <td>4527</td>
-            <td><strong>Wavelength (µm)</strong></td>
-            <td>2,21</td>
-          </tr>
-        </tbody>
-      </table>
-      <div style="margin-top:6px;">
-        <small>
-          Outros campos presentes na planilha (ex.: valores de ρ e M para CH₄, NH₃, H₂O; conversores de dose/espessura; “sticking probability”; fluxo/feixe) também constam na aba <em>Pasta1</em>. 
-          Esses itens podem ser usados para checagens e cálculos auxiliares (dose, alcance etc.). :contentReference[oaicite:1]{index=1}
-        </small>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Espaço para o print do SRIM/TRIM (como pede o enunciado) -->
 <div class="print-area" style="text-align:justify; margin-top:8px;">
   <strong>Print 4</strong><br>
   <em>(Inserir captura: resultados SRIM/TRIM e conclusão)</em>
 </div>
+    
+
 
 <!-- ===================== SEÇÃO 3 (mantida, apenas justificando títulos e parágrafos) ===================== -->
 <h3 style="text-align:justify;">3) Bandas “Pai” (não irradiada) e evolução com a fluência</h3>
