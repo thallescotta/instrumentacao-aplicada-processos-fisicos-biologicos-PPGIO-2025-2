@@ -495,7 +495,6 @@
       <div style="margin:6px 0 0 0;">
         <code>n = ρ(11 K) × N<sub>A</sub> / M</code>
         <span style="opacity:.85;">&nbsp;[ρ em g·cm<sup>−3</sup>; M = 44 g·mol<sup>−1</sup>; N<sub>A</sub> = 6,022×10<sup>23</sup> mol<sup>−1</sup>]</span>
-        &nbsp;→&nbsp; <span style="color:#c00;"><strong>use ρ(11&nbsp;K) de Fulvio (2009)</strong></span>
       </div>
     </li>
     <li>Por fim, eu converti <strong>N</strong> em espessura <strong>x</strong>:
@@ -505,9 +504,9 @@
     </li>
   </ol>
 
-  <!-- Tabela com as áreas já somadas (do seu OMNIC) + campos em vermelho para completar com Fulvio -->
+  <!-- Tabela com as áreas (OK) e campos pendentes dos A-values (em vermelho) -->
   <div style="font-size:0.95rem; margin-top:10px;">
-    <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:980px; margin:auto;">
+    <table border="1" cellpadding="6" style="border-collapse:collapse; width:100%; max-width:950px; margin:auto;">
       <thead style="background:#f5f5f5;">
         <tr>
           <th style="text-align:left;">Banda</th>
@@ -523,59 +522,56 @@
           <td><strong>c1</strong> (ν1)</td>
           <td>1310–1280</td>
           <td style="text-align:right;"><strong>6,7660</strong></td>
-          <td style="text-align:right;"><span style="color:#c00;"><strong>A<sub>c1</sub> = [copiar Tabela 4]</strong></span></td>
-          <td style="text-align:right;"><span style="color:#c00;"><strong>N<sub>c1</sub> = ln(10)×6,7660/A<sub>c1</sub></strong></span></td>
-          <td style="text-align:right;"><span style="color:#c00;"><strong>x<sub>c1</sub> = N<sub>c1</sub>/n</strong></span></td>
+          <td style="text-align:right; color:#c00;"><strong><!-- Cole aqui --> A<sub>c1</sub></strong></td>
+          <td style="text-align:right; color:#c00;"><strong>ln(10)·6,7660 / A<sub>c1</sub></strong></td>
+          <td style="text-align:right; color:#c00;"><strong>(ln(10)·6,7660 / A<sub>c1</sub>) / n × 10<sup>7</sup></strong></td>
         </tr>
         <tr>
           <td><strong>c2</strong> (2ν1)</td>
           <td>2600–2565</td>
           <td style="text-align:right;"><strong>3,6102</strong></td>
-          <td style="text-align:right;"><span style="color:#c00;"><strong>A<sub>c2</sub> = [copiar Tabela 4]</strong></span></td>
-          <td style="text-align:right;"><span style="color:#c00;"><strong>N<sub>c2</sub> = ln(10)×3,6102/A<sub>c2</sub></strong></span></td>
-          <td style="text-align:right;"><span style="color:#c00;"><strong>x<sub>c2</sub> = N<sub>c2</sub>/n</strong></span></td>
+          <td style="text-align:right; color:#c00;"><strong><!-- Cole aqui --> A<sub>c2</sub></strong></td>
+          <td style="text-align:right; color:#c00;"><strong>ln(10)·3,6102 / A<sub>c2</sub></strong></td>
+          <td style="text-align:right; color:#c00;"><strong>(ln(10)·3,6102 / A<sub>c2</sub>) / n × 10<sup>7</sup></strong></td>
         </tr>
         <tr>
           <td><strong>c3</strong> (ν3)</td>
           <td>2245–2228</td>
           <td style="text-align:right;"><strong>7,0326</strong></td>
-          <td style="text-align:right;"><span style="color:#c00;"><strong>A<sub>c3</sub> = [copiar Tabela 4]</strong></span></td>
-          <td style="text-align:right;"><span style="color:#c00;"><strong>N<sub>c3</sub> = ln(10)×7,0326/A<sub>c3</sub></strong></span></td>
-          <td style="text-align:right;"><span style="color:#c00;"><strong>x<sub>c3</sub> = N<sub>c3</sub>/n</strong></span></td>
+          <td style="text-align:right; color:#c00;"><strong><!-- Cole aqui --> A<sub>c3</sub></strong></td>
+          <td style="text-align:right; color:#c00;"><strong>ln(10)·7,0326 / A<sub>c3</sub></strong></td>
+          <td style="text-align:right; color:#c00;"><strong>(ln(10)·7,0326 / A<sub>c3</sub>) / n × 10<sup>7</sup></strong></td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
           <th colspan="5" style="text-align:right;">Média/intervalo de x (nm):</th>
-          <th style="text-align:right;"><span style="color:#c00;"><strong>média(x<sub>c1</sub>,x<sub>c2</sub>,x<sub>c3</sub>)</strong></span></th>
+          <th style="text-align:right; color:#c00;"><strong><!-- calcule após preencher x(c1..c3) --></strong></th>
         </tr>
       </tfoot>
     </table>
   </div>
 
-  <!-- Como calculei (exemplo) -->
-  <div style="margin-top:10px; font-size:0.95rem;">
-    <strong>Como calculei (exemplo para c3, ν3):</strong><br>
-    1) Da Tabela 4 de Fulvio (2009), anote <span style="color:#c00;"><strong>A<sub>c3</sub></strong></span> (cm·molec<sup>−1</sup>).<br>
-    2) Do OMNIC, use a área integrada <em>A<sub>banda</sub></em> = <strong>7,0326</strong> (abs·cm<sup>−1</sup>).<br>
-    3) Densidade de coluna: <code>N<sub>c3</sub> = ln(10) × 7,0326 / A<sub>c3</sub></code> (molec·cm<sup>−2</sup>).<br>
-    4) Densidade numérica do gelo (11 K): <code>n = ρ(11K) × N<sub>A</sub> / M</code> com <span style="color:#c00;"><strong>ρ(11K)</strong></span> do Fulvio (2009).<br>
-    5) Espessura: <code>x<sub>c3</sub> = N<sub>c3</sub> / n</code> e converta para nm multiplicando por 10<sup>7</sup>.
+  <!-- Como obter n com a densidade de 11 K -->
+  <div class="muted" style="margin-top:10px; font-size:0.95rem;">
+    <strong>Como obter <em>n</em>:</strong> copie do artigo a densidade do N<sub>2</sub>O a 11&nbsp;K, ρ(11&nbsp;K), e use
+    <code>n = ρ(11 K) × N<sub>A</sub> / M</code> (com M = 44 g·mol<sup>−1</sup>).
+    Depois substitua <code>n</code> nas expressões em vermelho para obter <code>x</code> (nm).
   </div>
 
-  <!-- Observações curtas -->
+  <!-- Observações e referências -->
   <ul style="margin:10px 0 0 18px; padding:0; line-height:1.5; font-size:0.95rem;">
-    <li>As <em>A-values</em> para ν₁, 2ν₁ e ν₃ devem ser copiadas da <strong>Tabela 4</strong> (Fulvio, 2009).</li>
-    <li>Use a <strong>ρ(11&nbsp;K)</strong> do N<sub>2</sub>O reportada por Fulvio (2009) ao calcular <em>n</em>.</li>
-    <li>Procedimento de integração no OMNIC: <em>Analyze → Peak Resolve → Find Peaks → Fit Peaks → Statistics… → Clipboard</em>.</li>
+    <li>Os <em>A-values</em> (cm·molec⁻¹) das três bandas devem ser **copiados da Tabela 4 de Fulvio (2009)**.</li>
+    <li>As áreas integradas vieram do OMNIC (Peak Resolve → <em>Statistics…</em> → <em>Clipboard</em>), conforme c1/c2/c3.</li>
+    <li>Após preencher A<sub>c1</sub>, A<sub>c2</sub>, A<sub>c3</sub> e ρ(11&nbsp;K), calcule N e x linha a linha e, por fim, a média de x.</li>
   </ul>
 
-  <!-- Referência ABNT -->
+  <!-- Referência ABNT (exemplo genérico; ajuste ao seu artigo exato) -->
   <div style="margin-top:10px; font-size:0.9rem;">
     <strong>Referência (ABNT):</strong><br>
-    FULVIO, D.; <em>et al.</em> Infrared spectroscopy of solid N<sub>2</sub>O at low temperature: band strengths and density. <strong>Journal of Quantitative Spectroscopy & Radiative Transfer</strong>, 2009. Tabela&nbsp;4 (A-values) e densidade a 11&nbsp;K.
+    FULVIO, D.; <em>et al.</em> Infrared spectroscopy of solid N<sub>2</sub>O at cryogenic temperatures: band strengths and density. <strong>Journal/Revista</strong>, v.&nbsp;xx, n.&nbsp;xx, p.&nbsp;xx–xx, 2009.
   </div>
-</
+</div>
 
 
 
