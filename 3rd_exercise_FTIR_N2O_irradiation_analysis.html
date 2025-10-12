@@ -482,22 +482,25 @@
          alt="c3 (ν3) — 2245–2228 cm-1" style="width:30%; min-width:220px; height:auto; border:1px solid #ddd; padding:2px;">
   </div>
 
-  <!-- Passo-a-passo (no passado) -->
-  <ol style="margin:0 0 10px 18px; padding:0; line-height:1.55;">
-    <li>Eu integrei as áreas das três bandas no OMNIC (c1, c2, c3) após <em>Smooth</em> e <em>Automatic Baseline Correct</em>.</li>
-    <li>Para cada banda, calculei a densidade de coluna <strong>N</strong> com a Eq.&nbsp;2:
-      <div style="margin:6px 0 0 0;">
-        <code>N = ln(10) × (Área integrada) / (A-value)</code>
-        <span style="opacity:.85;">&nbsp;[Área em absorbance·cm<sup>−1</sup>; A-value em cm·molec<sup>−1</sup>]</span>
-      </div>
-    </li>
-    <li>Usando ρ(11&nbsp;K) do N<sub>2</sub>O e \(M=44\ \mathrm{g\,mol^{-1}}\), obtive <code>n = ρ × N<sub>A</sub> / M</code>.</li>
-    <li>Por fim, converti <strong>N</strong> em espessura <strong>x</strong>:
-      <div style="margin:6px 0 0 0;">
-        <code>x (cm) = N / n</code> &nbsp;→&nbsp; <code>x (nm) = (N / n) × 10<sup>7</sup></code>
-      </div>
-    </li>
-  </ol>
+<!-- Passo-a-passo (no passado) -->
+<ol style="margin:0 0 10px 18px; padding:0; line-height:1.55;">
+  <li>Abri o arquivo <em>N2O 11K 0.5mbar Sam Juin 13 14-12-32 2015.SPA</em> (<code>File → Open…</code>), ajustei a janela de visualização em <code>View → Display Limits</code> (<strong>Ctrl+D</strong>) e trabalhei uma banda por vez: c1 1310–1280 cm⁻¹, c2 2600–2565 cm⁻¹, c3 2245–2228 cm⁻¹. Após enquadrar cada banda, usei <strong>Ctrl+F</strong> (Full Scale) para ver os detalhes.</li>
+  <li>Apliquei <code>Process → Smooth</code> (leve; 7–9 pontos) e <code>Process → Automatic Baseline Correct</code> antes da integração.</li>
+  <li>Integrei cada banda em <code>Analyze → Peak Resolve…</code>; em <em>Find Peaks</em> mantive <em>Sensitivity</em> em Low/Medium e <em>FWHH</em>≈0,9–1,0; cliquei <em>Find Peaks</em> e depois <em>Fit Peaks</em>. Em <em>Statistics…</em> → <em>Clipboard</em> copiei a tabela (Peak #, Center X, Area).</li>
+  <li>Para cada banda, calculei a densidade de coluna <strong>N</strong> pela Eq.&nbsp;2:
+    <div style="margin:6px 0 0 0;">
+      <code>N = ln(10) × (Área integrada) / (A-value)</code>
+      <span style="opacity:.85;">&nbsp;[Área em absorbance·cm<sup>−1</sup>; A-value em cm·molec<sup>−1</sup>]</span>
+    </div>
+  </li>
+  <li>Com ρ(11&nbsp;K) do N<sub>2</sub>O e <code>M = 44 g·mol<sup>−1</sup></code>, obtive a densidade numérica <code>n = ρ × N<sub>A</sub> / M</code>.</li>
+  <li>Por fim, converti <strong>N</strong> em espessura <strong>x</strong>:
+    <div style="margin:6px 0 0 0;">
+      <code>x (cm) = N / n</code> &nbsp;→&nbsp; <code>x (nm) = (N / n) × 10<sup>7</sup></code>
+    </div>
+  </li>
+</ol>
+
 
   <!-- Tabela com áreas + A-values + N + x (ATUALIZADA) -->
   <div style="font-size:0.95rem; margin-top:10px;">
