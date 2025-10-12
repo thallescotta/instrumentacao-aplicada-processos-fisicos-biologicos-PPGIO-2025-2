@@ -657,7 +657,17 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
 
   <h4 style="margin:0 0 10px 0;">Resposta 2.b — Stopping power e alcance no SRIM (c1, c2 e c3)</h4>
 
-  <!-- Cards responsivos: ocupam toda a largura e se reorganizam conforme a janela -->
+  <!-- Como li o log e cheguei à decisão -->
+  <div style="background:#fffffb; border:1px solid #e9e2c7; padding:10px; margin:0 0 12px 0; line-height:1.55; text-align:justify;">
+    <strong>Como eu interpretei o resultado do SRIM:</strong><br>
+    • Do log, para a energia de interesse, eu li o <em>Projected Range</em> \(R_p\) (profundidade média onde os íons param) e a <em>Longitudinal Straggling</em> \(\Delta R_p\) (largura da distribuição em profundidade).<br>
+    • Comparei \(R_p \pm \Delta R_p\) com a espessura do filme \(x\) obtida em 2.a (para cada banda c1, c2, c3):<br>
+    &nbsp;&nbsp;&nbsp;– se \(R_p - \Delta R_p &gt; x\) ⇒ o feixe <u>atravessou</u> (sem implantação);<br>
+    &nbsp;&nbsp;&nbsp;– se \(x &gt; R_p + \Delta R_p\) ⇒ houve <u>implantação</u> (parou dentro do filme);<br>
+    &nbsp;&nbsp;&nbsp;– se \(R_p - \Delta R_p \le x \le R_p + \Delta R_p\) ⇒ <u>transição</u> (parcial).
+  </div>
+
+  <!-- Cards responsivos (imagens 100% da largura do cartão) -->
   <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center;">
 
     <!-- ====== C1 ====== -->
@@ -673,15 +683,16 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
           <tr><th colspan="2" style="text-align:left;">c1 — Resumo SRIM</th></tr>
         </thead>
         <tbody>
-          <tr><td>Íon / Energia</td><td>Xe, 90&nbsp;MeV</td></tr>
+          <tr><td>Íon / Energia</td><td>Hydrogen, 90&nbsp;keV</td></tr>
           <tr><td>Alvo (ρ)</td><td>N–N–O, 1,1593&nbsp;g·cm⁻³</td></tr>
           <tr><td>Projected Range \(R_p\)</td><td>1,47&nbsp;µm</td></tr>
-          <tr><td>Straggling \(\Delta R_p\)</td><td>0,20&nbsp;µm</td></tr>
+          <tr><td>Longitudinal Straggling \(\Delta R_p\)</td><td>0,151&nbsp;µm</td></tr>
           <tr><td>Espessura \(x\) (2.a)</td><td>0,909&nbsp;µm</td></tr>
           <tr>
             <td style="font-weight:600;">Conclusão</td>
             <td style="font-weight:600;">
-              \(R_p-\Delta R_p = 1{,}27\,\mu m &gt; x\) → <u>atravessou</u> (sem implantação).
+              \(R_p-\Delta R_p = 1{,}47-0{,}151 = 1{,}319\,\mu m &gt; x\).<br>
+              Logo, <u>o feixe atravessou o filme</u> (sem implantação).
             </td>
           </tr>
         </tbody>
@@ -701,15 +712,16 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
           <tr><th colspan="2" style="text-align:left;">c2 — Resumo SRIM</th></tr>
         </thead>
         <tbody>
-          <tr><td>Íon / Energia</td><td>Xe, 90&nbsp;MeV</td></tr>
+          <tr><td>Íon / Energia</td><td>Hydrogen, 90&nbsp;keV</td></tr>
           <tr><td>Alvo (ρ)</td><td>N–N–O, 1,1593&nbsp;g·cm⁻³</td></tr>
           <tr><td>Projected Range \(R_p\)</td><td>1,47&nbsp;µm</td></tr>
-          <tr><td>Straggling \(\Delta R_p\)</td><td>0,20&nbsp;µm</td></tr>
+          <tr><td>Longitudinal Straggling \(\Delta R_p\)</td><td>0,151&nbsp;µm</td></tr>
           <tr><td>Espessura \(x\) (2.a)</td><td>3,461&nbsp;µm</td></tr>
           <tr>
             <td style="font-weight:600;">Conclusão</td>
             <td style="font-weight:600;">
-              \(x &gt; R_p+\Delta R_p = 1{,}67\,\mu m\) → <u>implantou</u> (parou no filme).
+              \(x = 3{,}461\,\mu m &gt; R_p+\Delta R_p = 1{,}47+0{,}151 = 1{,}621\,\mu m\).<br>
+              Logo, <u>o feixe parou no filme</u> (implantação).
             </td>
           </tr>
         </tbody>
@@ -720,7 +732,7 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
     <div style="flex:1 1 420px; max-width:900px;">
       <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/gif/srim-c3-complete.png" target="_blank" rel="noopener">
         <img
-          src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicados-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/srim-c3-complete.png"
+          src="https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/gif/srim-c3-complete.png"
           alt="SRIM — configuração/resultado c3"
           style="width:100%; height:auto; border:1px solid #ddd; padding:2px; background:#fff; display:block;">
       </a>
@@ -729,15 +741,16 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
           <tr><th colspan="2" style="text-align:left;">c3 — Resumo SRIM</th></tr>
         </thead>
         <tbody>
-          <tr><td>Íon / Energia</td><td>Xe, 90&nbsp;MeV</td></tr>
+          <tr><td>Íon / Energia</td><td>Hydrogen, 90&nbsp;keV</td></tr>
           <tr><td>Alvo (ρ)</td><td>N–N–O, 1,1593&nbsp;g·cm⁻³</td></tr>
           <tr><td>Projected Range \(R_p\)</td><td>1,47&nbsp;µm</td></tr>
-          <tr><td>Straggling \(\Delta R_p\)</td><td>0,20&nbsp;µm</td></tr>
+          <tr><td>Longitudinal Straggling \(\Delta R_p\)</td><td>0,151&nbsp;µm</td></tr>
           <tr><td>Espessura \(x\) (2.a)</td><td>0,178&nbsp;µm</td></tr>
           <tr>
             <td style="font-weight:600;">Conclusão</td>
             <td style="font-weight:600;">
-              \(R_p-\Delta R_p = 1{,}27\,\mu m \gg x\) → <u>atravessou</u> (sem implantação).
+              \(R_p-\Delta R_p = 1{,}319\,\mu m \gg x = 0{,}178\,\mu m\).<br>
+              Logo, <u>o feixe atravessou o filme</u> (sem implantação).
             </td>
           </tr>
         </tbody>
@@ -748,9 +761,8 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
 
   <!-- Nota sucinta de procedimento -->
   <p class="muted" style="margin-top:10px; text-align:justify;">
-    <strong>Como eu gerei os valores:</strong> no TRIM selecionei <em>Ion</em>=Xe (90&nbsp;MeV); no alvo, adicionei N (7), N (7) e O (8) com estequiometria 1:1:1 e
-    densidade 1,1593&nbsp;g·cm<sup>−3</sup>; para cada caso defini a espessura da camada como o \(x\) obtido em 2.a (c1, c2, c3) e executei
-    <em>Calculate Table</em> no <em>Ion Stopping &amp; Range Tables</em>. Do log, li \(R_p\) e \(\Delta R_p\) e comparei numericamente com \(x\) como mostrado em cada cartão.
+    <strong>Procedimento no SRIM:</strong> em <em>Ion Stopping and Range Tables</em>, selecionei <em>Ion</em>=Hydrogen (90&nbsp;keV), montei o alvo N–N–O com densidade 1,1593&nbsp;g·cm<sup>−3</sup> e executei <em>Calculate Table</em>.
+    Do log, para 90&nbsp;keV, extraí \(R_p\) = 1,47&nbsp;µm e \(\Delta R_p\) = 0,151&nbsp;µm (estraggle longitudinal). Comparei com as espessuras \(x\) de 2.a (c1, c2, c3) como mostrado acima.
   </p>
 
 </div>
