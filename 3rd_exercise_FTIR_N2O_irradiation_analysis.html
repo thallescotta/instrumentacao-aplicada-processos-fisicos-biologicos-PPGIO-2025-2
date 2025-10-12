@@ -800,95 +800,108 @@ x = N/n = 2,85×10¹⁷ / 1,60×10²² = 1,78×10⁻⁵ cm = <span style="color:
 
   <h4 style="margin:0 0 10px 0;">Resposta 3.1 — Identificação no OMNIC + atribuições e contaminantes</h4>
 
-  <!-- Grade com viewers PDF.js (2 fileiras no desktop) -->
-  <div style="
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap:14px;
-    align-items:start;
-  ">
+  <!-- Grade com viewers PDF.js (sem <script>, 2 fileiras no desktop) -->
+<div style="
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap:14px;
+  align-items:start;
+">
 
-    <!-- Helper: função para montar URL do viewer com o PDF -->
-    <script>
-      // Monta a URL do viewer do PDF.js (CDN) + arquivo PDF (raw.githubusercontent)
-      function v(pdfPath) {
-        const viewer = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/web/viewer.html";
-        const file   = "https://raw.githubusercontent.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/main/" + pdfPath;
-        return viewer + "?file=" + encodeURIComponent(file) + "#zoom=page-fit&toolbar=0"; // toolbar=0 para ficar clean
-      }
-    </script>
-
-    <!-- 589 cm⁻1 -->
-    <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
-      <div style="padding:10px;">
-        <div style="font-weight:600; font-size:15px;">589 cm⁻¹ — ν₂ (N₂O)</div>
-        <div style="font-size:12px; color:#555;">Janela 580–592</div>
-      </div>
-      <iframe id="v589" style="width:100%; height:340px; border:0;" title="3_589cm.pdf"></iframe>
-      <script>document.getElementById("v589").src = v("gif/3_589cm.pdf");</script>
+  <!-- 589 cm⁻1 -->
+  <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
+    <div style="padding:10px;">
+      <div style="font-weight:600; font-size:15px;">589 cm⁻¹ — ν₂ (N₂O)</div>
+      <div style="font-size:12px; color:#555;">Janela 580–592</div>
     </div>
-
-    <!-- 1166 cm⁻1 -->
-    <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
-      <div style="padding:10px;">
-        <div style="font-weight:600; font-size:15px;">1166 cm⁻¹ — 2ν₂ (N₂O)</div>
-        <div style="font-size:12px; color:#555;">Janela 1155–1178</div>
-      </div>
-      <iframe id="v1166" style="width:100%; height:340px; border:0;" title="3_1166cm.pdf"></iframe>
-      <script>document.getElementById("v1166").src = v("gif/3_1166cm.pdf");</script>
-    </div>
-
-    <!-- 1295 cm⁻1 -->
-    <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
-      <div style="padding:10px;">
-        <div style="font-weight:600; font-size:15px;">1295 cm⁻¹ — ν₁ (N–N, N₂O)</div>
-        <div style="font-size:12px; color:#555;">Janela 1280–1305</div>
-      </div>
-      <iframe id="v1295" style="width:100%; height:340px; border:0;" title="3_1295cm.pdf"></iframe>
-      <script>document.getElementById("v1295").src = v("gif/3_1295cm.pdf");</script>
-    </div>
-
-    <!-- 2239 cm⁻1 -->
-    <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
-      <div style="padding:10px;">
-        <div style="font-weight:600; font-size:15px;">2239 cm⁻¹ — ν₃ (anti-sim., N₂O)</div>
-        <div style="font-size:12px; color:#555;">Janela 2224–2243</div>
-      </div>
-      <iframe id="v2239" style="width:100%; height:340px; border:0;" title="3_2239cm.pdf"></iframe>
-      <script>document.getElementById("v2239").src = v("gif/3_2239cm.pdf");</script>
-    </div>
-
-    <!-- 2581 cm⁻1 -->
-    <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
-      <div style="padding:10px;">
-        <div style="font-weight:600; font-size:15px;">2581 cm⁻¹ — 2ν₁ / ν₁+ν₂ (N₂O)</div>
-        <div style="font-size:12px; color:#555;">Janela 2565–2600</div>
-      </div>
-      <iframe id="v2581" style="width:100%; height:340px; border:0;" title="3_2581cm.pdf"></iframe>
-      <script>document.getElementById("v2581").src = v("gif/3_2581cm.pdf");</script>
-    </div>
-
-    <!-- 3380 cm⁻1 -->
-    <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
-      <div style="padding:10px;">
-        <div style="font-weight:600; font-size:15px;">3380 cm⁻¹ — O–H (H₂O, amorfa)</div>
-        <div style="font-size:12px; color:#555;">Janela 3376–3382</div>
-      </div>
-      <iframe id="v3380" style="width:100%; height:340px; border:0;" title="3_3380cm.pdf"></iframe>
-      <script>document.getElementById("v3380").src = v("gif/3_3380cm.pdf");</script>
-    </div>
-
-    <!-- 3706 cm⁻1 -->
-    <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
-      <div style="padding:10px;">
-        <div style="font-weight:600; font-size:15px;">3706 cm⁻¹ — O–H “dangling bond”</div>
-        <div style="font-size:12px; color:#555;">Janela 3706.5–3704.5</div>
-      </div>
-      <iframe id="v3706" style="width:100%; height:340px; border:0;" title="3_3706cm.pdf"></iframe>
-      <script>document.getElementById("v3706").src = v("gif/3_3706cm.pdf");</script>
-    </div>
-
+    <iframe
+      style="width:100%; height:340px; border:0;"
+      title="3_589cm.pdf"
+      src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/web/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fthallescotta%2Finstrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2%2Fmain%2Fgif%2F3_589cm.pdf#zoom=page-fit&amp;toolbar=0">
+    </iframe>
   </div>
+
+  <!-- 1166 cm⁻1 -->
+  <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
+    <div style="padding:10px;">
+      <div style="font-weight:600; font-size:15px;">1166 cm⁻¹ — 2ν₂ (N₂O)</div>
+      <div style="font-size:12px; color:#555;">Janela 1155–1178</div>
+    </div>
+    <iframe
+      style="width:100%; height:340px; border:0;"
+      title="3_1166cm.pdf"
+      src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/web/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fthallescotta%2Finstrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2%2Fmain%2Fgif%2F3_1166cm.pdf#zoom=page-fit&amp;toolbar=0">
+    </iframe>
+  </div>
+
+  <!-- 1295 cm⁻1 -->
+  <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
+    <div style="padding:10px;">
+      <div style="font-weight:600; font-size:15px;">1295 cm⁻¹ — ν₁ (N–N, N₂O)</div>
+      <div style="font-size:12px; color:#555;">Janela 1280–1305</div>
+    </div>
+    <iframe
+      style="width:100%; height:340px; border:0;"
+      title="3_1295cm.pdf"
+      src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/web/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fthallescotta%2Finstrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2%2Fmain%2Fgif%2F3_1295cm.pdf#zoom=page-fit&amp;toolbar=0">
+    </iframe>
+  </div>
+
+  <!-- 2239 cm⁻1 -->
+  <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
+    <div style="padding:10px;">
+      <div style="font-weight:600; font-size:15px;">2239 cm⁻¹ — ν₃ (anti-sim., N₂O)</div>
+      <div style="font-size:12px; color:#555;">Janela 2224–2243</div>
+    </div>
+    <iframe
+      style="width:100%; height:340px; border:0;"
+      title="3_2239cm.pdf"
+      src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/web/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fthallescotta%2Finstrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2%2Fmain%2Fgif%2F3_2239cm.pdf#zoom=page-fit&amp;toolbar=0">
+    </iframe>
+  </div>
+
+  <!-- 2581 cm⁻1 -->
+  <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
+    <div style="padding:10px;">
+      <div style="font-weight:600; font-size:15px;">2581 cm⁻¹ — 2ν₁ / ν₁+ν₂ (N₂O)</div>
+      <div style="font-size:12px; color:#555;">Janela 2565–2600</div>
+    </div>
+    <iframe
+      style="width:100%; height:340px; border:0;"
+      title="3_2581cm.pdf"
+      src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/web/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fthallescotta%2Finstrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2%2Fmain%2Fgif%2F3_2581cm.pdf#zoom=page-fit&amp;toolbar=0">
+    </iframe>
+  </div>
+
+  <!-- 3380 cm⁻1 -->
+  <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
+    <div style="padding:10px;">
+      <div style="font-weight:600; font-size:15px;">3380 cm⁻¹ — O–H (H₂O, amorfa)</div>
+      <div style="font-size:12px; color:#555;">Janela 3376–3382</div>
+    </div>
+    <iframe
+      style="width:100%; height:340px; border:0;"
+      title="3_3380cm.pdf"
+      src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/web/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fthallescotta%2Finstrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2%2Fmain%2Fgif%2F3_3380cm.pdf#zoom=page-fit&amp;toolbar=0">
+    </iframe>
+  </div>
+
+  <!-- 3706 cm⁻1 -->
+  <div style="border:1px solid #ddd; border-radius:8px; overflow:hidden; background:#fff;">
+    <div style="padding:10px;">
+      <div style="font-weight:600; font-size:15px;">3706 cm⁻¹ — O–H “dangling bond”</div>
+      <div style="font-size:12px; color:#555;">Janela 3706.5–3704.5</div>
+    </div>
+    <iframe
+      style="width:100%; height:340px; border:0;"
+      title="3_3706cm.pdf"
+      src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/web/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fthallescotta%2Finstrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2%2Fmain%2Fgif%2F3_3706cm.pdf#zoom=page-fit&amp;toolbar=0">
+    </iframe>
+  </div>
+
+</div>
+
+
 
 
 
