@@ -2,7 +2,6 @@
 <html lang="pt-BR" data-lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="x-ua-compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</title>
 
@@ -19,15 +18,17 @@
     .eq { background:#f6f8fa; padding:10px 12px; border-radius:8px; border:1px solid #e5e7eb; margin:10px 0; overflow-x:auto; }
     img.logo { display:block; margin: 0 auto; max-width: 360px; height:auto; border-radius:8px; }
 
-    /* Language toggle button */
+    /* Language button (agora é um link) */
     .lang-toggle {
       position: fixed; top: 14px; right: 14px; z-index: 9999;
       background: var(--brand); color:#fff; border:none; border-radius:999px;
       padding: 10px 14px; font-weight:600; cursor:pointer; box-shadow: 0 4px 14px rgba(0,0,0,.12);
+      text-decoration: none;
+      display:inline-block;
     }
     .lang-toggle:focus { outline: 2px solid #cceeff; outline-offset: 2px; }
 
-    /* (Opcional) blocks PT/EN do seu layout atual — pode manter */
+    /* Seus blocos PT/EN podem permanecer (não interferem) */
     [data-lang="pt"] #pt { display:block; }
     [data-lang="pt"] #en { display:none; }
     [data-lang="en"] #pt { display:none; }
@@ -37,77 +38,27 @@
   <!-- MathJax configuration (must appear BEFORE the loader) -->
   <script>
     window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)']],
-        displayMath: [['\\[', '\\]']],
-        processEscapes: true
-      },
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']], processEscapes: true },
       options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
     };
   </script>
   <!-- MathJax loader -->
   <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-  <!-- Toggle via Google Translate proxy (abre/volta entre PT e EN) -->
-  <script>
-    (function () {
-      // Ajuste estes dois se mudar o usuário/repo do GitHub Pages
-      const CANON_HOST = 'thallescotta.github.io';
-      const TRANS_HOST = 'thallescotta-github-io.translate.goog';
-
-      // Constrói URLs canônica (PT) e traduzida (EN) para a página atual
-      function buildUrls() {
-        const path = location.pathname + location.search + location.hash;
-        const canonical = `https://${CANON_HOST}${location.pathname}`;
-        const translated = `https://${TRANS_HOST}${location.pathname}?_x_tr_sl=pt&_x_tr_tl=en&_x_tr_hl=pt-BR&_x_tr_pto=wapp`;
-        return { canonical, translated };
-      }
-
-      // Verifica se já estamos no proxy do Google Translate
-      function isTranslatedHost() {
-        return location.hostname.endsWith('translate.goog');
-      }
-
-      // Atualiza o rótulo do botão conforme estado atual
-      function setButtonLabel(btn, translated) {
-        if (translated) {
-          btn.textContent = 'PT-BR';
-          btn.setAttribute('aria-label', 'Alternar para português');
-          document.documentElement.setAttribute('data-lang', 'en'); // mantém compatibilidade com seus blocos
-        } else {
-          btn.textContent = 'EN-US';
-          btn.setAttribute('aria-label', 'Switch to English');
-          document.documentElement.setAttribute('data-lang', 'pt');
-        }
-      }
-
-      window.addEventListener('DOMContentLoaded', function () {
-        const btn = document.getElementById('langBtn');
-        const translated = isTranslatedHost();
-        setButtonLabel(btn, translated);
-
-        btn.addEventListener('click', function () {
-          const { canonical, translated } = buildUrls();
-          // Toggla entre as duas versões
-          if (isTranslatedHost()) {
-            location.href = canonical;       // voltar para PT (host canônico)
-          } else {
-            location.href = translated;      // ir para EN (proxy translate.goog)
-          }
-        });
-      });
-    })();
-  </script>
 </head>
 <body>
 
-<button class="lang-toggle" id="langBtn" aria-label="Alternar idioma">EN-US</button>
+<!-- Botão -> link direto para a versão traduzida (EN) -->
+<a class="lang-toggle" id="langBtn" aria-label="Ver em inglês (via Google Translate)"
+   href="https://thallescotta-github-io.translate.goog/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/3rd_exercise_FTIR_N2O_irradiation_analysis.html?_x_tr_sl=pt&_x_tr_tl=en&_x_tr_hl=pt-BR&_x_tr_pto=wapp">
+  EN-US
+</a>
 
 <!-- ================= PT-BR ================= -->
 <div id="pt">
   <h1>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</h1>
   <hr>
+
 
 
 
