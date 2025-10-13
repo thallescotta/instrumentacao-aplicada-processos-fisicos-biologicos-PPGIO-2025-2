@@ -26,12 +26,29 @@
     }
     .lang-toggle:focus { outline: 2px solid #cceeff; outline-offset: 2px; }
 
-    /* Show/hide language blocks */
+    /* Show/hide language blocks (opcional; mantém compatibilidade com seu layout atual) */
     [data-lang="pt"] #pt { display:block; }
     [data-lang="pt"] #en { display:none; }
     [data-lang="en"] #pt { display:none; }
     [data-lang="en"] #en { display:block; }
+
+    /* ------- Google Translate: esconder a barra e manter layout limpo ------- */
+    .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon { display:none !important; }
+    body { top: 0 !important; }
+    #google_translate_element { position: fixed; visibility: hidden; z-index: -1; } /* widget oculto */
+    .notranslate { translate: no; } /* use class="notranslate" para proteger trechos */
   </style>
+
+  <!-- Google Translate: init -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'pt', includedLanguages: 'pt,en', autoDisplay: false },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <!-- MathJax configuration (must appear BEFORE the loader) -->
   <script>
@@ -51,11 +68,56 @@
 <body>
 
 <button class="lang-toggle" id="langBtn" aria-label="Alternar idioma">EN-US</button>
+<!-- container oculto do Google Translate -->
+<div id="google_translate_element" aria-hidden="true"></div>
+
+<script>
+  (function () {
+    const btn = document.getElementById('langBtn');
+
+    function setBtn(labelLang) {
+      if (labelLang === 'en') {
+        btn.textContent = 'PT-BR';
+        btn.setAttribute('aria-label', 'Alternar para português');
+        document.documentElement.setAttribute('data-lang', 'en'); // mantém compatibilidade com seus blocos
+      } else {
+        btn.textContent = 'EN-US';
+        btn.setAttribute('aria-label', 'Switch to English');
+        document.documentElement.setAttribute('data-lang', 'pt');
+      }
+    }
+
+    function applyLang(target) {
+      const sel = document.querySelector('.goog-te-combo');
+      if (sel) {
+        sel.value = target;
+        sel.dispatchEvent(new Event('change'));
+        localStorage.setItem('lang-pref', target);
+        setBtn(target);
+      } else {
+        setTimeout(() => applyLang(target), 120);
+      }
+    }
+
+    // estado inicial (restaura preferência)
+    const saved = localStorage.getItem('lang-pref') || 'pt';
+    setBtn(saved);
+    if (saved === 'en') applyLang('en');
+
+    // click => alterna pt <-> en
+    btn.addEventListener('click', () => {
+      const current = localStorage.getItem('lang-pref') || 'pt';
+      const next = current === 'pt' ? 'en' : 'pt';
+      applyLang(next);
+    });
+  })();
+</script>
 
 <!-- ================= PT-BR ================= -->
 <div id="pt">
   <h1>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</h1>
   <hr>
+
 
   <p style="text-align:center">
     <img class="logo" src="https://raw.githubusercontent.com/thallescotta/logo-ppgio-vetorizado/main/SVG-PPGIO.png"
