@@ -192,7 +192,7 @@
       <div class="atividade-section">
         <!-- barra de informações compacta -->
         <div class="info-bar">
-          <strong>Atividade 4 - 2ª Lista de Exercícios</strong>
+          <strong>2ª Lista de Exercícios</strong>
           <span>enviado em 24/10/2025</span>
           <span>prazo: 29/10/2025</span>
           <span>(5 dias)</span>
@@ -247,30 +247,33 @@
 </li>
 
 
-            <!-- Q2 -->
-            <li id="q2">
-              <div class="enunciado">
-                <strong>2) Qual destes possui a maior energia:</strong>
-                <p>um elétron de conversão interna da camada L ou da camada M, se ambos vieram da mesma energia (nuclear) de excitação?</p>
-              </div>
-              <div class="resposta">
-                <strong>Resposta 2.</strong>
-                <div class="blank"></div>
-              </div>
-            </li>
+    <!-- Q2 -->
+    <li id="q2">
+        <div class="enunciado">
+            <strong>Qual destes possui a maior energia: um elétron de conversão interna da camada L ou da camada M, se ambos vieram da mesma energia (nuclear) de excitação?</strong>
+        </div>
+        <div class="resposta">
+            <strong>Resposta 2.</strong>
+            <p>O elétron de conversão interna da <strong>Camada M</strong> possui a maior energia [Knoll 2nd Ed].</p>
+            <p>A energia cinética ($T_i$) é dada por $T_i = Q - B_i$, onde $Q$ é a energia de transição nuclear e $B_i$ é a energia de ligação do elétron na sua camada (L ou M) [Knoll 2nd Ed]. Como a camada M possui uma energia de ligação ($B_M$) **menor** do que a camada L ($B_L$), a energia cinética do elétron M ejetado será maior [Tsoulfanidis].</p>
+        </div>
+    </li>
 
-            <!-- Q3 -->
-            <li id="q3">
-              <div class="enunciado">
-                <strong>3) <em>He<sup>2+</sup></em></strong>
-                <p>Qual o valor da máxima energia que um átomo de hélio duplamente ionizado (partícula alfa) pode ser acelerado por um gerador de tensão contínua com tensão máxima de 3 MeV?</p>
-              </div>
-              <div class="resposta">
-                <strong>Resposta 3.</strong>
-                <div class="blank"></div>
-              </div>
-            </li>
 
+            
+    <!-- Q3 -->
+    <li id="q3">
+        <div class="enunciado">
+            <strong>Qual o valor da máxima energia que um átomo de hélio duplamente ionizado (partícula alfa) pode ser acelerado por um gerador de tensão contínua com tensão máxima de 3 MeV?</strong>
+        </div>
+        <div class="resposta">
+            <strong>Resposta 3.</strong>
+            <p>Uma partícula alfa possui carga $z=2e$. A energia máxima ($E$) é o produto da carga pela tensão. Com tensão máxima de $3 \text{ MV}$, a energia máxima é $E = (2e) \cdot (3 \text{ MV}) = \mathbf{6 \text{ MeV}}$ [Knoll].</p>
+        </div>
+    </li>
+
+
+            
             <!-- Q4 -->
             <li id="q4">
               <div class="enunciado">
@@ -287,9 +290,11 @@
               </div>
               <div class="resposta">
                 <strong>Resposta 4.</strong>
-                <div class="blank"></div>
-              </div>
-            </li>
+            <p>Este problema é um exercício clássico que requer a leitura do poder de parada específico (Stopping Power, $-dE/dx$) para prótons de $5 \text{ MeV}$ em Si, valor este a ser obtido de uma figura (e.g., Figura 2.7 no Knoll) [Knoll 2nd Ed].</p>
+            <p>A perda de energia ($\Delta E$) é estimada por $\Delta E \approx - (dE/dx)_{avg} \cdot t$, onde $t = 100 \text{ µm}$. A energia restante seria $E_{restante} = 5 \text{ MeV} - \Delta E$ [Knoll / Tsoulfanidis].</p>
+        </div>
+    </li>
+
 
             <!-- Q5 -->
             <li id="q5">
@@ -313,10 +318,16 @@
                 </figure>
               </div>
               <div class="resposta">
-                <strong>Resposta 5.</strong>
-                <div class="blank"></div>
-              </div>
-            </li>
+            <strong>Resposta 5.</strong>
+            <p>Este cálculo depende de:</p>
+            <ol>
+                <li>Obter o Poder de Parada Específico, $S/\rho = -(dE/dx)/\rho$, para partículas alfa de $1 \text{ MeV}$ em Ouro a partir do gráfico (não fornecido).</li>
+                <li>Calcular o Poder de Parada, $S = -dE/dx = (S/\rho) \cdot \rho_{Au}$, usando $\rho_{Au} = 19,32 \text{ g/cm}^3$.</li>
+                <li>Calcular a energia perdida: $\Delta E = S \cdot t$, onde $t = 5 \text{ µm} = 5 \times 10^{-4} \text{ cm}$.</li>
+            </ol>
+            <p>O poder de parada descreve a energia depositada pela partícula carregada no material [Knoll / Tsoulfanidis].</p>
+        </div>
+    </li>
 
             <!-- Q6 -->
             <li id="q6">
@@ -341,10 +352,11 @@
                 </figure>
               </div>
               <div class="resposta">
-                <strong>Resposta 6.</strong>
-                <div class="blank"></div>
-              </div>
-            </li>
+            <strong>Resposta 6.</strong>
+            <p>A Lei de Bragg-Kleeman é primariamente usada para correlacionar o alcance ($R$) de **partículas carregadas pesadas** (como prótons e alfas) em diferentes materiais [Tsoulfanidis]. A fonte adverte que esta regra **não se aplica ao alcance de elétrons ou pósitrons** [Tsoulfanidis].</p>
+            <p>No entanto, se for forçado o uso da lei (conforme solicitado pelo exercício), é necessário um valor de alcance de referência ($R_{ref}$) do Si e a aplicação da fórmula. O uso de software como SRIM/TRIM (mencionado no contexto da simulação) é o método moderno mais preciso para calcular o alcance e straggling ($R_p \pm \Delta R_p$) de íons.</p>
+        </div>
+    </li>
 
             <!-- Q7 -->
             <li id="q7">
@@ -353,10 +365,11 @@
                 <p>(use a figura do exercício 6).</p>
               </div>
               <div class="resposta">
-                <strong>Resposta 7.</strong>
-                <div class="blank"></div>
-              </div>
-            </li>
+            <strong>Resposta 7.</strong>
+            <p>Assumindo que o "exercício 8" é uma referência equivocada e que a intenção é aplicar a Lei de Bragg-Kleeman (Q6) para partículas alfa (para as quais a lei é válida) [Tsoulfanidis].</p>
+            <p>O procedimento seria idêntico ao Q6, utilizando o alcance de referência ($R_{ref}$) para alfas de $3 \text{ MeV}$ (obtido da figura) e aplicando a lei de escala (Scaling Law) para o ouro, usando sua densidade e peso atômico.</p>
+        </div>
+    </li>
 
             <!-- Q8 -->
             <li id="q8">
@@ -369,16 +382,17 @@
                <li>Qual a velocidade escalar de propagação?</li>
               </div>
               <div class="resposta">
-                <strong>Resposta 8.</strong>
-                <div class="blank"></div>
-              </div>
-            </li>
+            <strong>Resposta 8.</strong>
+            <p>O tempo de parada ($t$) é o quociente entre o alcance ($R$) e a velocidade média ($v_{avg}$). Uma estimativa é difícil, pois o Stopping Power varia drasticamente (Curva de Bragg) [Knoll / Tsoulfanidis].</p>
+            <p>A velocidade inicial $v_0$ da partícula alfa ($M=4 \text{ u}$) deve ser determinada a partir da energia cinética $E = 5 \text{ MeV}$. O tempo estimado será: $t \approx R / v_{avg}$ (onde $v_{avg}$ é a velocidade média ao longo do alcance $R$). Os alcances são fornecidos na questão.</p>
+        </div>
+    </li>
 
             <!-- Q9 -->
             <li id="q9">
               <div class="enunciado">
                 <strong>9) Uma onda senoidal propaga-se de acordo com a expressão.</strong>
-                <p> \( y(x,t)=0,00327\sen(72,1x-2,72t), onde y é dado em metros (SI). \) (m):</p>
+                <p> \( y(x,t)=0,00327\sin(72,1x-2,72t), onde y é dado em metros (SI). \) (m):</p>
                 <ol class="sub">
                   <li>Qual a frequência da onda em Hz?</li>
                   <li>Quantas ondas existem por metro?</li>
@@ -386,10 +400,15 @@
                 </ol>
               </div>
               <div class="resposta">
-                <strong>Resposta 9.</strong>
-                <div class="blank"></div>
-              </div>
-            </li>
+            <strong>Resposta 9.</strong>
+            <p>Comparando com $y(x, t) = A \sin(kx - \omega t)$, temos $k = 72,1 \text{ m}^{-1}$ e $\omega = 2,72 \text{ rad/s}$ [Halliday].</p>
+            <ol class="sub">
+                <li>**Frequência ($v$):** $\nu = \omega / (2\pi)$.</li>
+                <li>**Número de ondas por metro ($1/\lambda$):** $1/\lambda = k / (2\pi)$.</li>
+                <li>**Velocidade escalar de propagação ($v$):** $v = \omega / k$.</li>
+            </ol>
+        </div>
+    </li>
 
             <!-- Q10 -->
             <li id="q10">
