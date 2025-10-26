@@ -360,10 +360,21 @@
                   <figcaption>Figura - Elétrons em Al.</figcaption>
                 </figure>
               </div>
-              <div class="resposta">
-                <strong>Resposta 6.</strong>
-                <p>Aplicar a relação fornecida usando um alcance de referência no Si e os parâmetros do Al para estimar o range por regra de escala.</p>
-              </div>
+<div class="resposta">
+  <strong>Resposta 6.</strong>
+  <p><em>Leitura do gráfico (Fig. 2.14):</em> para elétrons de \(1\,\text{MeV}\), o ponto em silício (marca “X”) indica \(R\!\times\!\rho \approx 0{,}45\ \text{g·cm}^{-2}\) (faixa visual \(0{,}40\text{–}0{,}50\)).</p>
+
+  <p>1) Alcance em Si: \( R_{\text{Si}} = \dfrac{(R\rho)_{\text{Si}}}{\rho_{\text{Si}}} \approx \dfrac{0{,}45}{2{,}33}\ \text{cm} \approx 0{,}193\ \text{cm} \) \((\rho_{\text{Si}}=2{,}33\ \text{g·cm}^{-3})\).</p>
+
+  <p>2) Escalonamento (Bragg–Kleeman) para Al:<br>
+  \( \displaystyle \frac{R_{\text{Al}}}{R_{\text{Si}}}=\frac{\rho_{\text{Si}}}{\rho_{\text{Al}}}\cdot\frac{A_{\text{Al}}}{A_{\text{Si}}} \Rightarrow
+  R_{\text{Al}} = R_{\text{Si}} \left(\frac{2{,}33}{2{,}699}\right)\!\left(\frac{26{,}98}{28{,}09}\right) \approx 0{,}193\times 0{,}828 \approx 0{,}160\ \text{cm}. \)</p>
+
+  <p><strong>Espessura que pára o feixe em Al:</strong> \( R_{\text{Al}} \approx \mathbf{1{,}6\ \text{mm}} \).</p>
+
+  <p class="muted">Incerteza pela leitura do gráfico: se \((R\rho)_{\text{Si}}\in[0{,}40,\,0{,}50]\ \text{g·cm}^{-2}\), então \(R_{\text{Al}}\approx 1{,}4\text{–}1{,}9\ \text{mm}\). Observação: a lei de Bragg–Kleeman é mais adequada a partículas pesadas; aqui foi usada apenas como aproximação solicitada.</p>
+</div>
+
             </li>
 
             <!-- Q7 -->
@@ -372,10 +383,30 @@
                 <strong>Repetir o exercício 8 usando um feixe de partículas alfa de 3 MeV em ouro.</strong>
                 <p>(use a figura do exercício 6).</p>
               </div>
-              <div class="resposta">
-                <strong>Resposta 7.</strong>
-                <p>Seguir procedimento análogo ao do item anterior, agora para alfas de \( 3\,\text{MeV} \) e ouro.</p>
-              </div>
+<div class="resposta">
+  <strong>Resposta 7.</strong>
+  <p><em>Leitura do gráfico (Fig. 2.7, “Alphas” em Si):</em> para partículas alfa de \(3\,\text{MeV}\), o alcance em silício é aproximadamente
+  \( R_{\text{Si}} \approx 10\text{–}12\,\mu\text{m} \) (escala log–log).</p>
+
+  <p>Aplicando a lei de Bragg–Kleeman para estimar o alcance no ouro:
+  \[
+    \frac{R_{\text{Au}}}{R_{\text{Si}}}
+      = \frac{\rho_{\text{Si}}}{\rho_{\text{Au}}}\cdot\frac{A_{\text{Au}}}{A_{\text{Si}}}
+      = \frac{2{,}33}{19{,}32}\cdot\frac{197{,}0}{28{,}09}
+      \approx 0{,}846.
+  \]
+  Portanto, \( R_{\text{Au}} \approx 0{,}846\,R_{\text{Si}} \).</p>
+
+  <p><strong>Resultado numérico:</strong>
+    para \( R_{\text{Si}}=10\,\mu\text{m} \Rightarrow R_{\text{Au}}\approx 8{,}5\,\mu\text{m} \);
+    para \( R_{\text{Si}}=12\,\mu\text{m} \Rightarrow R_{\text{Au}}\approx 10{,}2\,\mu\text{m} \).
+    Assim, a espessura de ouro que <em>pára</em> alfas de \(3\,\text{MeV}\) é da ordem de
+    \(\mathbf{9\pm1\,\mu\text{m}}\).
+  </p>
+
+  <p class="muted">Observação: a lei de Bragg–Kleeman é apropriada a partículas carregadas pesadas; a incerteza decorre da leitura do gráfico em Si.</p>
+</div>
+
             </li>
 
             <!-- Q8 -->
@@ -385,10 +416,26 @@
                 <p>Repita para gás hidrogênio.</p> 
                 <p class="muted">Considerar \( R_{\text{Si}}=2.1\times10^{-5}\,\text{m} \) e \( R_{\text{H}}=0.1\,\text{m} \).</p>
               </div>
-              <div class="resposta">
-                <strong>Resposta 8.</strong>
-                <p>Estimar \( t \approx R/v_{\text{médio}} \). Usar a energia inicial \( E=5\,\text{MeV} \) para obter \( v_0 \) e considerar que o <em>stopping power</em> varia ao longo do caminho (curva de Bragg).</p>
-              </div>
+<div class="resposta">
+  <strong>Resposta 8.</strong>
+  <p><em>Velocidade inicial da partícula alfa:</em> não relativística, \( m_\alpha \approx 4u = 6{,}64\times10^{-27}\,\text{kg} \) e \( E_0=5\,\text{MeV}=8{,}01\times10^{-13}\,\text{J} \). Logo,
+  \( v_0=\sqrt{2E_0/m_\alpha}\approx \mathbf{1{,}55\times10^{7}\ \text{m/s}} \) (\(\approx 0{,}052\,c\)).</p>
+
+  <p>O tempo de parada é \( t \approx R/v_{\text{médio}} \). Como a velocidade cai de \(v_0\) a 0 (curva de Bragg), adotamos \(v_{\text{médio}}\approx (0{,}5\pm0{,}1)\,v_0\) para estimar.</p>
+
+  <ul>
+    <li><strong>Em Si</strong> \((R_{\text{Si}}=2{,}1\times10^{-5}\ \text{m})\):<br>
+      \( t_{\text{Si}} \approx \dfrac{2{,}1\times10^{-5}}{0{,}5\,v_0} \approx \mathbf{2{,}7\times10^{-12}\ \text{s}} \)
+      (faixa \(2{,}0\text{–}3{,}4\ \text{ps}\) para \(v_{\text{médio}}=(0{,}7\text{–}0{,}4)\,v_0\)).</li>
+
+    <li><strong>Em H (gás)</strong> \((R_{\text{H}}=0{,}1\ \text{m})\):<br>
+      \( t_{\text{H}} \approx \dfrac{0{,}1}{0{,}5\,v_0} \approx \mathbf{1{,}29\times10^{-8}\ \text{s}} \)
+      (faixa \(9{,}2\text{–}16{,}1\ \text{ns}\) para \(v_{\text{médio}}=(0{,}7\text{–}0{,}4)\,v_0\)).</li>
+  </ul>
+
+  <p class="muted">Observação: resultados são estimativas de ordem de grandeza; valores exatos exigiriam integrar \(t=\int \! \mathrm{d}x/v(E(x))\) usando o \( -\mathrm{d}E/\mathrm{d}x \) experimental (curva de Bragg).</p>
+</div>
+
             </li>
 
             <!-- Q9 -->
@@ -402,15 +449,38 @@
                   <li>Qual a velocidade escalar de propagação?</li>
                 </ol>
               </div>
-              <div class="resposta">
-                <strong>Resposta 9.</strong>
-                <p>Comparando com \( y(x, t) = A \sin(kx - \omega t) \), tem-se \( k = 72{,}1\,\text{m}^{-1} \) e \( \omega = 2{,}72\,\text{rad/s} \).</p>
-                <ol class="sub">
-                  <li><strong>Frequência (\( \nu \)):</strong> \( \nu = \omega/(2\pi) \).</li>
-                  <li><strong>Número de ondas por metro (\( 1/\lambda \)):</strong> \( 1/\lambda = k/(2\pi) \).</li>
-                  <li><strong>Velocidade de propagação (\( v \)):</strong> \( v = \omega/k \).</li>
-                </ol>
-              </div>
+<div class="resposta">
+  <strong>Resposta 9.</strong>
+  <p>A equação da onda dada é:</p>
+  <p style="text-align:center;">\( y(x,t) = 0{,}00327 \sin(72{,}1x - 2{,}72t) \)</p>
+  <p>Comparando com a forma geral \( y(x,t) = A \sin(kx - \omega t) \), obtemos:</p>
+  <ul>
+    <li>\( k = 72{,}1\ \text{m}^{-1} \) (número de onda);</li>
+    <li>\( \omega = 2{,}72\ \text{rad/s} \) (frequência angular).</li>
+  </ul>
+
+  <ol class="sub">
+    <li><strong>Frequência (\( f \)):</strong><br>
+      \[
+      f = \frac{\omega}{2\pi} = \frac{2{,}72}{2\pi} \approx \mathbf{0{,}43\ \text{Hz}}
+      \]
+    </li>
+
+    <li><strong>Número de ondas por metro (\(1/\lambda\)):</strong><br>
+      \[
+      \lambda = \frac{2\pi}{k} = \frac{2\pi}{72{,}1} \approx 0{,}087\ \text{m}
+      \Rightarrow \frac{1}{\lambda} = \frac{1}{0{,}087} \approx \mathbf{11{,}5\ \text{ondas/m}}
+      \]
+    </li>
+
+    <li><strong>Velocidade de propagação (\( v \)):</strong><br>
+      \[
+      v = \frac{\omega}{k} = \frac{2{,}72}{72{,}1} \approx \mathbf{0{,}0377\ \text{m/s}}
+      \]
+    </li>
+  </ol>
+</div>
+
             </li>
 
             <!-- Q10 -->
@@ -419,10 +489,35 @@
                 <strong>Repetir os itens do exercício anterior para a onda:</strong>
                 <p>\( y(x,t)=7{,}5\sin(1{,}2\times10^{7}x-3{,}623\times10^{15}t)\ \text{V/m} \). Sendo esta a componente campo elétrico de uma onda eletromagnética, calcule a amplitude do campo magnético correspondente, encontre sua localização no espectro eletromagnético e diga em que faixa se encontra. No caso de estar no espectro visível, qual é a cor correspondente?</p>
               </div>
-              <div class="resposta">
-                <strong>Resposta 10.</strong>
-                <p>Calcular \( \nu=\omega/(2\pi) \), \( \lambda=2\pi/k \) e \( v=\omega/k \). Para a onda eletromagnética, usar \( E_0 = c\,B_0 \) com \( E_0=7{,}5\,\text{V/m} \) para obter \( B_0 \); comparar \( \nu \) ou \( \lambda \) com as faixas do espectro eletromagnético.</p>
-              </div>
+<div class="resposta">
+  <strong>Resposta 10.</strong>
+  <p>Para \( y(x,t)=7{,}5\sin(1{,}2\times10^{7}x-3{,}623\times10^{15}t)\ \text{(V/m)} \), identificamos \(k=1{,}2\times10^{7}\ \text{m}^{-1}\), \( \omega=3{,}623\times10^{15}\ \text{rad/s}\) e amplitude elétrica \(E_0=7{,}5\ \text{V/m}\).</p>
+
+  <ol class="sub">
+    <li><strong>Frequência \(f\):</strong>
+      \( f=\dfrac{\omega}{2\pi}=\dfrac{3{,}623\times10^{15}}{2\pi}\approx \mathbf{5{,}77\times10^{14}\ \text{Hz}} \).
+    </li>
+
+    <li><strong>Comprimento de onda \(\lambda\) e ondas por metro \(1/\lambda\):</strong>
+      \( \lambda=\dfrac{2\pi}{k}=\dfrac{2\pi}{1{,}2\times10^{7}}\approx \mathbf{5{,}24\times10^{-7}\ \text{m}} \) (≈ \(\mathbf{524\ \text{nm}}\));<br>
+      \( \dfrac{1}{\lambda}=\dfrac{k}{2\pi}\approx \mathbf{1{,}91\times10^{6}\ \text{ondas/m}} \).
+    </li>
+
+    <li><strong>Velocidade de propagação \(v\):</strong>
+      \( v=\dfrac{\omega}{k}=\dfrac{3{,}623\times10^{15}}{1{,}2\times10^{7}}\approx \mathbf{3{,}02\times10^{8}\ \text{m/s}} \) (≈ \(c\)).
+    </li>
+
+    <li><strong>Amplitude do campo magnético \(B_0\):</strong>
+      para onda eletromagnética no vácuo, \(E_0=c\,B_0\Rightarrow B_0=\dfrac{E_0}{c}\).
+      Usando \(c\approx v\), \( B_0\approx \dfrac{7{,}5}{3{,}02\times10^{8}}\approx \mathbf{2{,}5\times10^{-8}\ \text{T}} \) (≈ \(\mathbf{25\ \text{nT}}\)).
+    </li>
+
+    <li><strong>Localização no espectro e faixa:</strong>
+      \(\lambda\approx 524\ \text{nm}\) e \(f\approx 5{,}77\times10^{14}\ \text{Hz}\) situam a onda no <strong>espectro visível</strong>, região <strong>verde</strong> (verde-esverdeado).
+    </li>
+  </ol>
+</div>
+
             </li>
 
             <!-- Q11 -->
