@@ -530,15 +530,40 @@
                   <li>É possível ouvir o áudio do canal 6 num receptor de rádio FM?  Banda FM:  88 a 108 MHz</li>
                 </ol>
               </div>
-              <div class="resposta">
-                <strong>Resposta 11.</strong>
-                <p>A banda do canal 6 se estende de \( 82\,\text{MHz} \) a \( 88\,\text{MHz} \).</p>
-                <ol class="sub">
-                  <li><strong>Banda em comprimento de onda (\( \lambda \)):</strong> usar \( \lambda=c/\nu \) nos extremos (82 e 88&nbsp;MHz).</li>
-                  <li><strong>Banda em número de onda (\( \tilde{\nu} \)):</strong> \( \tilde{\nu}=1/\lambda \) nos extremos.</li>
-                  <li><strong>Compatibilidade com FM:</strong> a banda FM começa em \( 88\,\text{MHz} \); como o canal 6 termina em \( 88\,\text{MHz} \), o áudio pode, em princípio, ser captado/gerar interferência.</li>
-                </ol>
-              </div>
+<div class="resposta">
+  <strong>Resposta 11.</strong>
+  <p>A faixa de frequências do canal 6 vai de <strong>82 MHz</strong> a <strong>88 MHz</strong>.</p>
+
+  <ol class="sub">
+    <li>
+      <strong>Banda em comprimento de onda (\( \lambda \)):</strong><br>
+      Usando \( \lambda = \dfrac{c}{\nu} \) com \( c = 3{,}0 \times 10^8\,\text{m/s} \):<br>
+      \[
+      \lambda_{82} = \dfrac{3{,}0\times10^8}{82\times10^6} \approx 3{,}66\,\text{m}
+      \quad\text{e}\quad
+      \lambda_{88} = \dfrac{3{,}0\times10^8}{88\times10^6} \approx 3{,}41\,\text{m}
+      \]<br>
+      Portanto, o canal 6 corresponde a comprimentos de onda entre
+      <strong>3,66 m e 3,41 m</strong>.
+    </li>
+
+    <li>
+      <strong>Banda em número de onda (\( \tilde{\nu} = 1/\lambda \)):</strong><br>
+      \[
+      \tilde{\nu}_{82} = \dfrac{1}{3{,}66} \approx 0{,}273\,\text{m}^{-1}
+      \quad\text{e}\quad
+      \tilde{\nu}_{88} = \dfrac{1}{3{,}41} \approx 0{,}293\,\text{m}^{-1}
+      \]<br>
+      Assim, a banda em número de onda varia de <strong>0,273 a 0,293 m⁻¹</strong>.
+    </li>
+
+    <li>
+      <strong>Áudio no rádio FM?</strong><br>
+      A faixa de FM vai de <strong>88 a 108 MHz</strong>; como o canal 6 vai até exatamente <strong>88 MHz</strong>, o áudio pode ficar na borda inicial da banda FM. Isso explica por que, em rádios antigos, era possível captar ruídos ou áudio do canal 6 próximo de 87,9–88,0 MHz.
+    </li>
+  </ol>
+</div>
+
             </li>
 
             <!-- Q12 -->
@@ -547,10 +572,36 @@
                 <strong>Durante uma desintegração radioativa, um núcleo emite raio gama, cujo fóton tem energia de 1,35 MeV.</strong>
                 <p>Qual é o comprimento de onda e o número de onda correspondente a este fóton?</p>
               </div>
-              <div class="resposta">
-                <strong>Resposta 12.</strong>
-                <p>Usar \( E = h c/\lambda \) para obter \( \lambda \) a partir de \( E=1{,}35\,\text{MeV} \); o número de onda é \( \tilde{\nu}=1/\lambda \).</p>
-              </div>
+<div class="resposta">
+  <strong>Resposta 12.</strong>
+  <p>Para um fóton gama de energia \( E = 1{,}35\,\text{MeV} \), convertemos para joules:</p>
+  <p>
+    \( E = 1{,}35 \times 10^{6} \times 1{,}602\times10^{-19} \approx 2{,}16\times10^{-13}\ \text{J} \)
+  </p>
+
+  <p>Usando a relação de Planck:</p>
+  <p style="text-align:center;">
+    \( \lambda = \dfrac{h\,c}{E} \Rightarrow
+    \lambda = \dfrac{6{,}626\times10^{-34}\cdot 3{,}0\times10^{8}}
+    {2{,}16\times10^{-13}} \approx 9{,}2\times10^{-13}\ \text{m} \)
+  </p>
+
+  <p><strong>Comprimento de onda:</strong>  
+    \( \lambda \approx 9{,}2\times10^{-13}\ \text{m} \) (0,92 pm — raio gama)</p>
+
+  <p><strong>Número de onda:</strong></p>
+  <p style="text-align:center;">
+    \( \tilde{\nu} = \dfrac{1}{\lambda} \approx \dfrac{1}{9{,}2\times10^{-13}}
+    \approx 1{,}09\times10^{12}\ \text{m}^{-1} \)
+  </p>
+
+  <p>Portanto:</p>
+  <ul>
+    <li>\( \lambda \approx 9{,}2\times10^{-13}\ \text{m} \)</li>
+    <li>\( \tilde{\nu} \approx 1{,}1\times10^{12}\ \text{m}^{-1} \)</li>
+  </ul>
+</div>
+
             </li>
 
 <!-- Q13 -->
@@ -609,10 +660,32 @@
                 <strong>A partir da equação de Rydberg, determine, para o hidrogênio, as frequências dos dois primeiros valores para k, na série de Balmer.</strong>
                 <p>Para cada um dos resultados identifique a faixa do espectro e, caso seja o espectro visível, a cor correspondente.</p>
               </div>
-              <div class="resposta">
-                <strong>Resposta 14.</strong>
-                <p>Usar a equação de Rydberg para obter \( \lambda \) (ou \( \nu \)) para as duas primeiras transições da série de Balmer (estado final \( n_f=2 \)); identificar a faixa e a cor.</p>
-              </div>
+<div class="resposta">
+  <strong>Resposta 14.</strong>
+  <p>Na série de Balmer, o estado final é \( n_f=2 \). Tomando os dois primeiros valores para \( k \) como os dois menores inteiros acima de 2, temos \( k=n_i=3 \) e \( k=n_i=4 \). Pela equação de Rydberg,
+    \(\displaystyle \frac{1}{\lambda}=R_{\mathrm H}\!\left(\frac{1}{2^2}-\frac{1}{n_i^2}\right)\),
+    com \( R_{\mathrm H}\approx 1{,}097\,373\times 10^{7}\ \text{m}^{-1} \) e \( \nu=c/\lambda \).
+  </p>
+
+  <ol class="sub">
+    <li>
+      <strong>\(n_i=3 \rightarrow 2\) (linha H\( \alpha \)):</strong><br>
+      \(\displaystyle \frac{1}{\lambda}=R_{\mathrm H}\!\left(\frac{1}{4}-\frac{1}{9}\right)=R_{\mathrm H}\cdot\frac{5}{36}\) \(\Rightarrow\)
+      \( \lambda \approx 6{,}56\times 10^{-7}\ \text{m} = \mathbf{656\ \text{nm}} \).<br>
+      \( \nu=\dfrac{c}{\lambda}\approx \dfrac{3{,}00\times10^{8}}{6{,}56\times10^{-7}} \approx \mathbf{4{,}57\times10^{14}\ \text{Hz}} \).<br>
+      <em>Faixa:</em> visível, <strong>vermelho</strong>.
+    </li>
+
+    <li>
+      <strong>\(n_i=4 \rightarrow 2\) (linha H\( \beta \)):</strong><br>
+      \(\displaystyle \frac{1}{\lambda}=R_{\mathrm H}\!\left(\frac{1}{4}-\frac{1}{16}\right)=R_{\mathrm H}\cdot\frac{3}{16}\) \(\Rightarrow\)
+      \( \lambda \approx 4{,}86\times 10^{-7}\ \text{m} = \mathbf{486\ \text{nm}} \).<br>
+      \( \nu=\dfrac{c}{\lambda}\approx \dfrac{3{,}00\times10^{8}}{4{,}86\times10^{-7}} \approx \mathbf{6{,}17\times10^{14}\ \text{Hz}} \).<br>
+      <em>Faixa:</em> visível, <strong>azul-esverdeado</strong> (ciano).
+    </li>
+  </ol>
+</div>
+
             </li>
 
             <!-- Q15 -->
@@ -621,10 +694,36 @@
                 <strong>Série de Lyman (H)</strong>
                 <p>Repetir o exercício 12 para a série de Lyman para os dois primeiros valores pares de k.</p>
               </div>
-              <div class="resposta">
-                <strong>Resposta 15.</strong>
-                <p>Considerar transições com estado final \( n_f=1 \); calcular \( \lambda \) (ou \( \nu \)) para os dois primeiros valores pares de \( k \) e identificar a faixa (tipicamente ultravioleta).</p>
-              </div>
+<div class="resposta">
+  <strong>Resposta 15.</strong>
+  <p>A Série de Lyman corresponde a transições para o estado final \( n_f = 1 \). Os dois primeiros valores <strong>pares</strong> de \( k \) (isto é, \( n_i \)) são:</p>
+  <ul>
+    <li>\( n_i = 2 \rightarrow 1 \)</li>
+    <li>\( n_i = 4 \rightarrow 1 \)</li>
+  </ul>
+
+  <p>Utilizando a equação de Rydberg:</p>
+  <p style="text-align:center;">\( \dfrac{1}{\lambda} = R_H \left( \dfrac{1}{1^2} - \dfrac{1}{n_i^2} \right) \), com \( R_H = 1{,}097\times10^{7}\ \text{m}^{-1} \)</p>
+
+  <ol class="sub">
+    <li>
+      <strong>\( n_i = 2 \rightarrow 1 \):</strong><br>
+      \( \dfrac{1}{\lambda} = R_H \left(1 - \dfrac{1}{4}\right) = R_H \cdot \dfrac{3}{4} \Rightarrow \lambda \approx 1{,}22 \times 10^{-7}\ \text{m} = \mathbf{122\ \text{nm}} \)<br>
+      \( \nu = \dfrac{c}{\lambda} \approx \dfrac{3{,}0\times10^{8}}{1{,}22\times10^{-7}} \approx \mathbf{2{,}46\times10^{15}\ \text{Hz}} \)<br>
+      <em>Faixa:</em> Ultravioleta (UV-C).
+    </li>
+
+    <li>
+      <strong>\( n_i = 4 \rightarrow 1 \):</strong><br>
+      \( \dfrac{1}{\lambda} = R_H \left(1 - \dfrac{1}{16}\right) = R_H \cdot \dfrac{15}{16} \Rightarrow \lambda \approx 1{,}03 \times 10^{-7}\ \text{m} = \mathbf{103\ \text{nm}} \)<br>
+      \( \nu = \dfrac{c}{\lambda} \approx \dfrac{3{,}0\times10^{8}}{1{,}03\times10^{-7}} \approx \mathbf{2{,}91\times10^{15}\ \text{Hz}} \)<br>
+      <em>Faixa:</em> Ultravioleta extremo (UV-C).
+    </li>
+  </ol>
+
+  <p>Todas as transições da série de Lyman estão no <strong>ultravioleta</strong>, portanto não são visíveis ao olho humano.</p>
+</div>
+
             </li>
 
           </ol>
