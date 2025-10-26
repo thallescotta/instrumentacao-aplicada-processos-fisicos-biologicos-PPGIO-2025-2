@@ -98,3 +98,16 @@ No dia **01 de outubro de 2025**, foram compartilhados os seguintes arquivos par
 Estes arquivos correspondem aos espectros de absorção em diferentes temperaturas (10 K, 11 K, 80 K, 120 K) e fluências de irradiação, obtidos no experimento de FTIR com N₂O. Eles serão usados no programa **OMNIC** para análise de bandas, determinação da espessura do gelo e evolução espectral conforme o roteiro.
 
 
+---
+
+## ✅ Atividade 4 – 2ª Lista de Exercícios
+
+📦 **Materiais Recebidos – 24/10/2025 (via Grupo WhatsApp)**
+
+📝 **Arquivo PDF da entrega:**  
+[`4th_Lista_2.pdf`](https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/4th_Lista_2.pdf)
+
+No dia **24 de outubro de 2025**, o professor **Jesse Costa** enviou, via grupo de WhatsApp, a **2ª Lista de Exercícios** da disciplina. Nesta atividade são abordados, de forma integrada, os conceitos de espectros de radiação, processos de emissão e conversão interna, interação de partículas carregadas com a matéria (perda de energia, alcance, lei de Bragg-Kleeman e tempo de frenagem), além do estudo de ondas mecânicas e eletromagnéticas e sua relação com o espectro eletromagnético, fótons, lei de Wien e séries de Rydberg.
+
+---
+
