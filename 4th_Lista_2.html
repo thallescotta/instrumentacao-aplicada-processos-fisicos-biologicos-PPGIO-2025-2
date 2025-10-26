@@ -3,77 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</title>
+  <title>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2) — Atividade 4</title>
 
   <style>
-    :root { --bg:#ffffff; --fg:#222; --muted:#555; --line:#ddd; --brand:#0ea5e9; }
+    :root { --bg:#ffffff; --fg:#222; --muted:#555; --line:#ddd; --brand:#0ea5e9; --ans:#fffdf5; }
     body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; margin: 20px; color: var(--fg); background: var(--bg); }
     h1, h2, h3 { margin: .6em 0 .4em; }
     hr { border: 0; border-top: 1px solid var(--line); margin: 16px 0; }
     .atividade-section { margin-top: 30px; border: 1px solid var(--line); padding: 16px; border-radius: 10px; background:#fff; }
-    .enunciado { background-color: #e0f2fe; border-left: 6px solid var(--brand); padding: 10px; margin-top: 20px; border-radius: 8px; }
-    .print-area { border: 2px dashed #007bff; margin: 16px 0; padding: 12px; text-align: center; background-color: #f8f9fa; border-radius: 8px; }
-    .dicas { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 10px; margin-top: 20px; border-radius: 8px; }
+    .enunciado { background-color: #e0f2fe; border-left: 6px solid var(--brand); padding: 12px 12px; margin-top: 14px; border-radius: 8px; }
+    .resposta { border: 2px dashed #999; background: var(--ans); padding: 12px; border-radius: 8px; margin: 10px 0 4px; }
+    .hint { color:#777; font-size:.92rem; margin: 4px 0 0; }
+    .dicas { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 10px; margin-top: 14px; border-radius: 8px; }
     .muted { color: var(--muted); font-size: .95em; }
     .eq { background:#f6f8fa; padding:10px 12px; border-radius:8px; border:1px solid #e5e7eb; margin:10px 0; overflow-x:auto; }
     img.logo { display:block; margin: 0 auto; max-width: 360px; height:auto; border-radius:8px; }
 
-    /* Botão de idioma (link fixo) */
+    /* Link fixo para tradução (opcional) */
     .lang-toggle {
       position: fixed; top: 14px; right: 14px; z-index: 9999;
       background: var(--brand); color:#fff; border:none; border-radius:999px;
-      padding: 10px 14px; font-weight:600; cursor:pointer; box-shadow: 0 4px 14px rgba(0,0,0,.12);
-      text-decoration: none;
-      display:inline-block;
+      padding: 10px 14px; font-weight:600; text-decoration: none; box-shadow: 0 4px 14px rgba(0,0,0,.12);
     }
-    .lang-toggle:focus { outline: 2px solid #cceeff; outline-offset: 2px; }
 
-    /* Blocos PT/EN */
-    [data-lang="pt"] #pt { display:block; }
-    [data-lang="pt"] #en { display:none; }
-    [data-lang="en"] #pt { display:none; }
-    [data-lang="en"] #en { display:block; }
+    /* Figuras com TAMANHO FIXO (como no PDF) */
+    figure { margin: 0; text-align:center; }
+    .fig-fixed      { width:720px; height:430px; object-fit: contain; border:1px solid #ddd; background:#fff; border-radius:6px; }
+    .fig-pair       { width:420px; height:300px; object-fit: contain; border:1px solid #ddd; background:#fff; border-radius:6px; }
+    figcaption      { font-size:.9rem; color:#555; margin-top:6px; }
 
-    /* Figuras: tamanho fixo semelhante ao PDF */
-    figure { margin: 0; }
-    .fig-fixed { width: 720px; height: 430px; object-fit: contain; border:1px solid #ddd; background:#fff; border-radius:6px; }
-    .fig-row { display:flex; gap:20px; justify-content:center; align-items:flex-start; }
-    .fig-pair { width: 420px; height: 300px; object-fit: contain; border:1px solid #ddd; background:#fff; border-radius:6px; }
-    figcaption { font-size:.9rem; color:#555; margin-top:6px; }
-
-    /* Lista numerada com estilo “prova/pdf” */
+    /* Listas estilo prova */
     ol.prova { list-style-type: decimal; padding-left: 22px; }
     ol.prova > li { margin: 10px 0; }
     ol.sub { list-style-type: lower-alpha; padding-left: 22px; }
+
+    /* Campo de resposta “em branco” */
+    .blank { min-height: 56px; background:#fff; border:1px dashed #c9c9c9; border-radius:6px; padding:8px; }
   </style>
 
-  <!-- MathJax configuration (antes do loader) -->
+  <!-- MathJax -->
   <script>
     window.MathJax = {
       tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']], processEscapes: true },
       options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
     };
   </script>
-  <!-- MathJax loader -->
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
-<!-- Botão -> versão traduzida (EN) -->
-<a class="lang-toggle" id="langBtn" aria-label="Ver em inglês (via Google Translate)"
-   href="https://thallescotta-github-io.translate.goog/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/4th_Lista_2.html?_x_tr_sl=pt&_x_tr_tl=en&_x_tr_hl=pt-BR&_x_tr_pto=wapp">
-  🌐 Translate to English
-</a>
+<a class="lang-toggle" href="https://thallescotta-github-io.translate.goog/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/4th_Lista_2.html?_x_tr_sl=pt&_x_tr_tl=en&_x_tr_hl=pt-BR&_x_tr_pto=wapp">🌐 Translate to English</a>
 
-<!-- ================= PT-BR ================= -->
 <div id="pt">
   <h1>[IOA6042] Instrumentação Aplicada a Processos Físicos e Biológicos (2025.2)</h1>
   <hr>
 
   <p style="text-align:center">
-    <img class="logo" src="https://raw.githubusercontent.com/thallescotta/logo-ppgio-vetorizado/main/SVG-PPGIO.png"
-         alt="Logo CEFET">
+    <img class="logo" src="https://raw.githubusercontent.com/thallescotta/logo-ppgio-vetorizado/main/SVG-PPGIO.png" alt="Logo CEFET">
   </p>
 
   <p>
@@ -86,18 +72,13 @@
 
   <div class="atividade-section">
 
-    <!-- ==== INFORMAÇÕES ==== -->
+    <!-- INFORMAÇÕES -->
     <div class="dicas">
       <h3>✅ Atividade 4 – 2ª Lista de Exercícios</h3>
-
       <p>📦 <strong>Materiais Recebidos – 24/10/2025 (via Grupo WhatsApp)</strong></p>
-
       <p>📝 <strong>Arquivo PDF da entrega:</strong><br>
-        <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/4th_Lista_2.pdf" target="_blank" rel="noopener">
-          <code>4th_Lista_2.pdf</code>
-        </a>
+        <a href="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/4th_Lista_2.pdf" target="_blank" rel="noopener"><code>4th_Lista_2.pdf</code></a>
       </p>
-
       <p style="text-align:justify;">
         No dia <strong>24 de outubro de 2025</strong>, o professor <strong>Jesse Costa</strong> enviou, via grupo de WhatsApp, a
         <strong>2ª Lista de Exercícios</strong> da disciplina. Nesta atividade são abordados, de forma integrada, os conceitos de
@@ -105,188 +86,216 @@
       </p>
     </div>
 
-    <!-- ====== LISTA DE EXERCÍCIOS ====== -->
+    <!-- ROTEIRO -->
     <section id="lista_exercicios">
       <h2 style="font-size: 1.2em;">Roteiro de Exercícios (2ª Lista)</h2>
 
       <ol class="prova">
 
+        <!-- Q1 -->
         <li id="q1">
-          <strong>Classificação de Espectros de Energia</strong>
-          <p>Os espectros de energia das radiações podem ser classificados em dois grupos: espectro formado por <strong>linhas discretas</strong> ou <strong>espectro contínuo</strong>. Para cada fonte de radiação da lista abaixo, indique se a melhor descrição é linhas discretas ou contínuo:</p>
-          <ol class="sub">
-            <li>Partículas alfa</li>
-            <li>Partículas beta</li>
-            <li>Raios gama</li>
-            <li>Raios-X característicos</li>
-            <li>Elétrons de conversão interna</li>
-            <li>Elétrons Auger</li>
-            <li>Fissão espontânea</li>
-            <li>Bremsstrahlung</li>
-            <li>Radiação de aniquilação</li>
-          </ol>
+          <div class="enunciado">
+            <strong>1) Classificação de Espectros de Energia.</strong>
+            <p>Espectros podem ser de <strong>linhas discretas</strong> ou <strong>contínuos</strong>. Para cada fonte abaixo, indique a melhor descrição:</p>
+            <ol class="sub">
+              <li>Partículas alfa</li>
+              <li>Partículas beta</li>
+              <li>Raios gama</li>
+              <li>Raios-X característicos</li>
+              <li>Elétrons de conversão interna</li>
+              <li>Elétrons Auger</li>
+              <li>Fissão espontânea</li>
+              <li>Bremsstrahlung</li>
+              <li>Radiação de aniquilação</li>
+            </ol>
+          </div>
+          <div class="resposta">
+            <strong>Resposta 1.</strong>
+            <div class="blank" aria-label="Campo para resposta 1"></div>
+            <p class="hint">Dica: escreva “discreto” ou “contínuo” ao lado de cada item (a–i).</p>
+          </div>
         </li>
 
+        <!-- Q2 -->
         <li id="q2">
-          <strong>Energia de Elétrons de Conversão Interna</strong>
-          <p>Qual destes possui a maior energia: um elétron de conversão interna da <strong>camada L</strong> ou da <strong>camada M</strong>, se ambos vieram da mesma energia (nuclear) de excitação?</p>
+          <div class="enunciado">
+            <strong>2) Conversão interna.</strong>
+            <p>Quem tem maior energia: elétron de conversão interna da <strong>camada L</strong> ou da <strong>camada M</strong>, para a mesma energia nuclear de excitação?</p>
+          </div>
+          <div class="resposta"><strong>Resposta 2.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q3 -->
         <li id="q3">
-          <strong>Aceleração de Partícula Alfa</strong>
-          <p>Qual o valor da <strong>máxima energia</strong> que um átomo de hélio duplamente ionizado (partícula alfa) pode ser acelerado por um gerador de tensão contínua com tensão máxima de 3 MeV?</p>
+          <div class="enunciado">
+            <strong>3) Aceleração de partícula alfa.</strong>
+            <p>Valor da <strong>máxima energia</strong> para um <em>He<sup>2+</sup></em> (partícula alfa) acelerado por gerador DC de 3&nbsp;MeV.</p>
+          </div>
+          <div class="resposta"><strong>Resposta 3.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q4 -->
         <li id="q4">
-          <strong>Perda de Energia de Prótons em Si</strong>
-          <p>Com o auxílio da figura dada, <strong>estime a energia restante</strong> de um feixe de prótons de 5 MeV após passar por 100 µm num bloco de Si.</p>
-          <div class="print-area">
+          <div class="enunciado">
+            <strong>4) Perda de energia de prótons em Si.</strong>
+            <p>Usando a figura, estime a <strong>energia restante</strong> de prótons de 5&nbsp;MeV após 100&nbsp;µm de Si.</p>
             <figure>
-              <img class="fig-fixed"
-                   src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/24102025/4th_figure-4.png?raw=1"
-                   alt="Exercício 4 — Figura de referência para prótons em Si">
-              <figcaption>Figura do Exercício 4 — Prótons em Si.</figcaption>
+              <img class="fig-fixed" src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/24102025/4th_figure-4.png?raw=1" alt="Prótons em Si (figura do exercício 4)">
+              <figcaption>Figura — Prótons em Si.</figcaption>
             </figure>
           </div>
+          <div class="resposta"><strong>Resposta 4.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q5 -->
         <li id="q5">
-          <strong>Energia Perdida por Partículas Alfa em Ouro</strong>
-          <p>Com o auxílio da figura dada, <strong>determine o valor aproximado da energia perdida (depositada)</strong> por um feixe de partículas alfa de 1 MeV após atravessar uma espessura de 5 µm num bloco de ouro.</p>
-          <div style="margin-left: 20px; font-style: italic;">
-            <p><strong>Observações adicionais para o cálculo:</strong></p>
-            <ul>
-              <li>O eixo vertical da figura é a variação de energia dividida pela densidade do meio: \( -\frac{dE}{dx}\Big/\rho \).</li>
-              <li>Considere a densidade do ouro como \( \rho_{Au} = 19{,}32\ \text{g·cm}^{-3} \).</li>
-              <li>A perda esperada de energia é dada por \( \Delta E = -\left(\frac{dE}{dx}\right) \cdot t \) (onde \( t \) é a espessura em cm).</li>
+          <div class="enunciado">
+            <strong>5) Energia perdida por alfas em Au.</strong>
+            <p>Usando a figura, determine a <strong>energia depositada</strong> por partículas alfa de 1&nbsp;MeV após 5&nbsp;µm de ouro.</p>
+            <ul class="muted" style="margin:6px 0;">
+              <li>Eixo vertical: \( -\frac{dE}{dx}\big/\rho \)</li>
+              <li>Considere \( \rho_{Au}=19{,}32\ \text{g·cm}^{-3} \)</li>
+              <li>\( \Delta E \approx -(dE/dx)\cdot t \)</li>
             </ul>
-          </div>
-          <div class="print-area">
             <figure>
-              <img class="fig-fixed"
-                   src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/24102025/4th_figure-5.png?raw=1"
-                   alt="Exercício 5 — Figura de referência para alfas em Au">
-              <figcaption>Figura do Exercício 5 — Partículas alfa em ouro.</figcaption>
+              <img class="fig-fixed" src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/24102025/4th_figure-5.png?raw=1" alt="Alfas em ouro (figura do exercício 5)">
+              <figcaption>Figura — Alfas em Au.</figcaption>
             </figure>
           </div>
+          <div class="resposta"><strong>Resposta 5.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q6 -->
         <li id="q6">
-          <strong>Estimativa de Range (Elétrons em Al)</strong>
-          <p>Com o auxílio da figura dada e empregando a <strong>lei de Bragg-Kleeman</strong> (ou scaling law), <strong>estime a espessura de absorção total da energia cinética</strong> (espessura que irá parar uma partícula, ou range) para um feixe de elétrons a 1 MeV em alumínio.</p>
-          <div style="margin-left: 20px;">
-            <p><strong>Dados:</strong> \( \rho_{Al} = 2{,}699\ \text{g·cm}^{-3} \); \( A_{Al} = 26{,}98 \); \( A_{Si} = 28{,}09 \).</p>
-            <p><strong>Lei de Bragg-Kleeman (Scaling Law):</strong> \( \dfrac{R_1}{R_2} = \dfrac{\rho_2}{\rho_1}\cdot\dfrac{A_1}{A_2} \).</p>
-          </div>
-          <div class="print-area">
+          <div class="enunciado">
+            <strong>6) Range de elétrons em Al (Bragg–Kleeman).</strong>
+            <p>Com a figura e a lei de Bragg–Kleeman, estime a <strong>espessura que para</strong> elétrons de 1&nbsp;MeV em alumínio.</p>
+            <div class="eq">
+              <strong>Dados:</strong> \( \rho_{Al}=2{,}699\ \text{g·cm}^{-3} \), \( A_{Al}=26{,}98 \), \( A_{Si}=28{,}09 \)<br>
+              <strong>Lei:</strong> \( \displaystyle \frac{R_1}{R_2}=\frac{\rho_2}{\rho_1}\cdot\frac{A_1}{A_2} \)
+            </div>
             <figure>
-              <img class="fig-fixed"
-                   src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/24102025/4th_figure-6.png?raw=1"
-                   alt="Exercício 6 — Figura de referência para elétrons em Al">
-              <figcaption>Figura do Exercício 6 — Elétrons em Al (usar Bragg–Kleeman).</figcaption>
+              <img class="fig-fixed" src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/24102025/4th_figure-6.png?raw=1" alt="Elétrons em Al (figura do exercício 6)">
+              <figcaption>Figura — Elétrons em Al.</figcaption>
             </figure>
           </div>
+          <div class="resposta"><strong>Resposta 6.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q7 -->
         <li id="q7">
-          <strong>Range (Partículas Alfa em Ouro)</strong>
-          <p>Repetir o exercício 8 [sic] usando um feixe de partículas alfa de 3 MeV em ouro (use a figura do exercício 6).</p>
-        </li>
-
-        <li id="q8">
-          <strong>Tempo de Parada de Partícula Alfa</strong>
-          <p><strong>Estimar o tempo necessário</strong> para uma partícula alfa de 5 MeV desacelerar e parar num bloco de Si. Repita para o gás de hidrogênio.</p>
-          <div style="margin-left: 20px;">
-            <p><strong>Valores a considerar:</strong> \( R_{Si} = 2{,}1\times10^{-5}\ \text{m} \) e \( R_H = 0{,}1\ \text{m} \).</p>
+          <div class="enunciado">
+            <strong>7) Range — alfas em Au.</strong>
+            <p>Repita o exercício anterior para partículas alfa de 3&nbsp;MeV em ouro (use a figura do exercício 6).</p>
           </div>
+          <div class="resposta"><strong>Resposta 7.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q8 -->
+        <li id="q8">
+          <div class="enunciado">
+            <strong>8) Tempo de parada de partícula alfa.</strong>
+            <p>Estime o <strong>tempo</strong> para uma alfa de 5&nbsp;MeV parar em Si. Repita para gás hidrogênio.</p>
+            <p class="muted">Use, por exemplo, \(R_{Si}=2.1\times10^{-5}\ \text{m}\) e \(R_H=0.1\ \text{m}\).</p>
+          </div>
+          <div class="resposta"><strong>Resposta 8.</strong><div class="blank"></div></div>
+        </li>
+
+        <!-- Q9 -->
         <li id="q9">
-          <strong>Análise de Onda Senoidal (SI)</strong>
-          <p>Uma onda senoidal propaga-se de acordo com a expressão: \( y(x,t) = 0{,}00327\,\sin(72{,}1x - 2{,}72t) \), onde \(y\) é dado em metros (SI).</p>
-          <ol class="sub">
-            <li>Qual a frequência da onda em Hz?</li>
-            <li>Quantas ondas existem por metro?</li>
-            <li>Qual a velocidade escalar de propagação?</li>
-          </ol>
+          <div class="enunciado">
+            <strong>9) Onda senoidal (SI).</strong>
+            <p>Para \( y(x,t)=0{,}00327\sin(72{,}1x-2{,}72t) \) (m):</p>
+            <ol class="sub">
+              <li>Frequência (Hz)</li>
+              <li>Número de ondas por metro</li>
+              <li>Velocidade de propagação</li>
+            </ol>
+          </div>
+          <div class="resposta"><strong>Resposta 9.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q10 -->
         <li id="q10">
-          <strong>Onda Eletromagnética</strong>
-          <p>Repetir os itens do exercício anterior para a onda: \( y(x,t) = 7{,}5\,\sin(1{,}2\times10^{7}x - 3{,}623\times10^{15}t)\ \text{V/m} \) (volts/metro).</p>
-          <p>Sendo esta a componente campo elétrico de uma onda eletromagnética, calcule a <strong>amplitude do campo magnético correspondente</strong>, encontre sua <strong>localização no espectro eletromagnético</strong> e diga em que faixa se encontra. No caso de estar no espectro visível, qual é a cor correspondente?</p>
+          <div class="enunciado">
+            <strong>10) Onda eletromagnética.</strong>
+            <p>Para \( y(x,t)=7{,}5\sin(1{,}2\times10^{7}x-3{,}623\times10^{15}t)\ \text{V/m} \): repita os itens do exercício anterior, calcule a <strong>amplitude do campo magnético</strong>, localize no <strong>espectro eletromagnético</strong> e, se visível, <strong>cor</strong>.</p>
+          </div>
+          <div class="resposta"><strong>Resposta 10.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q11 -->
         <li id="q11">
-          <strong>TV Analógica e Rádio FM</strong>
-          <p>O canal 6 no antigo sistema de televisão convencional (analógico) ocupa uma faixa de frequências que inicia em 82 MHz. Sabendo que a banda para cada canal de TV é de 6 MHz:</p>
-          <ol class="sub">
-            <li>Calcule a banda do canal 6 em <strong>comprimento de onda</strong>.</li>
-            <li>Idem para <strong>número de onda</strong>.</li>
-            <li>É possível ouvir o áudio do canal 6 num receptor de rádio FM? Banda FM: 88 a 108 MHz.</li>
-          </ol>
+          <div class="enunciado">
+            <strong>11) TV analógica × Rádio FM.</strong>
+            <p>Canal 6 inicia em 82&nbsp;MHz; cada canal tem 6&nbsp;MHz de banda.</p>
+            <ol class="sub">
+              <li>Banda do canal 6 em <em>comprimento de onda</em></li>
+              <li>Banda em <em>número de onda</em></li>
+              <li>É possível ouvir o áudio no FM (88–108&nbsp;MHz)?</li>
+            </ol>
+          </div>
+          <div class="resposta"><strong>Resposta 11.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q12 -->
         <li id="q12">
-          <strong>Fóton Gama</strong>
-          <p>Durante uma desintegração radioativa, um núcleo emite raio gama, cujo fóton tem energia de 1,35 MeV. Qual é o <strong>comprimento de onda</strong> e o <strong>número de onda</strong> correspondente a este fóton?</p>
+          <div class="enunciado">
+            <strong>12) Fóton gama.</strong>
+            <p>Para um fóton de 1,35&nbsp;MeV: calcule <strong>comprimento de onda</strong> e <strong>número de onda</strong>.</p>
+          </div>
+          <div class="resposta"><strong>Resposta 12.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q13 -->
         <li id="q13">
-          <strong>Lei de Wien e Temperatura</strong>
-          <p>As figuras abaixo mostram os espectros obtidos de dois corpos aquecidos (A e B). Com base na <strong>Lei de Wien</strong>, determine a temperatura de ambos em graus Celsius.</p>
-          <div class="print-area">
-            <div class="fig-row">
-              <figure>
-                <img class="fig-pair"
-                     src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/24102025/4th_figure-13-a.png?raw=1"
-                     alt="Exercício 13 — Figura A">
-                <figcaption>Figura A — Espectro do corpo A.</figcaption>
-              </figure>
-              <figure>
-                <img class="fig-pair"
-                     src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/24102025/4th_figure-13-b.png?raw=1"
-                     alt="Exercício 13 — Figura B">
-                <figcaption>Figura B — Espectro do corpo B.</figcaption>
-              </figure>
+          <div class="enunciado">
+            <strong>13) Lei de Wien.</strong>
+            <p>As figuras mostram espectros de dois corpos (A e B). Pela Lei de Wien, determine a <strong>temperatura</strong> (°C) de cada um.</p>
+            <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+              <figure><img class="fig-pair" src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/24102025/4th_figure-13-a.png?raw=1" alt="Corpo A"><figcaption>Corpo A</figcaption></figure>
+              <figure><img class="fig-pair" src="https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/24102025/4th_figure-13-b.png?raw=1" alt="Corpo B"><figcaption>Corpo B</figcaption></figure>
             </div>
           </div>
+          <div class="resposta"><strong>Resposta 13.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q14 -->
         <li id="q14">
-          <strong>Série de Balmer (Hidrogênio)</strong>
-          <p>A partir da <strong>equação de Rydberg</strong>, determine, para o hidrogênio, as <strong>frequências dos dois primeiros valores para \(k\)</strong>, na <strong>série de Balmer</strong>. Para cada um dos resultados identifique a <strong>faixa do espectro</strong> e, caso seja o espectro visível, a <strong>cor correspondente</strong>.</p>
+          <div class="enunciado">
+            <strong>14) Série de Balmer (H).</strong>
+            <p>Usando a equação de Rydberg, determine as <strong>frequências</strong> para os dois primeiros valores de \(k\) na série de Balmer; indique a <strong>faixa</strong> do espectro e a <strong>cor</strong> se for visível.</p>
+          </div>
+          <div class="resposta"><strong>Resposta 14.</strong><div class="blank"></div></div>
         </li>
 
+        <!-- Q15 -->
         <li id="q15">
-          <strong>Série de Lyman (Hidrogênio)</strong>
-          <p>Repetir o exercício 12 [sic] para a <strong>série de Lyman</strong> para os <strong>dois primeiros valores pares de \(k\)</strong>.</p>
+          <div class="enunciado">
+            <strong>15) Série de Lyman (H).</strong>
+            <p>Repita para a série de Lyman (dois primeiros valores <em>pares</em> de \(k\)).</p>
+          </div>
+          <div class="resposta"><strong>Resposta 15.</strong><div class="blank"></div></div>
         </li>
 
       </ol>
     </section>
 
-    <!-- ====== BIBLIOGRAFIA ====== -->
+    <!-- BIBLIOGRAFIA -->
     <section id="bibliografia" class="atividade-section" style="margin-top:18px;">
-      <div class="dicas">
-        <h2 style="font-size: 1.2em; margin:0;">Bibliografia Recomendada</h2>
-      </div>
+      <div class="dicas"><h2 style="font-size: 1.2em; margin:0;">Bibliografia Recomendada</h2></div>
       <div class="enunciado" style="text-align:justify;">
         <ul style="list-style-type: disc; margin-left:18px;">
           <li>Notas de aula e apresentações ppt</li>
-          <li>Livro: Knoll (2ª ou 3ª Ed.)</li>
-          <li>Livro: Tsoulfanids (4ª Ed)</li>
-          <li>Halliday – Física, vols. 2 e 4</li>
+          <li>Knoll — <em>Radiation Detection and Measurement</em> (2ª/3ª ed.)</li>
+          <li>Tsoulfanidis — <em>Measurement and Detection of Radiation</em> (4ª ed.)</li>
+          <li>Halliday — <em>Física</em>, vols. 2 e 4</li>
         </ul>
       </div>
     </section>
 
   </div> <!-- /atividade-section -->
-
 </div> <!-- /pt -->
-
-<!-- (Opcional) bloco EN futuro -->
-<div id="en"></div>
 
 </body>
 </html>
