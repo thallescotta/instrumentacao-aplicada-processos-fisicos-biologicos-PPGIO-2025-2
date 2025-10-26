@@ -252,11 +252,13 @@
               <div class="enunciado">
                 <strong>Qual destes possui a maior energia: um elétron de conversão interna da camada L ou da camada M, se ambos vieram da mesma energia (nuclear) de excitação?</strong>
               </div>
-              <div class="resposta">
-                <strong>Resposta 2.</strong>
-                <p>O elétron de conversão interna da <strong>Camada M</strong> possui a maior energia.</p>
-                <p>A energia cinética \( T_i \) é dada por \( T_i = Q - B_i \), onde \( Q \) é a energia de transição nuclear e \( B_i \) é a energia de ligação do elétron na sua camada (L ou M). Como \( B_M < B_L \), a energia cinética do elétron M ejetado será maior.</p>
-              </div>
+<div class="resposta">
+  <strong>Resposta 2.</strong>
+  <p>O elétron de conversão interna da <strong>Camada M</strong> possui a maior energia.</p>
+  <p>A energia cinética \( T_i \) é dada por \( T_i = Q - B_i \), onde \( Q \) é a energia de transição nuclear e \( B_i \) é a energia de ligação do elétron na sua camada (L ou M). Como \( B_M < B_L \), a energia cinética do elétron M ejetado será maior.</p>
+  <p class="muted"><em>Legenda:</em> \(T_i\) = energia cinética do elétron de conversão interna; \(Q\) = energia liberada na transição nuclear; \(B_i\) = energia de ligação do elétron na camada \(i\); \(B_M\) e \(B_L\) = energias de ligação nas camadas M e L, respectivamente.</p>
+</div>
+
             </li>
 
             <!-- Q3 -->
@@ -285,10 +287,17 @@
                 </figure>
               </div>
               <div class="resposta">
-                <strong>Resposta 4.</strong>
-                <p>Este problema requer a leitura do <em>stopping power</em> específico \( -\mathrm{d}E/\mathrm{d}x \) para prótons de \( 5\,\text{MeV} \) em Si a partir do gráfico indicado.</p>
-                <p>A perda de energia é estimada por \( \Delta E \approx -\left(\frac{\mathrm{d}E}{\mathrm{d}x}\right)_{\!\text{médio}}\cdot t \), onde \( t = 100\,\mu\text{m} \). A energia restante é \( E_{\text{restante}} = 5\,\text{MeV} - \Delta E \).</p>
-              </div>
+  <strong>Resposta 4.</strong>
+  <p><em>Leitura do gráfico (Fig. 2.7, prótons em Si):</em> para \(5\,\text{MeV}\), o alcance total é \(R_{5\,\text{MeV}}\approx 2{,}5\times10^{2}\,\mu\text{m}\) (≈ 250 µm). Ao atravessar \(t=100\,\mu\text{m}\), resta um alcance \(R_{\text{rest}}\approx 150\,\mu\text{m}\).</p>
+  <p>Adotando a relação empírica \(R = aE^{b}\) (com \(b\simeq 1{,}7\) para prótons), a energia associada ao alcance remanescente é:</p>
+  <p style="text-align:center;">
+    \( E_{\text{rest}} = 5\,\text{MeV}\,\left(\dfrac{R_{\text{rest}}}{R_{5\,\text{MeV}}}\right)^{1/b}
+    \approx 5\,\left(\dfrac{150}{250}\right)^{1/1.7}
+    \approx \mathbf{3{,}7\ \text{MeV}}. \)
+  </p>
+  <p class="muted">Obs.: A leitura do gráfico é aproximada; tomando \(R_{5\,\text{MeV}}\in[230,300]\,\mu\text{m}\) e \(b\in[1{,}6,1{,}75]\), obtém-se \(E_{\text{rest}}\approx 3{,}6\text{–}4{,}0\,\text{MeV}\).</p>
+</div>
+
             </li>
 
             <!-- Q5 -->
@@ -309,11 +318,29 @@
                   <figcaption>Figura - Alfas em Au.</figcaption>
                 </figure>
               </div>
-              <div class="resposta">
-                <strong>Resposta 5.</strong>
-                <p>1) Obter \( S/\rho = -(\mathrm{d}E/\mathrm{d}x)/\rho \) para alfas de \( 1\,\text{MeV} \) em Au a partir do gráfico. 2) Calcular \( S = -\mathrm{d}E/\mathrm{d}x = (S/\rho)\cdot \rho_{\text{Au}} \). 3) Calcular \( \Delta E = S\cdot t \), com \( t = 5\times10^{-4}\,\text{cm} \).</p>
-              </div>
-            </li>
+<div class="resposta">
+  <strong>Resposta 5.</strong>
+  <p><em>Leitura do gráfico (Fig. 2.10, alfas em Au):</em> para \(E_\alpha = 1\,\text{MeV}\), o poder de parada específico no ouro é
+  \( (S/\rho) \approx 6\times10^{2}\ \text{MeV·cm}^2\!/\text{g} \) (ordem de \(4\text{–}8\times10^{2}\)).</p>
+
+  <p>Convertendo para poder de parada em comprimento:
+  \( S = (S/\rho)\,\rho_{\text{Au}} \), com \( \rho_{\text{Au}} = 19{,}32\ \text{g/cm}^3 \):</p>
+  <p style="text-align:center;">
+    \( S \approx (6\times10^{2})\times 19{,}32 \approx 1{,}16\times10^{4}\ \text{MeV/cm}. \)
+  </p>
+
+  <p>Para uma espessura \( t = 5\,\mu\text{m} = 5\times10^{-4}\ \text{cm} \), a energia perdida é</p>
+  <p style="text-align:center;">
+    \( \Delta E \approx S\,t \approx 1{,}16\times10^{4}\times 5\times10^{-4} \approx 5{,}8\ \text{MeV}. \)
+  </p>
+
+  <p>Como a partícula possui apenas \(1\,\text{MeV}\) inicialmente, o valor acima indica que a folha de \(5\,\mu\text{m}\) de ouro é mais do que suficiente para <strong>parar completamente</strong> a partícula alfa: logo,
+  \( \Delta E \approx 1\,\text{MeV} \) (perda total de energia ao atravessar \(5\,\mu\text{m}\)).</p>
+
+  <p class="muted">Faixa de leitura razoável do gráfico \((S/\rho)\in[4,8]\times10^{2}\) fornece
+  \( \Delta E \in [3{,}9,\,7{,}7]\ \text{MeV} \), ainda &gt; \(1\,\text{MeV}\); portanto a conclusão (parada total) permanece.</p>
+</div>
+
 
             <!-- Q6 -->
             <li id="q6">
