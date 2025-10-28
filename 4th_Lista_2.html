@@ -382,7 +382,7 @@
     <p class="muted"><em>Resposta final:</em> a energia perdida por partículas alfa de 1 MeV ao atravessar 5 µm de ouro é aproximadamente <strong>1,93 MeV</strong>.</p>
   </div>
 
-
+ </li>
             <!-- Q6 -->
             <li id="q6">
               <div class="enunciado">
@@ -482,23 +482,36 @@
               </div>
 <div class="resposta">
   <strong>Resposta 8.</strong>
-  <p><em>Velocidade inicial da partícula alfa:</em> não relativística, \( m_\alpha \approx 4u = 6{,}64\times10^{-27}\,\text{kg} \) e \( E_0=5\,\text{MeV}=8{,}01\times10^{-13}\,\text{J} \). Logo,
-  \( v_0=\sqrt{2E_0/m_\alpha}\approx \mathbf{1{,}55\times10^{7}\ \text{m/s}} \) (\(\approx 0{,}052\,c\)).</p>
+  <p>O tempo para uma partícula alfa parar em um material pode ser estimado dividindo-se o alcance \(R\) pela velocidade média \(v_{\text{médio}}\). O alcance é a distância média percorrida antes da partícula perder toda a sua energia. Como a velocidade diminui progressivamente (curva de Bragg), a velocidade média pode ser aproximada como metade da velocidade inicial.</p>
 
-  <p>O tempo de parada é \( t \approx R/v_{\text{médio}} \). Como a velocidade cai de \(v_0\) a 0 (curva de Bragg), adotamos \(v_{\text{médio}}\approx (0{,}5\pm0{,}1)\,v_0\) para estimar.</p>
+  <h4>Passo 1 – Calcular a velocidade inicial da partícula alfa</h4>
+  <p>A energia cinética da partícula alfa é \(E = 5\,\text{MeV}\). Convertendo para joules:</p>
+  <p style="text-align:center;">\( 1\,\text{MeV} = 1{,}602\times10^{-13}\,\text{J} \Rightarrow E = 5\times1{,}602\times10^{-13} = 8{,}01\times10^{-13}\,\text{J} \).</p>
+  <p>A massa de uma partícula alfa é aproximadamente \( m_\alpha = 4u = 4\times1{,}6605\times10^{-27} = 6{,}64\times10^{-27}\,\text{kg} \).</p>
+  <p>A partir da relação \( E = \tfrac{1}{2}m_\alpha v_0^2 \), obtemos:</p>
+  <p style="text-align:center;">\( v_0 = \sqrt{\tfrac{2E}{m_\alpha}} = \sqrt{\tfrac{2\times8{,}01\times10^{-13}}{6{,}64\times10^{-27}}} \approx 1{,}55\times10^{7}\,\text{m/s} \) (\(\approx 0{,}052\,c\)).</p>
 
+  <h4>Passo 2 – Estimar a velocidade média</h4>
+  <p>Como a partícula desacelera até parar, adoto \( v_{\text{médio}} \approx \tfrac{v_0}{2} \):</p>
+  <p style="text-align:center;">\( v_{\text{médio}} = \tfrac{1{,}55\times10^{7}}{2} = 7{,}76\times10^{6}\,\text{m/s} \).</p>
+
+  <h4>Passo 3 – Calcular o tempo de parada no silício (Si)</h4>
+  <p>O alcance em Si é \( R_{\text{Si}} = 2{,}1\times10^{-5}\,\text{m} \). Assim,</p>
+  <p style="text-align:center;">\( t_{\text{Si}} = \tfrac{R_{\text{Si}}}{v_{\text{médio}}} = \tfrac{2{,}1\times10^{-5}}{7{,}76\times10^{6}} \approx 2{,}7\times10^{-12}\,\text{s}. \)</p>
+
+  <h4>Passo 4 – Calcular o tempo de parada em gás hidrogênio (H)</h4>
+  <p>Para o gás hidrogênio, o alcance é \( R_{\text{H}} = 0{,}1\,\text{m} \). Portanto,</p>
+  <p style="text-align:center;">\( t_{\text{H}} = \tfrac{R_{\text{H}}}{v_{\text{médio}}} = \tfrac{0{,}1}{7{,}76\times10^{6}} \approx 1{,}3\times10^{-8}\,\text{s}. \)</p>
+
+  <h4>Resultados finais</h4>
   <ul>
-    <li><strong>Em Si</strong> \((R_{\text{Si}}=2{,}1\times10^{-5}\ \text{m})\):<br>
-      \( t_{\text{Si}} \approx \dfrac{2{,}1\times10^{-5}}{0{,}5\,v_0} \approx \mathbf{2{,}7\times10^{-12}\ \text{s}} \)
-      (faixa \(2{,}0\text{–}3{,}4\ \text{ps}\) para \(v_{\text{médio}}=(0{,}7\text{–}0{,}4)\,v_0\)).</li>
-
-    <li><strong>Em H (gás)</strong> \((R_{\text{H}}=0{,}1\ \text{m})\):<br>
-      \( t_{\text{H}} \approx \dfrac{0{,}1}{0{,}5\,v_0} \approx \mathbf{1{,}29\times10^{-8}\ \text{s}} \)
-      (faixa \(9{,}2\text{–}16{,}1\ \text{ns}\) para \(v_{\text{médio}}=(0{,}7\text{–}0{,}4)\,v_0\)).</li>
+    <li><strong>Tempo para parar em Si:</strong> \( t_{\text{Si}} \approx 2{,}7\times10^{-12}\,\text{s} \)</li>
+    <li><strong>Tempo para parar em H:</strong> \( t_{\text{H}} \approx 1{,}3\times10^{-8}\,\text{s} \)</li>
   </ul>
 
-  <p class="muted">Observação: resultados são estimativas de ordem de grandeza; valores exatos exigiriam integrar \(t=\int \! \mathrm{d}x/v(E(x))\) usando o \( -\mathrm{d}E/\mathrm{d}x \) experimental (curva de Bragg).</p>
+  <p class="muted">Observação: o cálculo considera movimento não relativístico e uma desaceleração aproximadamente uniforme. Resultados exatos exigiriam integrar \( t = \int \mathrm{d}x / v(E(x)) \) com o poder de parada experimental \( -\mathrm{d}E/\mathrm{d}x \).</p>
 </div>
+
 
             </li>
 
