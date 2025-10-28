@@ -351,27 +351,48 @@
                 </figure>
               </div>
 <div class="resposta">
-  <strong>Resposta 5.</strong>
-  <p><em>Leitura do gráfico (Fig. 2.10, alfas em Au):</em> para \(E_\alpha = 1\,\text{MeV}\), o poder de parada específico no ouro é
-  \( (S/\rho) \approx 6\times10^{2}\ \text{MeV·cm}^2\!/\text{g} \) (ordem de \(4\text{–}8\times10^{2}\)).</p>
+    <strong>Resposta 5.</strong>
 
-  <p>Convertendo para poder de parada em comprimento:
-  \( S = (S/\rho)\,\rho_{\text{Au}} \), com \( \rho_{\text{Au}} = 19{,}32\ \text{g/cm}^3 \):</p>
-  <p style="text-align:center;">
-    \( S \approx (6\times10^{2})\times 19{,}32 \approx 1{,}16\times10^{4}\ \text{MeV/cm}. \)
-  </p>
+    <h4>Passo 1 – Extrair o valor requerido do gráfico</h4>
+    <p>Para partículas alfa de 1 MeV em ouro (\(Z = 79\)), o gráfico fornece o valor aproximado de:</p>
+    <p style="text-align:center;">
+      \( -\dfrac{1}{\rho}\dfrac{\mathrm{d}E}{\mathrm{d}x} \approx 200\,\text{MeV·cm}^2/\text{g} \)
+    </p>
 
-  <p>Para uma espessura \( t = 5\,\mu\text{m} = 5\times10^{-4}\ \text{cm} \), a energia perdida é</p>
-  <p style="text-align:center;">
-    \( \Delta E \approx S\,t \approx 1{,}16\times10^{4}\times 5\times10^{-4} \approx 5{,}8\ \text{MeV}. \)
-  </p>
+    <h4>Passo 2 – Calcular a perda de energia por unidade de comprimento</h4>
+    <p>A perda de energia por unidade de comprimento é dada por:</p>
+    <p style="text-align:center;">
+      \( -\dfrac{\mathrm{d}E}{\mathrm{d}x} = \left(-\dfrac{1}{\rho}\dfrac{\mathrm{d}E}{\mathrm{d}x}\right)\rho \)
+    </p>
+    <p>Substituindo:</p>
+    <ul>
+      <li>\( -\dfrac{1}{\rho}\dfrac{\mathrm{d}E}{\mathrm{d}x} = 200\,\text{MeV·cm}^2/\text{g} \)</li>
+      <li>\( \rho_{\text{Au}} = 19{,}32\,\text{g/cm}^3 \)</li>
+    </ul>
+    <p style="text-align:center;">
+      \( \Rightarrow -\dfrac{\mathrm{d}E}{\mathrm{d}x} = 200 \times 19{,}32 = 3864\,\text{MeV/cm} \)
+    </p>
 
-  <p>Como a partícula possui apenas \(1\,\text{MeV}\) inicialmente, o valor acima indica que a folha de \(5\,\mu\text{m}\) de ouro é mais do que suficiente para <strong>parar completamente</strong> a partícula alfa: logo,
-  \( \Delta E \approx 1\,\text{MeV} \) (perda total de energia ao atravessar \(5\,\mu\text{m}\)).</p>
+    <h4>Passo 3 – Converter a espessura para cm</h4>
+    <p>Espessura dada:</p>
+    <p style="text-align:center;">
+      \( 5\,\mu\text{m} = 5\times10^{-4}\,\text{cm} \)
+    </p>
 
-  <p class="muted">Faixa de leitura razoável do gráfico \((S/\rho)\in[4,8]\times10^{2}\) fornece
-  \( \Delta E \in [3{,}9,\,7{,}7]\ \text{MeV} \), ainda &gt; \(1\,\text{MeV}\); portanto a conclusão (parada total) permanece.</p>
-</div>
+    <h4>Passo 4 – Calcular a perda total de energia</h4>
+    <p>A energia perdida é:</p>
+    <p style="text-align:center;">
+      \( \Delta E \approx \left(-\dfrac{\mathrm{d}E}{\mathrm{d}x}\right)\cdot t = 3864\,\text{MeV/cm}\times5\times10^{-4}\,\text{cm} \)
+    </p>
+    <p style="text-align:center;">
+      \( \Delta E \approx 1{,}93\,\text{MeV} \)
+    </p>
+
+    <h4>Passo 5 – Interpretar o resultado</h4>
+    <p>A perda de energia (ou energia depositada) por um feixe de partículas alfa de 1 MeV após atravessar 5 µm de ouro é aproximadamente <strong>1,93 MeV</strong>.</p>
+
+    <p class="muted"><em>Resposta final:</em> a energia perdida por partículas alfa de 1 MeV ao atravessar 5 µm de ouro é aproximadamente <strong>1,93 MeV</strong>.</p>
+  </div>
 
 
             <!-- Q6 -->
