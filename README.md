@@ -112,3 +112,22 @@ No dia **24 de outubro de 2025**, o professor **Jesse Costa** enviou, via grupo 
 
 ---
 
+---
+
+## ✅ Atividade 5 – Sensores de Temperatura (RTD e Termopares)
+
+📦 **Materiais Recebidos – 04/11/2025 (via Grupo WhatsApp)**  
+
+📝 **Arquivo PDF da entrega:**  
+[5th_Sensores_Temperatura.pdf](https://github.com/thallescotta/instrumentacao-aplicada-processos-fisicos-biologicos-PPGIO-2025-2/blob/main/5th_Sensores_Temperatura.pdf?raw=1)
+
+No dia **4 de novembro de 2025**, o professor **Jesse Werner Costa** enviou a atividade destinada ao aluno **Thalles Cotta Fontainha**, referente ao estudo dos **sensores de temperatura**, com **prazo de entrega em 12 de novembro de 2025**.  
+A tarefa envolve o desenvolvimento de um trabalho sobre os sensores **RTD (ex.: PT-100)** e **termopares (ex.: tipos K e J)**, abordando os seguintes tópicos:
+
+- **Princípios de funcionamento:** conceitos físicos e fundamentos matemáticos;  
+- **Tipos de sensores** e classificações;  
+- **Aplicações:** gerais e exemplos específicos;  
+- **Vantagens e desvantagens;**  
+- **Conclusão e referências**, incluindo fontes da internet, vídeos do YouTube e o uso de ferramentas de IA.  
+
+---
